@@ -7,7 +7,6 @@ let currentQuestionIndex = -1; // 現在の問題のインデックス
 // ウェブページが読み込まれたときに実行される関数
 window.onload = function () {
     loadQuestions();
-    nextQuestion();
 };
 
 // CSVファイルから問題を読み込む関数
