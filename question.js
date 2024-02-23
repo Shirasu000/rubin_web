@@ -1,23 +1,22 @@
 // script.js
 let questions = [];
+let currentQuestionIndex = -1;
 
 function loadCSV() {
-    Papa.parse("question.csv", {
-        download: true,
-        complete: function(results) {
-            questions = results.data;
-            showRandomQuestion();
-        }
-    });
+    fetch('question.csv')
+        .then(response => response.text())
+        .then(data => {
+            questions = Papa.parse(data, { header: true }).data;
+            nextQuestion();
+        });
 }
 
-function showRandomQuestion() {
-    const randomIndex = Math.floor(Math.random() * questions.length);
+function showQuestion(index) {
     const questionElement = document.getElementById('question');
     const answerInput = document.getElementById('answerInput');
     const feedbackElement = document.getElementById('feedback');
 
-    questionElement.textContent = questions[randomIndex][0];
+    questionElement.textContent = questions[index].Question;
     answerInput.value = '';
     feedbackElement.textContent = '';
 }
@@ -26,16 +25,19 @@ function checkAnswer() {
     const answerInput = document.getElementById('answerInput');
     const feedbackElement = document.getElementById('feedback');
 
-    const currentQuestion = document.getElementById('question').textContent;
-    const correctAnswer = questions.find(q => q[0] === currentQuestion)[1];
+    const correctAnswer = questions[currentQuestionIndex].Answer;
 
     if (answerInput.value.toLowerCase() === correctAnswer.toLowerCase()) {
         feedbackElement.textContent = '正解です！';
     } else {
         feedbackElement.textContent = '不正解です。もう一度試してみてください。';
     }
+}
 
-    showRandomQuestion();
+function nextQuestion() {
+    currentQuestionIndex = Math.floor(Math.random() * questions.length);
+    showQuestion(currentQuestionIndex);
 }
 
 loadCSV();  // ページ読み込み時にCSVデータを読み込む
+
