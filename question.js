@@ -44,13 +44,6 @@ function nextQuestion() {
     if (questions.length > 0) {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
-        alert(JSON.stringify(questions[0]));
-        alert(JSON.stringify(questions[1]));
-        alert(questions[0]['Question'])
-        alert(questions[0]['Answer'])
-        alert(currentQuestion['Question'])
-        alert(currentQuestion['Answer'])
-        alert(currentQuestionIndex)
         document.getElementById('question-text').textContent = currentQuestion['Question'];
         document.getElementById('answer-input').value = '';
         document.getElementById('result').textContent = '';
@@ -61,8 +54,6 @@ function nextQuestion() {
 function checkAnswer() {
     const userAnswer = document.getElementById('answer-input').value;
     const correctAnswer = questions[currentQuestionIndex]['Answer'];
-    alert(userAnswer)
-    alert(correctAnswer)
           
     if (userAnswer.localeCompare(correctAnswer, 'ja', { sensitivity: 'base' }) === 0) {
         alert('正解！');
