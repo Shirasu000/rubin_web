@@ -55,8 +55,8 @@ function nextQuestion() {
 function checkAnswer() {
     const userAnswer = document.getElementById('answer-input').value;
     const correctAnswer = questions[currentQuestionIndex]['Answer'];
-    alert('userAnswer')
-    alert('correctAnswer')
+    alert(userAnswer)
+    alert(correctAnswer)
           
     if (userAnswer.localeCompare(correctAnswer, 'ja', { sensitivity: 'base' }) === 0) {
         alert('正解！');
