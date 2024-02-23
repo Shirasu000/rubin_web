@@ -25,8 +25,6 @@ function processData(csv) {
     const lines = csv.split('\n');
     const result = [];
     const headers = lines[0].split(',');
-    alert('headers')
-    alert(headers)
 
     for (let i = 1; i < lines.length; i++) {
         const obj = {};
@@ -34,8 +32,6 @@ function processData(csv) {
 
         for (let j = 0; j < headers.length; j++) {
             obj[headers[j]] = currentLine[j];
-            alert(j)
-            alert(currentLine[j])
         }
 
         result.push(obj);
@@ -52,7 +48,7 @@ function nextQuestion() {
         alert(currentQuestion['Question'])
         alert(currentQuestion['Answer'])
         alert(currentQuestionIndex)
-        document.getElementById('question-text').textContent = currentQuestion['Question'];
+        document.getElementById('question-text').textContent = currentQuestion['Answer'];
         document.getElementById('answer-input').value = '';
         document.getElementById('result').textContent = '';
     }
