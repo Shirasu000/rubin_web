@@ -48,7 +48,7 @@ function nextQuestion() {
         alert(currentQuestion['Question'])
         alert(currentQuestion['Answer'])
         alert(currentQuestionIndex)
-        document.getElementById('question-text').textContent = currentQuestion['Answer'];
+        document.getElementById('question-text').textContent = currentQuestion['Question'];
         document.getElementById('answer-input').value = '';
         document.getElementById('result').textContent = '';
     }
