@@ -22,7 +22,7 @@ function loadQuestions() {
 
 // CSVデータを処理して配列に変換する関数
 function processData(csv) {
-    const lines = csv.split('\n');
+    const lines = csv.split('\r\n');
     const result = [];
     const headers = lines[0].split(',');
 
