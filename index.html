@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>クイズアプリ</title>
+    <title>クイズウェブサイト</title>
 </head>
 <body>
-
-    <h1 id="question">ここに問題が表示されます。</h1>
-    <input type="text" id="answerInput" placeholder="回答を入力">
-    <button onclick="checkAnswer()">回答を確認</button>
-    <p id="feedback"></p>
+    <h1>クイズ</h1>
+    <div id="question-container">
+        <p id="question-text"></p>
+        <input type="text" id="answer-input" placeholder="答えを入力">
+        <button onclick="checkAnswer()">答えを確認</button>
+    </div>
+    <p id="result"></p>
     <button onclick="nextQuestion()">次の問題</button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="script.js"></script>
-
-</body>
+    <script src="main.js"></script>
+</body> 
 </html>
