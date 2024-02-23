@@ -2,7 +2,7 @@
 let questions = [];
 
 function loadCSV() {
-    Papa.parse("questions.csv", {
+    Papa.parse("question.csv", {
         download: true,
         complete: function(results) {
             questions = results.data;
