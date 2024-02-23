@@ -32,13 +32,10 @@ function processData(csv) {
 
         for (let j = 0; j < headers.length; j++) {
             obj[headers[j]] = currentLine[j];
-            alert(headers[0])
-            alert(headers[1])
         }
 
         result.push(obj);
     }
-    alert(result)
     return result;
 }
 
@@ -47,6 +44,12 @@ function nextQuestion() {
     if (questions.length > 0) {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
+        alert(questions[0])
+        alert(questions[1])
+        alert(questions[2])
+        alert(questions[3])
+        alert(questions[0]['Question'])
+        alert(questions[0]['Answer'])
         alert(currentQuestion['Question'])
         alert(currentQuestion['Answer'])
         alert(currentQuestionIndex)
