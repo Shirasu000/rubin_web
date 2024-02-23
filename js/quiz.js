@@ -9,8 +9,9 @@ let currentQuestionIndex = -1; // 現在の問題のインデックス
 // ウェブページが読み込まれたときに実行される関数
 window.onload = function () {
     setupQuizUI();  // クイズのUIを初期化
-    loadQuestions();
-    nextQuestion();
+    loadQuestions().then(() => {
+        nextQuestion();
+    });
 };
 
 // クイズのUIを初期化する関数
@@ -22,7 +23,7 @@ function setupQuizUI() {
 
 // CSVファイルから問題を読み込む関数
 function loadQuestions() {
-    fetch(csvUrl)
+    return fetch(csvUrl)
         .then(response => response.text())
         .then(data => {
             // CSVデータを処理してquestions配列に格納
@@ -57,12 +58,13 @@ function nextQuestion() {
         document.getElementById('question-container').textContent = currentQuestion['Question'];
         document.getElementById('answer-input').value = '';
         document.getElementById('result').textContent = '';
+        document.getElementById('next-question-button').style.display = 'none';
+        document.getElementById('submit-answer-button').disabled = false;
     }
 }
 
 // クイズを開始する関数
 function startQuiz() {
-    loadQuestions();
     nextQuestion();
     document.getElementById('start-quiz-button').style.display = 'none';
     document.getElementById('quiz-container').style.display = 'block';
