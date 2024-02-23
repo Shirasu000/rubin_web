@@ -51,7 +51,11 @@ function nextQuestion() {
     }
 }
 
-// 答えを確認する関数
+function checkAnswer(){
+    document.write('やあ')
+}
+
+/* 答えを確認する関数
 function checkAnswer() {
     const userAnswer = document.getElementById('answer-input').value.toLowerCase();
     const correctAnswer = questions[currentQuestionIndex]['Answer'].toLowerCase();
@@ -62,3 +66,4 @@ function checkAnswer() {
         document.getElementById('result').textContent = '不正解';
     }
 }
+*/
