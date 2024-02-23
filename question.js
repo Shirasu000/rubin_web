@@ -55,11 +55,13 @@ function nextQuestion() {
 function checkAnswer() {
     const userAnswer = document.getElementById('answer-input').value;
     const correctAnswer = questions[currentQuestionIndex]['Answer'];
-
-    if (userAnswer === correctAnswer) {
-        document.getElementById('result').textContent = '正解';
+    alert('userAnswer')
+    alert('correctAnswer')
+          
+    if (userAnswer.localeCompare(correctAnswer, 'ja', { sensitivity: 'base' }) === 0) {
+        alert('正解！');
     } else {
-        document.getElementById('result').textContent = '不正解';
+        alert('不正解…');
     }
 }
 
