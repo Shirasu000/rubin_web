@@ -7,7 +7,6 @@ let currentQuestionIndex = -1; // 現在の問題のインデックス
 // ウェブページが読み込まれたときに実行される関数
 window.onload = function () {
     loadQuestions();
-    alert("aaa")
 };
 
 // CSVファイルから問題を読み込む関数
@@ -42,7 +41,6 @@ function processData(csv) {
 
 // 問題を表示する関数
 function showQuestion() {
-    alert('bbb')
     if (questions.length > 0) {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
