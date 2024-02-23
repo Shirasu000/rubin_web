@@ -44,10 +44,8 @@ function nextQuestion() {
     if (questions.length > 0) {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
-        alert(questions[0])
-        alert(questions[1])
-        alert(questions[2])
-        alert(questions[3])
+        console.dir(questions[0])
+        console.dir(questions[1])
         alert(questions[0]['Question'])
         alert(questions[0]['Answer'])
         alert(currentQuestion['Question'])
