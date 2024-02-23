@@ -1,63 +1,57 @@
-// quiz.csvのURL（GitHub Raw URLを使用）
+// quiz.js
+
 const csvUrl = 'quiz.csv';
+let questions = [];
+let currentQuestionIndex = -1;
 
-let questions = []; // 問題データを保持する配列
-let currentQuestionIndex = -1; // 現在の問題のインデックス
-
-// ウェブページが読み込まれたときに実行される関数
 window.onload = function () {
-    loadQuestions();
-    nextQuestion();
+    setupQuizUI(); // クイズのUIを初期化
 };
 
-// CSVファイルから問題を読み込む関数
+function setupQuizUI() {
+    document.querySelector('#start-quiz-button').addEventListener('click', startQuiz);
+    document.querySelector('#submit-answer-button').addEventListener('click', checkAnswer);
+    document.querySelector('#next-question-button').addEventListener('click', nextQuestion);
+}
+
+function startQuiz() {
+    loadQuestions().then(() => {
+        nextQuestion();
+        document.querySelector('#start-quiz-button').style.display = 'none';
+        document.querySelector('#quiz-container').style.display = 'block';
+    });
+}
+
 function loadQuestions() {
-    fetch(csvUrl)
+    return fetch(csvUrl)
         .then(response => response.text())
         .then(data => {
-            // CSVデータを処理してquestions配列に格納
             questions = processData(data);
         });
 }
 
-// CSVデータを処理して配列に変換する関数
-function processData(csv) {
-    const lines = csv.split('\r\n');
-    const result = [];
-    const headers = lines[0].split(',');
-
-    for (let i = 1; i < lines.length; i++) {
-        const obj = {};
-        const currentLine = lines[i].split(',');
-
-        for (let j = 0; j < headers.length; j++) {
-            obj[headers[j]] = currentLine[j];
-        }
-
-        result.push(obj);
-    }
-    return result;
-}
-
-// 次の問題を表示する関数
 function nextQuestion() {
     if (questions.length > 0) {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
-        document.getElementById('question-text').textContent = currentQuestion['Question'];
-        document.getElementById('answer-input').value = '';
-        document.getElementById('result').textContent = '';
+        document.querySelector('#question-container').textContent = currentQuestion['Question'];
+        document.querySelector('#answer-input').value = '';
+        document.querySelector('#result').textContent = '';
+        document.querySelector('#next-question-button').style.display = 'none';
+        document.querySelector('#submit-answer-button').disabled = false;
     }
 }
 
-// 答えを確認する関数
 function checkAnswer() {
-    const userAnswer = document.getElementById('answer-input').value;
+    const userAnswer = document.querySelector('#answer-input').value;
     const correctAnswer = questions[currentQuestionIndex]['Answer'];
-          
+
     if (userAnswer.localeCompare(correctAnswer, 'ja', { sensitivity: 'base' }) === 0) {
-        document.getElementById('result').textContent = '正解！';
+        document.querySelector('#result').textContent = '正解！';
     } else {
-        document.getElementById('result').textContent = '不正解…';
+        document.querySelector('#result').textContent = '不正解…';
     }
+
+    document.querySelector('#next-question-button').style.display = 'block';
+    document.querySelector('#submit-answer-button').disabled = true;
 }
