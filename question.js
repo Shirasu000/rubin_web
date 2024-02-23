@@ -47,7 +47,7 @@ function nextQuestion() {
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('question-text').textContent = currentQuestion['Question'];
         document.getElementById('answer-input').value = 'あああ';
-        document.getElementById('result').textContent = '';
+        document.getElementById('result').textContent = 'ああ';
     }
 }
 
