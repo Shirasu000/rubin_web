@@ -45,6 +45,7 @@ function showQuestion() {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('question-text').textContent = currentQuestion['Question'];
+        alert(currentQuestion['Question'])
         document.getElementById('answer-input').value = '';
         document.getElementById('result').textContent = '';
     }
