@@ -51,14 +51,10 @@ function nextQuestion() {
     }
 }
 
-function checkAnswer(){
-    document.getElementById('result').textContent = '正解';
-}
-
-/* 答えを確認する関数
+//答えを確認する関数
 function checkAnswer() {
-    const userAnswer = document.getElementById('answer-input').value.toLowerCase();
-    const correctAnswer = questions[currentQuestionIndex]['Answer'].toLowerCase();
+    const userAnswer = document.getElementById('answer-input').value;
+    const correctAnswer = questions[currentQuestionIndex]['Answer'];
 
     if (userAnswer === correctAnswer) {
         document.getElementById('result').textContent = '正解';
@@ -66,4 +62,4 @@ function checkAnswer() {
         document.getElementById('result').textContent = '不正解';
     }
 }
-*/
+
