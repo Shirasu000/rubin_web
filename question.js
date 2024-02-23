@@ -32,11 +32,13 @@ function processData(csv) {
 
         for (let j = 0; j < headers.length; j++) {
             obj[headers[j]] = currentLine[j];
+            alert(headers[0])
+            alert(headers[1])
         }
 
         result.push(obj);
     }
-
+    alert(result)
     return result;
 }
 
