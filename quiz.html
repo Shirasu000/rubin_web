@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+</head>
+<body>
+  <h1>Quiz Page</h1>
+
+  <div>
+    <p id="question-text"></p>
+    <input type="text" id="answer-input" placeholder="答えを入力">
+    <button onclick="checkAnswer()">答えを確認する</button>
+    <p id="result"></p>
+    <button onclick="nextQuestion()">次の問題</button>
+    <button onclick="location.href='index.html'">トップページに戻る</button>
+  </div>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
