@@ -1,85 +1,53 @@
 // quiz.js
 
-// quiz.csvのURL（GitHub Raw URLを使用）
-const csvUrl = 'quiz.csv';
+// CSVファイルのパス
+const csvFilePath = 'question.csv';
 
-let questions = []; // 問題データを保持する配列
-let currentQuestionIndex = -1; // 現在の問題のインデックス
+// ページ読み込み時の処理
+document.addEventListener('DOMContentLoaded', function () {
+    // 「問題を出題する」ボタンにクリックイベントを追加
+    document.querySelector('button').addEventListener('click', loadQuestion);
 
-// ウェブページが読み込まれたときに実行される関数
-window.onload = function () {
-    setupQuizUI();  // クイズのUIを初期化
-    loadQuestions().then(() => {
-        nextQuestion();
-    });
-};
+    // 「解答を提出する」ボタンにクリックイベントを追加
+    document.querySelector('div button').addEventListener('click', checkAnswer);
+});
 
-// クイズのUIを初期化する関数
-function setupQuizUI() {
-    document.getElementById('start-quiz-button').addEventListener('click', startQuiz);
-    document.getElementById('submit-answer-button').addEventListener('click', checkAnswer);
-    document.getElementById('next-question-button').addEventListener('click', nextQuestion);
-}
-
-// CSVファイルから問題を読み込む関数
-function loadQuestions() {
-    return fetch(csvUrl)
+// 問題を出題する処理
+function loadQuestion() {
+    // CSVファイルから問題を取得
+    fetch(csvFilePath)
         .then(response => response.text())
         .then(data => {
-            // CSVデータを処理してquestions配列に格納
-            questions = processData(data);
+            const lines = data.split('\r\n').slice(1); // 1行目はヘッダーなので除外
+            const randomIndex = Math.floor(Math.random() * lines.length);
+            const randomQuestion = lines[randomIndex].split(',');
+
+            // 問題を画面に表示
+            const questionText = randomQuestion[0];
+            alert(questionText); // 本来はHTML要素を操作して表示するべきですが、簡略化のためアラートを使用
+            // 問題ごとに解答を保持
+            currentAnswer = randomQuestion[1];
         });
 }
 
-// CSVデータを処理して配列に変換する関数
-function processData(csv) {
-    const lines = csv.split('\r\n');
-    const result = [];
-    const headers = lines[0].split(',');
-
-    for (let i = 1; i < lines.length; i++) {
-        const obj = {};
-        const currentLine = lines[i].split(',');
-
-        for (let j = 0; j < headers.length; j++) {
-            obj[headers[j]] = currentLine[j];
-        }
-
-        result.push(obj);
-    }
-    return result;
-}
-
-// 次の問題を表示する関数
-function nextQuestion() {
-    if (questions.length > 0) {
-        currentQuestionIndex = Math.floor(Math.random() * questions.length);
-        const currentQuestion = questions[currentQuestionIndex];
-        document.getElementById('question-container').textContent = currentQuestion['Question'];
-        document.getElementById('answer-input').value = '';
-        document.getElementById('result').textContent = '';
-        document.getElementById('next-question-button').style.display = 'none';
-        document.getElementById('submit-answer-button').disabled = false;
-    }
-}
-
-// クイズを開始する関数
-function startQuiz() {
-    nextQuestion();
-    document.getElementById('start-quiz-button').style.display = 'none';
-    document.getElementById('quiz-container').style.display = 'block';
-}
-
-// 答えを確認する関数
+// 解答をチェックする処理
 function checkAnswer() {
-    const userAnswer = document.getElementById('answer-input').value;
-    const correctAnswer = questions[currentQuestionIndex]['Answer'];
+    // ユーザからの入力を取得
+    const userAnswer = document.getElementById('userAnswer').value;
 
-    if (userAnswer.localeCompare(correctAnswer, 'ja', { sensitivity: 'base' }) === 0) {
-        document.getElementById('result').textContent = '正解！';
+    // 解答の比較
+    if (userAnswer.trim().toLowerCase() === currentAnswer.trim().toLowerCase()) {
+        alert('正解');
     } else {
-        document.getElementById('result').textContent = '不正解…';
+        alert('不正解');
     }
-    document.getElementById('next-question-button').style.display = 'block';
-    document.getElementById('submit-answer-button').disabled = true;
+
+    // 入力欄をクリア
+    document.getElementById('userAnswer').value = '';
+
+    // 「問題を出題する」ボタンを押すことで、新しい問題を出題
+    loadQuestion();
 }
+
+// 現在の問題の解答を保持する変数
+let currentAnswer;
