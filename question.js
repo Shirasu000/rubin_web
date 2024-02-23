@@ -46,8 +46,8 @@ function nextQuestion() {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('question-text').textContent = currentQuestion['Question'];
-        document.getElementById('answer-input').value = '';
-        document.getElementById('result').textContent = 'ｈｆｈｊｇｊ';
+        document.getElementById('answer-input').value = 'あああ';
+        document.getElementById('result').textContent = '';
     }
 }
 
