@@ -45,7 +45,9 @@ function nextQuestion() {
     if (questions.length > 0) {
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
-        alert(questions)
+        alert(questions[0])
+        alert(questions[1])
+        alert(questions[2])
         alert(currentQuestionIndex)
         document.getElementById('question-text').textContent = currentQuestion['Question'];
         document.getElementById('answer-input').value = '';
