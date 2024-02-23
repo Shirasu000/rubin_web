@@ -1,5 +1,5 @@
 // question.csvのURL（GitHub Raw URLを使用）
-const csvUrl = './question.csv';
+const csvUrl = 'question.csv';
 
 let questions = []; // 問題データを保持する配列
 let currentQuestionIndex = -1; // 現在の問題のインデックス
