@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Page</title>
-  <script src="js/quiz.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <script src="js/quiz.js" defer></script>
 </head>
 <body>
-  <h1>Quiz Page</h1>
+    <h1>Quiz Page</h1>
 
-  <!-- ① 問題を出題するボタン -->
-  <button id="start-quiz-button">問題を出題する</button>
+    <button onclick="loadQuestion()">問題を出題する</button>
 
-  <!-- ② 問題表示、入力フォーム、解答提出ボタン -->
-  <div id="quiz-container" style="display: none;">
-    <div id="question-container"></div>
-    <label for="answer-input">回答：</label>
-    <input type="text" id="answer-input">
-    <button id="submit-answer-button">解答を提出する</button>
-  </div>
+    <div>
+        <input type="text" id="userAnswer" placeholder="解答を入力">
+        <button onclick="checkAnswer()">解答を提出する</button>
+    </div>
 
-  <!-- ③ トップページに戻るボタン -->
-  <button onclick="location.href='index.html'">トップページに戻る</button>
-
-  <!-- ④ 正誤表示 -->
-  <p id="result"></p>
-
+    <button onclick="location.href='index.html'">トップページに戻る</button>
 </body>
 </html>
