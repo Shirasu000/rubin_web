@@ -1,76 +1,210 @@
 /* index.css */
 
+/* Google FontsからRobotoフォントを読み込む */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* Font Awesomeからアイコンを読み込む */
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+
+/* body要素に対するスタイル */
 body {
     font-family: 'Roboto', sans-serif; /* フォントをRobotoに変更する */
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+    background-color: #f8f8f8; /* 背景色を薄い灰色にする */
+    margin: 0; /* 余白をなくす */
+    padding: 0; /* 余白をなくす */
 }
 
+/* header要素に対するスタイル */
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #3498db;
+    text-align: center; /* テキストを中央寄せにする */
+    padding: 20px; /* 余白を20pxにする */
+    background-color: #3498db; /* 背景色を青色にする */
 }
 
+/* img要素に対するスタイル */
 img {
-    max-width: 100px; /* 画像の最大幅を調整 */
-    height: auto; /* アスペクト比を保つために高さを自動調整 */
-    display: inline-block; /* テキストとの配置を調整 */
-    margin-right: 10px; /* 画像とテキストの間隔を調整 */
+    max-width: 100px; /* 画像の最大幅を100pxにする */
+    height: auto; /* アスペクト比を保つために高さを自動調整する */
+    display: inline-block; /* テキストとの配置を調整する */
+    margin-right: 10px; /* 画像とテキストの間隔を10pxにする */
 }
 
+/* h1要素に対するスタイル */
 h1 {
-    color: #333;
-    display: inline-block; /* 画像との配置を調整 */
-    vertical-align: middle; /* 画像との配置を調整 */
+    color: #333; /* 文字色を濃い灰色にする */
+    display: inline-block; /* テキストとの配置を調整する */
+    vertical-align: middle; /* テキストとの配置を調整する */
 }
 
+/* nav要素に対するスタイル */
 nav {
     display: flex; /* メニューを水平に並べる */
     align-items: center; /* メニューの項目を中央に揃える */
-    background-color: #333; /* メニューの背景色 */
+    background-color: #333; /* メニューの背景色を濃い灰色にする */
 }
 
+/* nav要素の中のa要素に対するスタイル */
 nav a {
-    padding: 10px; /* メニューの項目の余白 */
-    color: #fff; /* メニューの文字色 */
+    padding: 10px; /* メニューの項目の余白を10pxにする */
+    color: #fff; /* メニューの文字色を白色にする */
     text-decoration: none; /* メニューの下線を消す */
 }
 
+/* nav要素の中のa要素にカーソルを合わせたときに適用するスタイル */
 nav a:hover {
-    color: #3498db; /* メニューの項目にカーソルを合わせたときの文字色 */
+    color: #3498db; /* メニューの文字色を青色にする */
 }
 
+/* div要素に対するスタイル */
 div {
-    max-width: 800px; /* コンテンツの領域の最大幅 */
+    max-width: 800px; /* コンテンツの領域の最大幅を800pxにする */
     margin: 0 auto; /* コンテンツの領域を中央に寄せる */
-    padding: 20px; /* コンテンツの領域の余白 */
-    background-color: #fff; /* コンテンツの領域の背景色 */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* コンテンツの領域の影 */
+    padding: 20px; /* コンテンツの領域の余白を20pxにする */
+    background-color: #fff; /* コンテンツの領域の背景色を白色にする */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* コンテンツの領域の影をつける */
 }
 
+/* h2要素に対するスタイル */
 h2 {
-    color: #3498db;
+    color: #3498db; /* 文字色を青色にする */
 }
 
+/* p要素に対するスタイル */
 p {
-    margin: 10px 0;
-    color: #555;
+    margin: 10px 0; /* 段落の間隔を10pxにする */
+    color: #555; /* 文字色を薄い灰色にする */
 }
 
+/* a要素に対するスタイル */
 a {
-    color: #3498db;
-    text-decoration: none;
+    color: #3498db; /* 文字色を青色にする */
+    text-decoration: none; /* 下線を消す */
 }
 
+/* a要素にカーソルを合わせたときに適用するスタイル */
 a:hover {
-    color: #2574a9;
+    color: #2574a9; /* 文字色を濃い青色にする */
 }
 
-/* 以下、画面のサイズに応じてスタイルを変更する */
+/* 画面の幅が768px以下のときに適用するスタイル */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* メニューを垂直に並べる */
+        position: fixed; /* メニューを固定する */
+        top: 0; /* メニューの位置を上端にする */
+        left: 0; /* メニューの位置を左端にする */
+        width: 100%; /* メニューの幅を画面いっぱいにする */
+        height: 100%; /* メニューの高さを画面いっぱいにする */
+        transform: translateX(-100%); /* メニューを画面から隠す */
+        transition: transform 0.3s ease; /* メニューの移動にアニメーションをつける */
+    }
 
-@media (max-width: 768px) { /* 画面の幅が768px以下のとき */
+    nav a {
+        display: block; /* メニューの項目をブロック要素にする */
+        text-align: center; /* メニューの項目を中央寄せにする */
+        font-size: 20px; /* メニューの項目の文字サイズを大きくする */
+        font-weight: bold; /* メニューの項目の文字を太くする */
+    }
+
+    nav a:first-child {
+        margin-top: 100px; /* メニューの最初の項目の上に余白をつける */
+    }
+
+    nav a:last-child {
+        margin-bottom: 20px; /* メニューの最後の項目の下に余白をつける */
+    }
+
+    .menu-icon { /* ハンバーガーメニューのアイコン */
+/* index.css */
+
+/* Google FontsからRobotoフォントを読み込む */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* Font Awesomeからアイコンを読み込む */
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+
+/* body要素に対するスタイル */
+body {
+    font-family: 'Roboto', sans-serif; /* フォントをRobotoに変更する */
+    background-color: #f8f8f8; /* 背景色を薄い灰色にする */
+    margin: 0; /* 余白をなくす */
+    padding: 0; /* 余白をなくす */
+}
+
+/* header要素に対するスタイル */
+header {
+    text-align: center; /* テキストを中央寄せにする */
+    padding: 20px; /* 余白を20pxにする */
+    background-color: #3498db; /* 背景色を青色にする */
+}
+
+/* img要素に対するスタイル */
+img {
+    max-width: 100px; /* 画像の最大幅を100pxにする */
+    height: auto; /* アスペクト比を保つために高さを自動調整する */
+    display: inline-block; /* テキストとの配置を調整する */
+    margin-right: 10px; /* 画像とテキストの間隔を10pxにする */
+}
+
+/* h1要素に対するスタイル */
+h1 {
+    color: #333; /* 文字色を濃い灰色にする */
+    display: inline-block; /* テキストとの配置を調整する */
+    vertical-align: middle; /* テキストとの配置を調整する */
+}
+
+/* nav要素に対するスタイル */
+nav {
+    display: flex; /* メニューを水平に並べる */
+    align-items: center; /* メニューの項目を中央に揃える */
+    background-color: #333; /* メニューの背景色を濃い灰色にする */
+}
+
+/* nav要素の中のa要素に対するスタイル */
+nav a {
+    padding: 10px; /* メニューの項目の余白を10pxにする */
+    color: #fff; /* メニューの文字色を白色にする */
+    text-decoration: none; /* メニューの下線を消す */
+}
+
+/* nav要素の中のa要素にカーソルを合わせたときに適用するスタイル */
+nav a:hover {
+    color: #3498db; /* メニューの文字色を青色にする */
+}
+
+/* div要素に対するスタイル */
+div {
+    max-width: 800px; /* コンテンツの領域の最大幅を800pxにする */
+    margin: 0 auto; /* コンテンツの領域を中央に寄せる */
+    padding: 20px; /* コンテンツの領域の余白を20pxにする */
+    background-color: #fff; /* コンテンツの領域の背景色を白色にする */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* コンテンツの領域の影をつける */
+}
+
+/* h2要素に対するスタイル */
+h2 {
+    color: #3498db; /* 文字色を青色にする */
+}
+
+/* p要素に対するスタイル */
+p {
+    margin: 10px 0; /* 段落の間隔を10pxにする */
+    color: #555; /* 文字色を薄い灰色にする */
+}
+
+/* a要素に対するスタイル */
+a {
+    color: #3498db; /* 文字色を青色にする */
+    text-decoration: none; /* 下線を消す */
+}
+
+/* a要素にカーソルを合わせたときに適用するスタイル */
+a:hover {
+    color: #2574a9; /* 文字色を濃い青色にする */
+}
+
+/* 画面の幅が768px以下のときに適用するスタイル */
+@media (max-width: 768px) {
     nav {
         flex-direction: column; /* メニューを垂直に並べる */
         position: fixed; /* メニューを固定する */
@@ -150,4 +284,3 @@ a:hover {
     }
 }
 
-    
