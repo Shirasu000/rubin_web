@@ -1,4 +1,3 @@
-// question.csvのURL（GitHub Raw URLを使用）
 const csvUrl = 'quiz.csv';
 
 let questions = []; // 問題データを保持する配列
@@ -23,9 +22,9 @@ function loadQuestions() {
 
 // CSVデータを処理して配列に変換する関数
 function processData(csv) {
+    alert("csv")
+    alert(csv)
     const lines = csv.split('\r\n');
-    alert("lines")
-    alert(lines)
     const result = [];
     const headers = lines[0].split(',');
 
