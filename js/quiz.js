@@ -1,4 +1,4 @@
-const csvUrl = 'quiz.csv';
+const csvFilePath = 'quiz.csv';
 
 let questions = []; // 問題データを保持する配列
 let currentQuestionIndex = -1; // 現在の問題のインデックス
@@ -10,14 +10,13 @@ window.onload = function () {
 
 // CSVファイルから問題を読み込む関数
 function loadQuestions() {
-    fetch(csvUrl)
+    fetch(csvFilePath)
         .then(response => response.text())
         .then(data => {
             // CSVデータを処理してquestions配列に格納
             questions = processData(data);
-            alert("questions")
-            alert(questions)
-        });
+        })
+        .catch(error => console.error('CSVファイルの読み込みエラー:', error));
 }
 
 // CSVデータを処理して配列に変換する関数
