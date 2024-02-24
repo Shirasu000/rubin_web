@@ -41,6 +41,7 @@ function processData(csv) {
 
 // 問題を表示する関数
 function showQuestion() {
+    alert(questions)
     if (questions.length > 0) {
         alert('Hello')
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
