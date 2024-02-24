@@ -16,6 +16,7 @@ function loadQuestions() {
         .then(data => {
             // CSVデータを処理してquestions配列に格納
             questions = processData(data);
+            alert(questions)
         });
 }
 
@@ -41,7 +42,7 @@ function processData(csv) {
 
 // 問題を表示する関数
 function showQuestion() {
-    alert(questions)
+    alert('こんにちは')
     if (questions.length > 0) {
         alert('Hello')
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
