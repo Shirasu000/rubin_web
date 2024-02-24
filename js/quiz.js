@@ -47,7 +47,7 @@ function showQuestion() {
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('questionText').textContent = currentQuestion['Question'];
         alert(currentQuestion['Question'])
-        document.getElementById('answer-input').value = '';
+        document.getElementById('userAnswer').value = '';
         document.getElementById('result').textContent = '';
     }
 }
