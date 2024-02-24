@@ -1,71 +1,26 @@
-/* styles.css */
-
-/* リセット：デフォルトのマージンとパディングをリセット */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* 背景色とフォントファミリーを設定 */
 body {
-    background-color: #f0f0f0;
-    font-family: 'Rond B', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* ヘッダーをスタイリング */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* ロゴをスタイリング */
-.logo-container img {
-    max-width: 10%; /* 画像を10%のサイズに縮小 */
-    height: auto;
-}
-
-/* ナビゲーションメニューをスタイリング */
-nav ul {
-    display: flex; /* リスト形式ではなくフレックスボックスを使用 */
-    justify-content: center;
-    margin-top: 20px;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* インフォメーションセクションをスタイリング */
-.information {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* インフォメーションセクション内のリンクをスタイリング */
-.information a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-/* インフォメーションセクション内のリンクにホバーエフェクトを追加 */
-.information a:hover {
-    color: #666;
-}
-
-/* 画像をタイトルの両脇に配置 */
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 10%;
+}
+
+.logo-container h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.information {
+    text-align: center;
 }
