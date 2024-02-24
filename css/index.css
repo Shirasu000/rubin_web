@@ -1,8 +1,8 @@
 /* index.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
 }
@@ -11,7 +11,7 @@ h1 {
     color: #333;
     text-align: center;
     padding: 20px;
-    background-color: #00bcd4;
+    background-color: #3498db;
     margin: 0;
 }
 
@@ -20,15 +20,16 @@ button {
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4caf50;
+    background-color: #2ecc71;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #27ae60;
 }
 
 div {
@@ -36,23 +37,25 @@ div {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #333;
+    color: #3498db;
 }
 
 p {
     margin: 10px 0;
+    color: #555;
 }
 
 a {
-    color: #00bcd4;
+    color: #3498db;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #2574a9;
 }
