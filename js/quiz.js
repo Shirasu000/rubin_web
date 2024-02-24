@@ -16,6 +16,7 @@ function loadQuestions() {
         .then(data => {
             // CSVデータを処理してquestions配列に格納
             questions = processData(data);
+            alert("questions")
             alert(questions)
         });
 }
@@ -23,6 +24,8 @@ function loadQuestions() {
 // CSVデータを処理して配列に変換する関数
 function processData(csv) {
     const lines = csv.split('\r\n');
+    alert("lines")
+    alert(lines)
     const result = [];
     const headers = lines[0].split(',');
 
