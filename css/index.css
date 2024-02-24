@@ -16,7 +16,9 @@ body {
 }
 
 .logo-container img {
-    width: 5%;
+    width: 5%; /* 修正：元の画像サイズの5%に縮小 */
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .logo-container h1 {
