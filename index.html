@@ -2,29 +2,33 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 画面の幅に合わせて表示を調整する -->
-    <meta name="description" content="クイズやイベントの情報を発信するwebサイトです。"> <!-- webサイトの説明 -->
-    <meta name="keywords" content="ルビン,クイズ,イベント,思うつぼ"> <!-- webサイトのキーワード -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="クイズやイベントの情報を発信するwebサイトです。"> <!-- ウェブサイトの説明 -->
+    <meta name="keywords" content="ルビン,クイズ,イベント,思うつぼ"> <!-- ウェブサイトのキーワード -->
     <title>ルビンの思うつぼ</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css"> <!-- CSSファイルを読み込む -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"> <!-- Font Awesomeからアイコンを読み込む -->
 </head>
 <body>
     <header>
-        <img src="images/rubin.png" alt="Rubin Logo">
-        <h1>ルビンの思うつぼ</h1>
+        <!-- ロゴとタイトルを同じコンテナ内に配置 -->
+        <div class="logo-container">
+            <img src="images/rubin.png" alt="Rubin Logo">
+            <h1>ルビンの思うつぼ</h1>
+        </div>
         <nav>
-            <a href="index.html"><i class="fas fa-home"></i>ホーム</a> <!-- アイコンを追加する -->
-            <a href="quiz.html"><i class="fas fa-question-circle"></i>クイズ</a>
-            <a href="contact.html"><i class="fas fa-envelope"></i>お問い合わせ</a>
+            <ul>
+                <!-- ナビゲーションメニューをリスト形式に -->
+                <li><a href="index.html"><i class="fas fa-home"></i>ホーム</a></li>
+                <li><a href="quiz.html"><i class="fas fa-question-circle"></i>クイズ</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>お問い合わせ</a></li>
+            </ul>
         </nav>
     </header>
     
-    <div>
+    <div class="information">
         <h2>Information</h2>
-        <p>
-            <a href="event1.html"><i class="fas fa-calendar-alt"></i>イベント</a>
-        </p>
+        <p><a href="event1.html"><i class="fas fa-calendar-alt"></i>イベント</a></p>
     </div>
 </body>
 </html>
