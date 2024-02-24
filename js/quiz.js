@@ -14,8 +14,6 @@ function loadQuestions() {
         .then(response => response.text())
         .then(data => {
             // CSVデータを処理してquestions配列に格納
-            alert("data")
-            alert(data)
             questions = processData(data);
         })
         .catch(error => console.error('CSVファイルの読み込みエラー:', error));
@@ -23,8 +21,6 @@ function loadQuestions() {
 
 // CSVデータを処理して配列に変換する関数
 function processData(csv) {
-    alert("csv")
-    alert(csv)
     const lines = csv.split('\r\n');
     const result = [];
     const headers = lines[0].split(',');
@@ -45,9 +41,7 @@ function processData(csv) {
 
 // 問題を表示する関数
 function showQuestion() {
-    alert('こんにちは')
     if (questions.length > 0) {
-        alert('Hello')
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('questionText').textContent = currentQuestion['Question'];
