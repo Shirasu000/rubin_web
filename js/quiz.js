@@ -52,7 +52,7 @@ function showQuestion() {
 
 // 答えを確認する関数
 function checkAnswer() {
-    const userAnswer = document.getElementById('answer-input').value.toLowerCase();
+    const userAnswer = document.getElementById('userAnswer').value.toLowerCase();
     const correctAnswer = questions[currentQuestionIndex]['Answer'].toLowerCase();
 
     if (userAnswer === correctAnswer) {
