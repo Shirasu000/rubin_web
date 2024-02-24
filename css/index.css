@@ -22,14 +22,13 @@ header {
 
 /* ロゴをスタイリング */
 .logo-container img {
-    max-width: 100%;
+    max-width: 10%; /* 画像を10%のサイズに縮小 */
     height: auto;
 }
 
 /* ナビゲーションメニューをスタイリング */
 nav ul {
-    list-style: none;
-    display: flex;
+    display: flex; /* リスト形式ではなくフレックスボックスを使用 */
     justify-content: center;
     margin-top: 20px;
 }
