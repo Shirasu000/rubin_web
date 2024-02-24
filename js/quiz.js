@@ -14,6 +14,8 @@ function loadQuestions() {
         .then(response => response.text())
         .then(data => {
             // CSVデータを処理してquestions配列に格納
+            alert("data")
+            alert(data)
             questions = processData(data);
         })
         .catch(error => console.error('CSVファイルの読み込みエラー:', error));
