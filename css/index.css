@@ -1,7 +1,7 @@
 /* index.css */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* フォントをRobotoに変更する */
     background-color: #f8f8f8;
     margin: 0;
     padding: 0;
@@ -67,3 +67,87 @@ a {
 a:hover {
     color: #2574a9;
 }
+
+/* 以下、画面のサイズに応じてスタイルを変更する */
+
+@media (max-width: 768px) { /* 画面の幅が768px以下のとき */
+    nav {
+        flex-direction: column; /* メニューを垂直に並べる */
+        position: fixed; /* メニューを固定する */
+        top: 0; /* メニューの位置を上端にする */
+        left: 0; /* メニューの位置を左端にする */
+        width: 100%; /* メニューの幅を画面いっぱいにする */
+        height: 100%; /* メニューの高さを画面いっぱいにする */
+        transform: translateX(-100%); /* メニューを画面から隠す */
+        transition: transform 0.3s ease; /* メニューの移動にアニメーションをつける */
+    }
+
+    nav a {
+        display: block; /* メニューの項目をブロック要素にする */
+        text-align: center; /* メニューの項目を中央寄せにする */
+        font-size: 20px; /* メニューの項目の文字サイズを大きくする */
+        font-weight: bold; /* メニューの項目の文字を太くする */
+    }
+
+    nav a:first-child {
+        margin-top: 100px; /* メニューの最初の項目の上に余白をつける */
+    }
+
+    nav a:last-child {
+        margin-bottom: 20px; /* メニューの最後の項目の下に余白をつける */
+    }
+
+    .menu-icon { /* ハンバーガーメニューのアイコン */
+        display: block; /* アイコンを表示する */
+        position: fixed; /* アイコンを固定する */
+        top: 20px; /* アイコンの位置を上端から20pxにする */
+        right: 20px; /* アイコンの位置を右端から20pxにする */
+        width: 40px; /* アイコンの幅を40pxにする */
+        height: 40px; /* アイコンの高さを40pxにする */
+        z-index: 10; /* アイコンを最前面に表示する */
+        cursor: pointer; /* アイコンにカーソルを合わせたときにポインターにする */
+    }
+
+    .menu-icon span { /* アイコンの横棒 */
+        display: block; /* 横棒を表示する */
+        position: absolute; /* 横棒を絶対位置にする */
+        width: 100%; /* 横棒の幅をアイコンの幅に合わせる */
+        height: 4px; /* 横棒の高さを4pxにする */
+        background-color: #fff; /* 横棒の色を白にする */
+        border-radius: 2px; /* 横棒の角を丸くする */
+        transition: transform 0.3s ease; /* 横棒の移動にアニメーションをつける */
+    }
+
+    .menu-icon span:nth-child(1) { /* アイコンの上の横棒 */
+        top: 0; /* 横棒の位置を上端にする */
+    }
+
+    .menu-icon span:nth-child(2) { /* アイコンの真ん中の横棒 */
+        top: 50%; /* 横棒の位置を中央にする */
+        transform: translateY(-50%); /* 横棒の位置を中央に合わせる */
+    }
+
+    .menu-icon span:nth-child(3) { /* アイコンの下の横棒 */
+        bottom: 0; /* 横棒の位置を下端にする */
+    }
+
+    .menu-icon.active { /* アイコンがクリックされたとき */
+        nav {
+            transform: translateX(0); /* メニューを画面に表示する */
+        }
+
+        .menu-icon span:nth-child(1) { /* アイコンの上の横棒 */
+            transform: rotate(45deg) translate(10px, 10px); /* 横棒を右下に傾ける */
+        }
+
+        .menu-icon span:nth-child(2) { /* アイコンの真ん中の横棒 */
+            opacity: 0; /* 横棒を消す */
+        }
+
+        .menu-icon span:nth-child(3) { /* アイコンの下の横棒 */
+            transform: rotate(-45deg) translate(10px, -10px); /* 横棒を右上に傾ける */
+        }
+    }
+}
+
+    
