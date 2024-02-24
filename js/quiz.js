@@ -42,6 +42,7 @@ function processData(csv) {
 // 問題を表示する関数
 function showQuestion() {
     if (questions.length > 0) {
+        alert('Hello')
         currentQuestionIndex = Math.floor(Math.random() * questions.length);
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('questionText').textContent = currentQuestion['Question'];
