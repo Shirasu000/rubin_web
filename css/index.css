@@ -1,20 +1,18 @@
-/* ページ全体のスタイル */
-body {
-    font-family: sans-serif;
+/* styles.css */
+
+/* リセット：デフォルトのマージンとパディングをリセット */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
 }
 
-
-
-/* 画像のスタイル */
-img {
-    max-width: 10%;
-    height: auto;
+/* 背景色とフォントファミリーを設定 */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Rond B', sans-serif;
 }
 
-/* ヘッダーのスタイル */
+/* ヘッダーをスタイリング */
 header {
     background-color: #333;
     color: #fff;
@@ -22,35 +20,53 @@ header {
     text-align: center;
 }
 
-header h1 {
-    font-size: 24px;
-    margin: 0;
+/* ロゴをスタイリング */
+.logo-container img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* ナビゲーションのスタイル */
-nav {
-    margin-top: 10px;
+/* ナビゲーションメニューをスタイリング */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+nav ul li {
     margin-right: 20px;
 }
 
-/* 見出しのスタイル */
-h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* リンクのスタイル */
-a {
-    color: #007bff;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+/* インフォメーションセクションをスタイリング */
+.information {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* インフォメーションセクション内のリンクをスタイリング */
+.information a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* インフォメーションセクション内のリンクにホバーエフェクトを追加 */
+.information a:hover {
+    color: #666;
+}
+
+/* 画像をタイトルの両脇に配置 */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
