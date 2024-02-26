@@ -1,50 +1,48 @@
-/* css/index.css */
-
-/* ヘッダー */
+/* css.index */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
-
-.logo-container img {
-    max-width: 5%; /* 画像を5%のサイズに縮小 */
-    height: auto;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
-
+.logo-container img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
 .logo-container h1 {
     font-size: 24px;
-    margin: 10px 0;
+    margin: 0;
 }
-
+nav {
+    margin-top: 20px;
+}
 nav a {
     color: #fff;
     text-decoration: none;
     margin-right: 20px;
 }
-
-/* メニュー */
-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* イベント情報 */
 .information {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     text-align: center;
+    margin-top: 20px;
 }
-
 .information h2 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 0;
 }
-
 .information a {
     color: #333;
     text-decoration: none;
-    font-weight: bold;
 }
