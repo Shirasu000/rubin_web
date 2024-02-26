@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<body>
+    「ルビンの思うつぼ」という社会人クイズサークルです。
+    <button onclick="location.href='index.html'">トップページに戻る</button>
+</body>
+</html>
