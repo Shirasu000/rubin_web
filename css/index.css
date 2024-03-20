@@ -50,11 +50,12 @@ nav a {
 .profiles {
     display: flex; /* 複数のプロフィールを横並びにするために追加 */
     gap: 1%; /* プロフィール間のスペースを調整 */
+    justify-content: center;
 }
 
 .profile {
     background: #FFF;
-    width: 300px;
+    width: 250px;
     padding: 2rem;
     border: 1px solid #1a1a1a;
     display: flex; /* 横並びにするために追加 */
