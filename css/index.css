@@ -82,8 +82,3 @@ nav a {
 .profile__desc {
     line-height: 1.6rem;
 }
-
-/* デモ用の調整 */
-body {
-    padding: 50px 20px;
-}
