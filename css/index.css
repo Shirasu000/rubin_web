@@ -13,13 +13,16 @@ header {
 }
 .logo-container {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 .logo-container img {
-    width: 100%;
-    max-width: 100%;
+    width: 40px;
     height: auto;
+    margin-right: 10px;
+}
+.logo-container h1 {
+    font-size: 24px;
+    margin: 0;
 }
 nav {
     margin-top: 20px;
@@ -46,4 +49,45 @@ nav a {
 #wrap{
     margin: 1%;
     background: #f9f9f9;
+}
+
+/* プロフィール画面用設定 */
+.profiles {
+    display: flex; /* 複数のプロフィールを横並びにするために追加 */
+    gap: 20px; /* プロフィール間のスペースを調整 */
+}
+
+.profile {
+    background: #FFF;
+    width: 300px;
+    padding: 2rem;
+    border: 1px solid #1a1a1a;
+    display: flex; /* 横並びにするために追加 */
+    flex-direction: column; /* 縦方向の並びを維持 */
+    align-items: center; /* 要素を中央寄せ */
+}
+
+.profile__img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.profile__name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 1rem auto 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.profile__desc {
+    line-height: 1.6rem;
+}
+
+/* デモ用の調整 */
+body {
+    padding: 50px 20px;
 }
