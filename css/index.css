@@ -13,16 +13,13 @@ header {
 }
 .logo-container {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 .logo-container img {
-    width: 40px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin-right: 10px;
-}
-.logo-container h1 {
-    font-size: 24px;
-    margin: 0;
 }
 nav {
     margin-top: 20px;
