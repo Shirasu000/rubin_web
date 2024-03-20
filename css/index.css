@@ -82,3 +82,9 @@ nav a {
 .profile__desc {
     line-height: 1.6rem;
 }
+
+a:link {
+  color: blue; 
+  background-color: transparent;   
+  text-decoration: none;
+}
