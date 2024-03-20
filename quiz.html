@@ -22,17 +22,20 @@
         </nav>
     </header>
     
-    <h1>Quiz Page</h1>
-
-    <button onclick="showQuestion()">問題を出題する</button>
-
-    <div>
-        <p id="questionText"></p> <!-- 問題を表示するための要素 -->
-        <input type="text" id="userAnswer" placeholder="解答を入力">
-        <button onclick="checkAnswer()">解答を提出する</button>
-        <p id="result"></p> <!-- 結果を表示するための要素 -->
+    <div id="wrap">
+        <h1>Quiz Page</h1>
+        
+        <button onclick="showQuestion()">問題を出題する</button>
+        
+        <div>
+            <p id="questionText"></p> <!-- 問題を表示するための要素 -->
+            <input type="text" id="userAnswer" placeholder="解答を入力">
+            <button onclick="checkAnswer()">解答を提出する</button>
+            <p id="result"></p> <!-- 結果を表示するための要素 -->
+        </div>
+        
+        <button onclick="location.href='index.html'">トップページに戻る</button>
+    
     </div>
-
-    <button onclick="location.href='index.html'">トップページに戻る</button>
 </body>
 </html>
