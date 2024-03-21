@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCM9RXVP08"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BCM9RXVP08');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Page</title>
@@ -32,10 +39,7 @@
             <input type="text" id="userAnswer" placeholder="解答を入力">
             <button onclick="checkAnswer()">解答を提出する</button>
             <p id="result"></p> <!-- 結果を表示するための要素 -->
-        </div>
-        
-        <button onclick="location.href='index.html'">トップページに戻る</button>
-    
+        </div>    
     </div>
 </body>
 </html>
