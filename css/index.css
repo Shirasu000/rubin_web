@@ -28,6 +28,12 @@ nav a {
     margin-right: 30px;
     line-height: 2.5;
 }
+
+nav a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
 .information {
     background-color: #fff;
     padding: 20px;
