@@ -166,3 +166,8 @@ th {
     background-color: #f2f2f2;
 }
 
+
+/*スクロールバーを常に表示する*/
+html {
+ overflow-y: scroll;
+}
