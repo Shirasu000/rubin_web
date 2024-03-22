@@ -61,3 +61,21 @@ function checkAnswer() {
         document.getElementById('result').textContent = '不正解';
     }
 }
+
+
+// テーブルの表示切り替えを行う関数
+function toggleTable(element) {
+    // テーブル要素を取得
+    var table = element.parentElement.querySelector('.article-table');
+
+    // テーブルの表示状態を取得
+    var computedStyle = window.getComputedStyle(table);
+    var displayStyle = computedStyle.getPropertyValue('display');
+
+    // テーブルの表示状態を切り替える
+    if (displayStyle === 'none') {
+        table.style.display = 'block';
+    } else {
+        table.style.display = 'none';
+    }
+}

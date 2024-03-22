@@ -125,6 +125,10 @@ nav a:hover {
     align-items: center; /* 要素を中央寄せ */
 }
 
+.article-table{
+    display: none;
+}
+
 /* 記事タイトルのスタイル */
 h1 {
     font-size: 25px;

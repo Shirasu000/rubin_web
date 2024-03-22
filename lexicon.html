@@ -13,7 +13,7 @@
     <title>About Us</title>
     <link rel="stylesheet" href="css/index.css"> <!-- CSSファイルを読み込む -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-
+    <script src="./js/quiz.js" defer></script>
 </head>
 <body>
     <header>
@@ -33,13 +33,13 @@
         クイズで使える知識をまとめていきます！
         <div class="article-area">
             <!-- ここに記事の内容を書いてください -->
-            <h1>ロシア五人組</h1>
+            <h1 class="group" onclick="toggleTable(this)">ロシア五人組</h1>
             <div class="tags">
                 <span>ロシア</span>
                 <span>音楽</span>
             </div>
             <p>
-                <table>
+                <table class="article-table">
                     <tr>
                         <th>名前</th>
                         <th>代表曲など</th>
@@ -69,8 +69,39 @@
         </div><br>
         <div class="article-area">
             <!-- ここに記事の内容を書いてください -->
-            <h1>六歌仙</h1>
-            <p>記事の本文はここに入ります。</p>
+            <h1 class="group" onclick="toggleTable(this)">六歌仙</h1>
+            <div class="tags">
+                <span>ロシア</span>
+                <span>音楽</span>
+            </div>
+            <p>
+                <table class="article-table">
+                    <tr>
+                        <th>名前</th>
+                        <th>代表曲など</th>
+                    </tr>
+                    <tr>
+                        <td>ミリィ・バラキレフ</td>
+                        <td>『イスラメイ』</td>
+                    </tr>
+                    <tr>
+                        <td>ツェーザリ・キュイ</td>
+                        <td>『25の前奏曲』 ※軍事教育家としても有名</td>
+                    </tr>
+                    <tr>
+                        <td>モデスト・ムソルグスキー</td>
+                        <td>『禿山の一夜』『展覧会の絵』</td>
+                    </tr>
+                    <tr>
+                        <td>アレクサンドル・ボロディン</td>
+                        <td>『イーゴリ公』</td>
+                    </tr>
+                    <tr>
+                        <td>ニコライ・リムスキー＝コルサコフ</td>
+                        <td>『シェヘラザード』</td>
+                    </tr>
+                </table>
+            </p>
         </div><br>
         <div class="article-area">
             <!-- ここに記事の内容を書いてください -->
@@ -80,6 +111,5 @@
             </p>
         </div><br>
     </div>
-
 </body>
 </html>
