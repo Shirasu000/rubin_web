@@ -108,3 +108,46 @@ nav a:hover {
     line-height: 1.6rem;
 }
 
+/* 記事エリアのスタイル */
+.article-area {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    background: #FFF;
+    padding: 2rem;
+    border: 1px solid #1a1a1a;
+    flex-direction: column; /*縦方向の並びを維持*/
+    align-items: center; /* 要素を中央寄せ */
+}
+
+/* 記事タイトルのスタイル */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 記事本文のスタイル */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* タグのスタイル */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
