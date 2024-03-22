@@ -124,14 +124,13 @@ nav a:hover {
 
 /* 記事タイトルのスタイル */
 h1 {
-    font-size: 24px;
+    font-size: 25px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* 記事本文のスタイル */
 p {
-    font-size: 16px;
     line-height: 1.5;
     color: #666;
 }
@@ -144,10 +143,23 @@ p {
 }
 
 .tags span {
-    background-color: #f9f9f9;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #333;
+    background-color: #d5e4e7;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: black;
+}
+
+/* 表のスタイルを設定 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
 }
 
