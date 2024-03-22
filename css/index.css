@@ -36,6 +36,9 @@ nav a:hover {
 
 .information {
     background-color: #fff;
+    margin: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 20px;
     text-align: center;
 }
@@ -51,7 +54,6 @@ nav a:hover {
     margin: 1%;
     background: #f9f9f9;
 }
-
 
 /*リンク用設定*/
 /* 未訪問のリンク */
