@@ -75,14 +75,14 @@ nav a:hover {
 }
 
 .content .box_scrollbar {
-    width:auto;
+    /* width:auto; */
     height:250px;
-    /* padding:5px; */
+    padding:5px;
     border:3px solid rgb(226, 225, 225);
     border-radius: 10px;
     /* background-color:#efefef; */
-    margin-left:20%;
-    margin-right:20%;
+    margin-left:15%;
+    margin-right:15%;
     /* color:#000; */
     /* font-size:12px; */
     overflow-y: scroll;
