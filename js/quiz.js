@@ -75,7 +75,9 @@ function toggle(element) {
     // hiddenの表示状態を切り替える
     if (displayStyle === 'none') {
         hidden.style.display = 'block';
+        element.classList.add('expanded');
     } else {
         hidden.style.display = 'none';
+        element.classList.remove('expanded');
     }
 }

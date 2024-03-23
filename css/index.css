@@ -166,6 +166,16 @@ nav a:hover {
     display: none;
 }
 
+.article .toggle-btn::before {
+    content: "＋";
+    display: inline-block;
+    margin-right: 5px;
+    color:rgb(92, 91, 91);
+}
+
+.article .toggle-btn.expanded::before {
+    content: "－";
+}
 
 /* タグのスタイル */
 .tags {
