@@ -43,8 +43,7 @@ nav a:hover {
 
 
 /* main部 */
-.content{
-}
+
 .content .title{
     padding: 0px;
     padding-top: 10px;
@@ -56,22 +55,22 @@ nav a:hover {
     text-align: center;
 }
 
-.description a:link {
+.content .description a:link {
     color: blue;
     text-decoration: none; /* 下線をなくす */
 }
 
-.description a:visited {
+.content .description a:visited {
     color: blue;
     text-decoration: none; /* 下線をなくす */
 }
 
-.description a:hover {
+.content .description a:hover {
     color: red;
     text-decoration: underline; /* 下線を引く */
 }
 
-.box_scrollbar {
+.content .box_scrollbar {
     width:auto;
     height:250px;
     /* padding:5px; */

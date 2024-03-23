@@ -30,16 +30,17 @@
     </header>
     
     <div id="wrap">
-        <h1>Quiz Page</h1>
-        
-        <button onclick="showQuestion()">問題を出題する</button>
-        
-        <div>
-            <p id="questionText"></p> <!-- 問題を表示するための要素 -->
-            <input type="text" id="userAnswer" placeholder="解答を入力">
-            <button onclick="checkAnswer()">解答を提出する</button>
-            <p id="result"></p> <!-- 結果を表示するための要素 -->
-        </div>    
+        <div class="content">
+            <h2 class="title">Quiz Page</h2>
+            <button onclick="showQuestion()">問題を出題する</button>
+            
+            <div>
+                <p id="questionText"></p> <!-- 問題を表示するための要素 -->
+                <input type="text" id="userAnswer" placeholder="解答を入力">
+                <button onclick="checkAnswer()">解答を提出する</button>
+                <p id="result"></p> <!-- 結果を表示するための要素 -->
+            </div>    
+        </div>
     </div>
 </body>
 </html>
