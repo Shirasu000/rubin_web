@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="logo-container">
             <img src="images/rubin_banner_wide.png" loading="eager", alt="Rubin Logo">
         </div>
@@ -27,7 +27,13 @@
             <a href="lexicon.html"><i class="fas fa-book"></i> Lexicon</a>
             <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
         </nav>
-    </header>
+    </header> -->
+    <div id="header"></div>
+    <script>
+        fetch("header.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("#header").innerHTML = data);
+    </script>
     
     <div id="wrap">
         <div class="content">
