@@ -1,27 +1,26 @@
-/* index.css */
+/* body部（全体）*/
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
 }
-.logo-container {
+
+
+/* header部 */
+#banner img {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo-container img {
     width: 100%;
     max-width: 100%;
     height: auto;
 }
+
 nav {
     background-color: #333;
-    color: #fff;
     padding: 0px;
-    height: 40px;
     text-align: center;
 }
+
 nav a {
     color: #fff;
     text-decoration: none;
@@ -29,48 +28,72 @@ nav a {
     line-height: 2.5;
 }
 
+/*カーソルを合わせたときの処理*/
 nav a:hover {
     color: gray;
     text-decoration: none;
 }
 
-.information {
-    background-color: #fff;
-    margin: 1%;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 20px;
-    text-align: center;
-}
-.information h2 {
-    font-size: 20px;
-    margin: 0;
-}
-.information a {
-    color: #333;
-    text-decoration: none;
-}
+
+
 #wrap{
-    margin: 1%;
+    margin: 5px;
     background: #f9f9f9;
 }
 
-/*リンク用設定*/
-/* 未訪問のリンク */
-.information a:link {
+
+/* main部 */
+
+.content .title{
+    padding: 0px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.content .description{
+    padding: 0px;
+    text-align: center;
+}
+
+.description a:link {
     color: blue;
     text-decoration: none; /* 下線をなくす */
 }
-/* 訪れたリンク */
-.information a:visited {
-    color: purple;
+
+.description a:visited {
+    color: blue;
     text-decoration: none; /* 下線をなくす */
 }
-/* アクティブなリンク */
-.information a:hover {
+
+.description a:hover {
     color: red;
     text-decoration: underline; /* 下線を引く */
 }
+
+.box_srcollbar {
+    overflow:auto;
+    width:300px;
+    height:80px;
+    padding:5px;
+    border:1px solid #000;
+    background-color:#F9F9F9;
+    color:#000;
+    font-size:12px;
+}
+
+.content dl{
+    width: 800px;
+}
+
+.content dt{
+    float: left;
+    margin-left: 0px;
+}
+
+.content dd{
+    margin-left: 100px;
+}
+
 
 
 /* プロフィール画面用設定 */
@@ -129,18 +152,6 @@ nav a:hover {
     display: none;
 }
 
-/* 記事タイトルのスタイル */
-h1 {
-    font-size: 25px;
-    color: #333;
-    margin-bottom: 10px; /* タイトルの下に余白を追加 */
-}
-
-/* 記事本文のスタイル */
-p {
-    line-height: 1.5;
-    color: black;
-}
 
 /* タグのスタイル */
 .tags {
@@ -173,5 +184,5 @@ th {
 
 /*スクロールバーを常に表示する*/
 html {
- overflow-y: scroll;
+    overflow-y: scroll;
 }
