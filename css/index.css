@@ -44,6 +44,10 @@ nav a:hover {
 
 /* main部 */
 
+.content{
+    justify-content: center;
+}
+
 .content .title{
     padding: 0px;
     padding-top: 10px;
@@ -99,7 +103,6 @@ nav a:hover {
 }
 
 
-
 /* プロフィール画面用設定 */
 .profiles {
     display: flex;
@@ -140,14 +143,17 @@ nav a:hover {
     line-height: 1.6rem;
 }
 
+/* Lexiconのスタイル */
 
-/* 記事エリアのスタイル */
-.article-area {
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
-    padding-top: 7px; /* 上下の余白を調整 */
-    padding-bottom: 7px; /* 上下の余白を調整 */
+.article {
+    max-width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
     background: #FFF;
@@ -156,7 +162,7 @@ nav a:hover {
     align-items: center; /* 要素を中央寄せ */
 }
 
-.article-table{
+.article-hidden{
     display: none;
 }
 

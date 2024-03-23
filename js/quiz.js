@@ -63,19 +63,19 @@ function checkAnswer() {
 }
 
 
-// テーブルの表示切り替えを行う関数
-function toggleTable(element) {
-    // テーブル要素を取得
-    var table = element.parentElement.querySelector('.article-table');
+// クリック時に表示切り替えを行う関数
+function toggle(element) {
+    // hidden要素を取得
+    var hidden = element.parentElement.querySelector('.article-hidden');
 
-    // テーブルの表示状態を取得
-    var computedStyle = window.getComputedStyle(table);
+    // hiddenの表示状態を取得
+    var computedStyle = window.getComputedStyle(hidden);
     var displayStyle = computedStyle.getPropertyValue('display');
 
-    // テーブルの表示状態を切り替える
+    // hiddenの表示状態を切り替える
     if (displayStyle === 'none') {
-        table.style.display = 'block';
+        hidden.style.display = 'block';
     } else {
-        table.style.display = 'none';
+        hidden.style.display = 'none';
     }
 }
