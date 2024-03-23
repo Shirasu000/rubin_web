@@ -102,19 +102,22 @@ nav a:hover {
 
 /* プロフィール画面用設定 */
 .profiles {
-    display: flex; /* 複数のプロフィールを横並びにするために追加 */
-    gap: 1%; /* プロフィール間のスペースを調整 */
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* プロフィールが折り返されるようにする */
 }
 
 .profile {
     background: #FFF;
-    width: 250px;
-    padding: 2rem;
-    border: 1px solid #1a1a1a;
-    display: flex; /* 横並びにするために追加 */
-    flex-direction: column; /* 縦方向の並びを維持 */
-    align-items: center; /* 要素を中央寄せ */
+    width: 200px;
+    height: 300px;
+    padding: 3%;
+    margin: 5px;
+    border: 1px solid #5f5f5f;
+    border-radius: 5px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile__img {
@@ -136,6 +139,7 @@ nav a:hover {
 .profile__desc {
     line-height: 1.6rem;
 }
+
 
 /* 記事エリアのスタイル */
 .article-area {
