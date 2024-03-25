@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCM9RXVP08"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BCM9RXVP08');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BCM9RXVP08');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,26 +16,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <script src="./js/quiz.js" defer></script>
 </head>
+
 <body>
     <!-- header.htmlの内容を埋め込む -->
     <div id="header"></div>
     <script>
         fetch("header.html")
-          .then((response) => response.text())
-          .then((data) => document.querySelector("#header").innerHTML = data);
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#header").innerHTML = data);
     </script>
-    
+
     <div id="wrap">
         <div class="content">
             <h2 class="title">Lexicon</h2>
-            <div class="description">    
+            <div class="description">
                 クイズで使える知識をまとめていきます！
             </div>
             <div class="articles">
                 <div class="article">
                     <h3 class="toggle-btn" onclick="toggle(this)">ロシア五人組</h3>
-                    <p>
-                        <table class="article-hidden">
+                    <div class="article-hidden">
+                        <p>
+                        19世紀後半のロシアで民族主義的な音楽を作った人たち。
+                        <table>
                             <tr>
                                 <th>名前</th>
                                 <th>代表曲など</th>
@@ -58,47 +62,58 @@
                                 <td>『シェヘラザード』</td>
                             </tr>
                         </table>
-                    </p>
+                        </p>
+                        <p>
+                            <h4 class="goro">語呂合わせ</h4>
+                        </p>
+                    </div>
                 </div>
                 <div class="article">
                     <h3 class="toggle-btn" onclick="toggle(this)">六歌仙</h3>
-            <p>
-                <table class="article-hidden">
-                    <tr>
-                        <th>名前</th>
-                        <th>代表的な歌</th>
-                    </tr>
-                    <tr>
-                        <td>僧正遍昭</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>在原業平</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>文屋康秀</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>小野小町</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>大伴黒主</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </p>
+                    <div class="article-hidden">
+                        <table>
+                            <tr>
+                                <th>名前</th>
+                                <th>代表的な歌</th>
+                            </tr>
+                            <tr>
+                                <td>僧正遍昭（そうじょうへんじょう）</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>在原業平（ありわらのなりひら）</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>文屋康秀（ふんやのやすひで）</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>喜撰法師（きせんほうし）</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>小野小町（おののこまち）</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>大伴黒主（おおとものくろぬし）</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <h4 class="goro">語呂合わせ</h4> 大小の僧が喜ぶ文あり（大：大友黒主、小：小野小町、僧：僧正遍昭、喜ぶ：喜撰法師、文：文屋康秀、あり：在原業平）
+                    </div>
+                </div>
+                <div class="article">
+                    <!-- ここに記事の内容を書いてください -->
+                    <h3 class="toggle-btn" onclick="toggle(this)">特定原材料</h3>
+                    <div class="article-hidden">
+                        えび、かに、くるみ、小麦、そば、卵、乳、落花生 <br>
+                        <h4 class="goro">語呂合わせ</h4> カニこそ食えたら（カ：かに、二：乳、こ：小麦、そ：そば、く：くるみ、え：えび、た：卵、ら：落花生）
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="article">
-            <!-- ここに記事の内容を書いてください -->
-            <h3 class="toggle-btn" onclick="toggle(this)">特定原材料</h3>
-            <p class="article-hidden">
-                えび、かに、くるみ、小麦、そば、卵、乳、落花生 <br>
-            </p>
-        </div>
-    </div>
-</div>
 </body>
+
 </html>

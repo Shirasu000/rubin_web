@@ -210,3 +210,14 @@ th {
 html {
     overflow-y: scroll;
 }
+
+/*語呂合わせ用スタイル*/
+.goro {
+    width: fit-content;
+    display:inline-block;
+    margin-right: 5px;
+    background-color: #cecfcf;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: black;
+}
