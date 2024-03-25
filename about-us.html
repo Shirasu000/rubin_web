@@ -22,87 +22,104 @@
           .then((response) => response.text())
           .then((data) => document.querySelector("#header").innerHTML = data);
     </script>
-
     
-    <div id="wrap"><!-- 上下左右に1%の余白をつける -->
-        <div class="content">
+    <main>
+        <section>
             <h2 class="title">About us</h2>
-            <div class="description">
+            <div class="content">
                 「ルビンの思うつぼ」という社会人クイズサークルです。<br>
                 クイズ問題集の販売やクイズイベントの企画をしています！！<br>
             </div>
-        </div>
-        <div class="content">
+        </section>
 
+        <section>            
             <h2 class="title">メンバー紹介</h2>
             
-            <div class="profiles">
+            <div class="content">
                 
-                <div class="profile">
-                    <img class="profile__img" src="images/profile_image_shirasu.jpg">
-                    <div class="profile__name">シラス</div>
-                    <div class="profile__desc">
-                    趣味はクイズ
-                </div>
+                <div class="profiles">
+                    
+                    <div class="profile">
+                        <img class="profile__img" src="images/profile_image_shirasu.jpg">
+                        <div class="profile__name">シラス</div>
+                        <div class="profile__desc">
+                            趣味はクイズ
+                        </div>
+                    </div>
+                    
+                    <div class="profile">
+                        <img class="profile__img" src="images/profile_image_nabe.jpg">
+                        <div class="profile__name">ナベ</div>
+                        <div class="profile__desc">
+                            趣味はアフォガートフラペチーノ
+                        </div>
+                    </div>
+                    
+                    <div class="profile">
+                        <img class="profile__img" src="images/profile_image_chiru.jpg">
+                        <div class="profile__name">あらちる</div>
+                        <div class="profile__desc">
+                            趣味はクイズ
+                        </div>
+                    </div>
+                    
+                    <div class="profile">
+                        <img class="profile__img" src="images/user.png">
+                        <div class="profile__name">マルコス</div>
+                        <div class="profile__desc">
+                            趣味はクイズ
+                        </div>
+                    </div>
+            
+                    <div class="profile">
+                        <img class="profile__img" src="images/profile_image_cell.jpg">
+                        <div class="profile__name">造血幹細胞</div>
+                        <div class="profile__desc">
+                            趣味はクイズ
+                        </div>
+                    </div>
+                    
+                    <div class="profile">
+                        <img class="profile__img" src="images/profile_image_fe.jpg">
+                        <div class="profile__name">Fe</div>
+                        <div class="profile__desc">
+                            趣味はスンドュブ
+                        </div>
+                    </div>
+                        
+                    <div class="profile">
+                            <img class="profile__img" src="images/profile_image_yoshiponw.jpg">
+                            <div class="profile__name">よしゅあ</div>
+                            <div class="profile__desc">
+                                趣味はクイズ
+                            </div>
+                    </div>
+                    
+                    <div class="profile">
+                        <img class="profile__img" src="images/user.png">
+                        <div class="profile__name">おぢ</div>
+                        <div class="profile__desc">
+                            趣味はクイズ
+                        </div>
+                    </div>
             </div>
             
-            <div class="profile">
-                <img class="profile__img" src="images/profile_image_nabe.jpg">
-                <div class="profile__name">ナベ</div>
-                <div class="profile__desc">趣味はアフォガートフラペチーノ</div>
+        </section>
+
+        <section>
+            <h2 class="title">主な活動</h2>
+            <div class="content">
+        
             </div>
-            
-            <div class="profile">
-                <img class="profile__img" src="images/profile_image_chiru.jpg">
-                <div class="profile__name">あらちる</div>
-                <div class="profile__desc">
-                    趣味はクイズ
-                </div>
-            </div>
-            
-            <div class="profile">
-                <img class="profile__img" src="images/user.png">
-                <div class="profile__name">マルコス</div>
-                <div class="profile__desc">
-                    趣味はクイズ
-                </div>
-            </div>
-            
-            <div class="profile">
-                <img class="profile__img" src="images/profile_image_cell.jpg">
-                <div class="profile__name">造血幹細胞</div>
-                <div class="profile__desc">
-                    趣味はクイズ
-                </div>
-            </div>
-            
-            <div class="profile">
-                <img class="profile__img" src="images/profile_image_fe.jpg">
-                <div class="profile__name">Fe</div>
-                <div class="profile__desc">
-                    趣味はスンドュブ
-                </div>
-            </div>
-            
-            <div class="profile">
-                <img class="profile__img" src="images/profile_image_yoshiponw.jpg">
-                <div class="profile__name">よしゅあ</div>
-                <div class="profile__desc">
-                    趣味はクイズ
-                </div>
-            </div>
-            
-            <div class="profile">
-                <img class="profile__img" src="images/user.png">
-                <div class="profile__name">おぢ</div>
-                <div class="profile__desc">
-                    趣味はクイズ
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</div>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </footer>
     
 </body>
 </html>

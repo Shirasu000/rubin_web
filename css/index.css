@@ -108,16 +108,18 @@ nav a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* プロフィールが折り返されるようにする */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .profile {
-    background: #FFF;
+    background: #e2e1e1;
     width: 175px;
     height: 300px;
     padding: 3%;
-    margin: 5px;
-    border: 1px solid #5f5f5f;
-    border-radius: 5px;
+    margin: 10px;
+    border: 0px solid #686868;
+    border-radius: 30px;
     /* display: flex; */
     flex-direction: column;
     align-items: center;
@@ -221,3 +223,41 @@ html {
     border-radius: 3px;
     color: black;
 }
+
+main {
+    padding: 1%; /* 必要に応じて余白を追加 */
+}
+
+
+/* =============<section>タグの設定=============== */
+
+section{
+    padding: 1%;
+    justify-content: center;
+}
+
+section .title {
+    display: flex;
+    align-items: center;
+}
+
+section .title::before {
+    content: "";
+    display: inline-block;
+    width: 100%; /* 線の長さを調整 */
+    height: 1px;
+}
+
+section .title::before,
+section .title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #bdbdbd; /* 線の色を指定 */
+    margin: 0 5%; /* 左右の余白を調整 */
+}
+section .content{
+    text-align: center;
+}
+
+/* =============================================== */
