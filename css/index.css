@@ -106,8 +106,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* プロフィールが折り返されるようにする */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .profile {
