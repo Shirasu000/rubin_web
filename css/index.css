@@ -42,37 +42,50 @@ nav a:hover {
 
 /* main部 */
 
-.content{
-    justify-content: center;
-}
-
-.content .title{
-    padding: 0px;
+section .title {
     padding-top: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-.content .description{
+section .title::before {
+    content: "";
+    display: inline-block;
+    width: 100%; /* 線の長さを調整 */
+    height: 1px;
+}
+
+section .title::before,
+section .title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #bdbdbd; /* 線の色を指定 */
+    margin: 0 5%; /* 左右の余白を調整 */
+}
+
+
+.description{
     padding: 0px;
     text-align: center;
 }
 
-.content .description a:link {
+.description a:link {
     color: blue;
     text-decoration: none; /* 下線をなくす */
 }
 
-.content .description a:visited {
+.description a:visited {
     color: blue;
     text-decoration: none; /* 下線をなくす */
 }
 
-.content .description a:hover {
+.description a:hover {
     color: red;
     text-decoration: underline; /* 下線を引く */
 }
 
-.content .box_scrollbar {
+.table .box_scrollbar {
     /* width:auto; */
     height:250px;
     padding:5px;
@@ -86,17 +99,17 @@ nav a:hover {
     overflow-y: scroll;
 }
 
-.content dl{
+.table dl{
     /* width: 800px; */
 }
 
-.content dt{
+.table dt{
     float: left;
     margin-left: 3%;
     /* margin-right: 10px; */
 }
 
-.content dd{
+.table dd{
     margin-left: 150px;
 }
 
@@ -226,40 +239,4 @@ html {
     color: black;
 }
 
-main {
-    padding: 1%; /* 必要に応じて余白を追加 */
-}
 
-
-/* =============<section>タグの設定=============== */
-
-section{
-    padding: 1%;
-    justify-content: center;
-}
-
-section .title {
-    display: flex;
-    align-items: center;
-}
-
-section .title::before {
-    content: "";
-    display: inline-block;
-    width: 100%; /* 線の長さを調整 */
-    height: 1px;
-}
-
-section .title::before,
-section .title::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background-color: #bdbdbd; /* 線の色を指定 */
-    margin: 0 5%; /* 左右の余白を調整 */
-}
-section .content{
-    text-align: center;
-}
-
-/* =============================================== */

@@ -65,7 +65,7 @@ function checkAnswer() {
 
 // クリック時に記事の表示を切り替える関数
 function toggle(element) {
-    // 記事の隠れている要素を取得
+    // 記事の非表示要素を取得
     var hidden = element.parentElement.querySelector('.article-hidden');
 
     // 要素の表示状態を取得
