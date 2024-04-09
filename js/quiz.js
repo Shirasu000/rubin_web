@@ -82,6 +82,40 @@ function toggle(element) {
     }
 }
 
+function toggleTag(tagName, event) {
+    var articles = document.querySelectorAll('.article');
+    var selectedTag = document.querySelector('.selected-tag');
+
+    // クリックされたタグの色を変える
+    if (event.target.classList.contains('selected-tag')) {
+        event.target.classList.remove('selected-tag');
+        // すべての記事を表示
+        articles.forEach(function(article) {
+            article.classList.remove('article-hidden');
+        });
+    } else {
+        if (selectedTag) {
+            selectedTag.classList.remove('selected-tag');
+        }
+        event.target.classList.add('selected-tag');
+
+        articles.forEach(function(article) {
+            var tags = article.querySelectorAll('.tag');
+            var tagFound = false;
+            tags.forEach(function(tag) {
+                if (tag.textContent === tagName) {
+                    tagFound = true;
+                }
+            });
+            if (tagFound) {
+                article.classList.remove('article-hidden');
+            } else {
+                article.classList.add('article-hidden');
+            }
+        });
+    }
+}
+
 // headerを自動表示する
 function insert_header(){
     fetch("header.html")
