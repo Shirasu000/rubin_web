@@ -19,24 +19,48 @@ nav {
     background-color: #ffffff;
     padding: 0px;
     /* text-align: center; */
-    /* display: flex; */
+    display: flex;
     /* justify-content: center; */
-    overflow: hidden; /* floatをクリアするために必要 */
+    /* overflow: hidden; floatをクリアするために必要 */
 }
 
-nav a {
-    color: #000000;
-    text-decoration: none;
-    margin-right: 30px;
-    line-height: 2.5;
-}
 .logo {
     /* float: left; タイトルを左寄せ */
     height: 100px;
     width: auto;
+    background-color: green;
 }
 .menu {
     float: right; /* メニューを右寄せ */
+    background-color: red;
+}
+
+.parent {
+    /* margin: 40px; */
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    /* position: fixed; */
+}
+.child1 {
+    display: flex;
+    text-align:center;
+}
+.child1 img{
+    height: 70px;
+}
+.child2 {
+    /* background-color: blue; */
+    padding: 23px 0px 0px 0px;
+}
+.child2 a {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 30px;
+    /* line-height: 2.5; */
+    font-size: 20px;
 }
 
 
