@@ -63,24 +63,60 @@ function checkAnswer() {
 }
 
 
-// クリック時に表示切り替えを行う関数
+// クリック時に記事の表示を切り替える関数
 function toggle(element) {
-    // hidden要素を取得
+    // 記事の非表示要素を取得
     var hidden = element.parentElement.querySelector('.article-hidden');
 
-    // hiddenの表示状態を取得
-    var computedStyle = window.getComputedStyle(hidden);
-    var displayStyle = computedStyle.getPropertyValue('display');
+    // 要素の表示状態を取得
+    var displayStyle = hidden.style.display || window.getComputedStyle(hidden).display;
 
-    // hiddenの表示状態を切り替える
+    // 要素の表示状態を切り替える
     if (displayStyle === 'none') {
-        hidden.style.display = 'block';
-        element.classList.add('expanded');
+        hidden.style.display = 'block'; // 記事を表示
+        element.classList.add('expanded'); // 記事の見出しにクラスを追加してスタイルを変更
     } else {
-        hidden.style.display = 'none';
-        element.classList.remove('expanded');
+        hidden.style.display = 'none'; // 記事を非表示
+        element.classList.remove('expanded'); // 記事の見出しからクラスを削除してスタイルを元に戻す
     }
 }
+
+// タグをクリックしたときに記事をフィルタリングする関数
+function toggleTag(tagName, event) {
+    var articles = document.querySelectorAll('.article');
+
+    // 選択されたタグの色を変更
+    if (event.target.classList.contains('selected-tag')) {
+        event.target.classList.remove('selected-tag'); // クリックされたタグの色を解除
+        // すべての記事を表示
+        articles.forEach(function(article) {
+            article.classList.remove('article-hidden'); // 記事の表示状態をリセットして全ての記事を表示
+        });
+    } else {
+        var selectedTag = document.querySelector('.selected-tag');
+        if (selectedTag) {
+            selectedTag.classList.remove('selected-tag'); // 他のタグの色を解除
+        }
+        event.target.classList.add('selected-tag'); // クリックされたタグに色を付ける
+
+        // 記事をフィルタリングして表示・非表示を切り替える
+        articles.forEach(function(article) {
+            var tags = article.querySelectorAll('.tag'); // 記事のタグを取得
+            var tagFound = false;
+            tags.forEach(function(tag) {
+                if (tag.textContent === tagName) {
+                    tagFound = true; // 該当のタグが記事に含まれているかチェック
+                }
+            });
+            if (tagFound) {
+                article.classList.remove('article-hidden'); // 該当のタグを持つ記事は表示
+            } else {
+                article.classList.add('article-hidden'); // 該当のタグを持たない記事は非表示
+            }
+        });
+    }
+}
+
 
 // headerを自動表示する
 function insert_header(){
