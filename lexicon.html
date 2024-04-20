@@ -26,112 +26,127 @@
             .then((data) => document.querySelector("#header").innerHTML = data);
     </script>
     <main>
-        <section>   
-            <div id="wrap">
-                    <!-- タイトルと説明 -->
-                    <h2 class="title">Lexicon</h2>
-            <p class="description">
-                クイズで使える知識をまとめていきます！
-            </p>
-            <!-- タグの選択肢 -->
-            <div class="tags">
-                <span class="tag" onclick="toggleTag('ロシア', event)">ロシア</span>
-                <span class="tag" onclick="toggleTag('音楽', event)">音楽</span>
-                <span class="tag" onclick="toggleTag('歴史', event)">歴史</span>
-            </div>
-            <!-- 記事の一覧 -->
-            <div class="articles">
-                <!-- 記事1 -->
-                <div class="article">
-                    <h3 class="toggle-btn" onclick="toggle(this)">ロシア五人組</h3>
-                    <div class="tags">
-                        <span class="tag">ロシア</span>
-                        <span class="tag">音楽</span>
-                    </div>
-                    <div class="article-hidden">
-                        <p>
-                            19世紀後半のロシアで民族主義的な音楽を作った人たち。
+        <div id="wrap">
+            <section>
+                <!-- タイトルと説明 -->
+                <h2 class="title">　Lexicon　</h2>
+                <p class="description">
+                    クイズで使える知識をまとめていきます！
+                </p>
+                <!-- タグの選択肢 -->
+                <div class="tags">
+                    <span class="tag" onclick="toggleTag('自然科学', event)">自然科学</span>
+                    <span class="tag" onclick="toggleTag('現代社会', event)">現代社会</span>
+                    <span class="tag" onclick="toggleTag('歴史', event)">歴史</span>
+                    <span class="tag" onclick="toggleTag('地理', event)">地理</span>
+                    <span class="tag" onclick="toggleTag('生活・雑学', event)">生活・雑学</span>
+                    <span class="tag" onclick="toggleTag('音楽', event)">音楽</span>
+                    <span class="tag" onclick="toggleTag('ロシア', event)">ロシア</span>
+                    <span class="tag" onclick="toggleTag('語源', event)">語源</span>
+                    <span class="tag" onclick="toggleTag('料理', event)">料理</span>
+                    <span class="tag" onclick="toggleTag('アニメ・漫画', event)">アニメ・漫画</span>
+                    <span class="tag" onclick="toggleTag('スポーツ', event)">スポーツ</span>
+                    <span class="tag" onclick="toggleTag('人物', event)">人物</span>
+                    <span class="tag" onclick="toggleTag('映画', event)">映画</span>
+                    <span class="tag" onclick="toggleTag('IT', event)">IT</span>
+                    <span class="tag" onclick="toggleTag('世界三大', event)">世界三大</span>
+                    <span class="tag" onclick="toggleTag('英語', event)">英語</span>
+                    <span class="tag" onclick="toggleTag('効果・現象・パラドックス', event)">効果・現象・パラドックス</span>
+
+                </div>
+                <!-- 記事の一覧 -->
+                <div class="articles">
+                    <!-- 記事1 -->
+                    <div class="article">
+                        <h3 class="toggle-btn" onclick="toggle(this)">ロシア五人組</h3>
+                        <div class="tags_view">
+                            <span class="tag">ロシア</span>
+                            <span class="tag">音楽</span>
+                        </div>
+                        <div class="article-hidden">
+                            <p>
+                                19世紀後半のロシアで民族主義的な音楽を作った人たち。
                             <table>
                                 <tr>
-                                <th>名前</th>
-                                <th>代表曲など</th>
-                            </tr>
-                            <td>ミリィ・バラキレフ</td>
-                            <td>『イスラメイ』</td>
-                            <tr>
-                                <td>ツェーザリ・キュイ</td>
-                                <td>『25の前奏曲』 ※軍事教育家としても有名</td>
-                            </tr>
-                            <tr>
-                                <td>モデスト・ムソルグスキー</td>
-                                <td>『禿山の一夜』『展覧会の絵』</td>
-                            </tr>
-                            <tr>
-                                <td>アレクサンドル・ボロディン</td>
-                                <td>『イーゴリ公』</td>
-                            </tr>
-                            <tr>
-                                <td>ニコライ・リムスキー＝コルサコフ</td>
-                                <td>『シェヘラザード』</td>
-                            </tr>
-                        </table>
-                    </p>
-                    <p>
+                                    <th>名前</th>
+                                    <th>代表曲など</th>
+                                </tr>
+                                <td>ミリィ・バラキレフ</td>
+                                <td>『イスラメイ』</td>
+                                <tr>
+                                    <td>ツェーザリ・キュイ</td>
+                                    <td>『25の前奏曲』 ※軍事教育家としても有名</td>
+                                </tr>
+                                <tr>
+                                    <td>モデスト・ムソルグスキー</td>
+                                    <td>『禿山の一夜』『展覧会の絵』</td>
+                                </tr>
+                                <tr>
+                                    <td>アレクサンドル・ボロディン</td>
+                                    <td>『イーゴリ公』</td>
+                                </tr>
+                                <tr>
+                                    <td>ニコライ・リムスキー＝コルサコフ</td>
+                                    <td>『シェヘラザード』</td>
+                                </tr>
+                            </table>
+                            </p>
+                            <p>
                             <h4 class="goro">語呂合わせ</h4>
-                        </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <h3 class="toggle-btn" onclick="toggle(this)">六歌仙</h3>
+                        <div class="tags_view">
+                            <span class="tag">歴史</span>
+                            <span class="tag">音楽</span>
+                        </div>
+                        <div class="article-hidden">
+                            <table>
+                                <tr>
+                                    <th>名前</th>
+                                    <th>代表的な歌</th>
+                                </tr>
+                                <tr>
+                                    <td>僧正遍昭（そうじょうへんじょう）</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>在原業平（ありわらのなりひら）</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>文屋康秀（ふんやのやすひで）</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>喜撰法師（きせんほうし）</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>小野小町（おののこまち）</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>大伴黒主（おおとものくろぬし）</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <h4 class="goro">語呂合わせ</h4> 大小の僧が喜ぶ文あり（大：大友黒主、小：小野小町、僧：僧正遍昭、喜ぶ：喜撰法師、文：文屋康秀、あり：在原業平）
+                        </div>
+                    </div>
+                    <div class="article">
+                        <!-- ここに記事の内容を書いてください -->
+                        <h3 class="toggle-btn" onclick="toggle(this)">特定原材料</h3>
+                        <div class="article-hidden">
+                            えび、かに、くるみ、小麦、そば、卵、乳、落花生 <br>
+                            <h4 class="goro">語呂合わせ</h4> カニこそ食えたら（カ：かに、二：乳、こ：小麦、そ：そば、く：くるみ、え：えび、た：卵、ら：落花生）
+                        </div>
                     </div>
                 </div>
-                <div class="article">
-                    <h3 class="toggle-btn" onclick="toggle(this)">六歌仙</h3>
-                    <div class="tags">
-                        <span class="tag">歴史</span>
-                        <span class="tag">音楽</span>
-                    </div>
-                    <div class="article-hidden">
-                        <table>
-                            <tr>
-                                <th>名前</th>
-                                <th>代表的な歌</th>
-                            </tr>
-                            <tr>
-                                <td>僧正遍昭（そうじょうへんじょう）</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>在原業平（ありわらのなりひら）</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>文屋康秀（ふんやのやすひで）</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>喜撰法師（きせんほうし）</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>小野小町（おののこまち）</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>大伴黒主（おおとものくろぬし）</td>
-                                <td></td>
-                            </tr>
-                        </table>
-                        <h4 class="goro">語呂合わせ</h4> 大小の僧が喜ぶ文あり（大：大友黒主、小：小野小町、僧：僧正遍昭、喜ぶ：喜撰法師、文：文屋康秀、あり：在原業平）
-                    </div>
-                </div>
-                <div class="article">
-                    <!-- ここに記事の内容を書いてください -->
-                    <h3 class="toggle-btn" onclick="toggle(this)">特定原材料</h3>
-                    <div class="article-hidden">
-                        えび、かに、くるみ、小麦、そば、卵、乳、落花生 <br>
-                        <h4 class="goro">語呂合わせ</h4> カニこそ食えたら（カ：かに、二：乳、こ：小麦、そ：そば、く：くるみ、え：えび、た：卵、ら：落花生）
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
     </main>
 </body>
 

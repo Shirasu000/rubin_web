@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     margin: 0px;
+    /* background-image: url("../images/background_sea.jpg"); */
 }
 
 
@@ -71,8 +72,9 @@ nav a:hover {
 }
 
 #wrap{
-    margin: 5px;
-    background: #f9f9f9;
+    margin: 1% 5%;
+    /* background: rgba(255, 255, 255, 0.5); */
+    /* opacity: 0.5; */
 }
 
 
@@ -80,6 +82,7 @@ nav a:hover {
 
 section .title {
     padding-top: 10px;
+    /* padding-left: 10px; */
     display: flex;
     align-items: center;
 }
@@ -96,8 +99,8 @@ section .title::after {
     content: "";
     flex: 1;
     height: 1px;
-    background-color: #bdbdbd; /* 線の色を指定 */
-    margin: 0 5%; /* 左右の余白を調整 */
+    background-color: #bdbdbd;
+    margin: 0; /*左右の余白を調整*/
 }
 
 
@@ -206,9 +209,10 @@ section .title::after {
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
     background: #FFF;
-    border: 1px solid #1a1a1a;
+    border: 1px solid #a3a2a2;
     flex-direction: column; /* 縦方向の並びを維持 */
     align-items: center; /* 要素を中央寄せ */
+    border-radius: 10px;
 }
 
 .article-hidden{
@@ -218,7 +222,7 @@ section .title::after {
 .article .toggle-btn::before {
     content: "＋";
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 05px;
     color:rgb(92, 91, 91);
 }
 
@@ -227,9 +231,29 @@ section .title::after {
 }
 
 /* タグのスタイル */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    max-width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tags_view {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin-top: -10px;
+    padding-left: 13px;
+    pointer-events: none;
+}
+
 .tag {
     display: inline-block;
-    margin-right: 10px;
+    margin: 0px 5px 10px 10px;
     cursor: pointer;
     background-color: #f0f0f0;
     padding: 5px;
