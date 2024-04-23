@@ -2,19 +2,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
     margin: 0px;
-    background-image: url("../images/background.png");
-    background-size: cover;
+    background-image: url("../images/background3.png");
+    /* background-color: rgb(222, 237, 245); */
+    background-size: contain;
 }
 
 
 /* header部 */
 #banner img {
     display: flex;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* height: 100%; */
 }
 
 nav {
@@ -39,8 +39,8 @@ nav {
 
 .parent {
     /* margin: 40px; */
-    padding: 0% 5%;
-    height: 70px;
+    padding: 0% 17%;
+    height: 50px;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -52,18 +52,18 @@ nav {
     text-align:center;
 }
 .child1 img{
-    height: 70px;
+    height: 60px;
 }
 .child2 {
     /* background-color: blue; */
-    padding: 23px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
 }
 .child2 a {
     color: #000000;
     text-decoration: none;
     margin-right: 30px;
     /* line-height: 2.5; */
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -74,7 +74,7 @@ nav a:hover {
 }
 
 #wrap{
-    margin: 1% 5%;
+    margin: 1% 20%;
     /* background: rgba(255, 255, 255, 0.5); */
     /* opacity: 0.5; */
 }
@@ -83,7 +83,7 @@ nav a:hover {
 /* main部 */
 
 section .title {
-    padding-top: 10px;
+    padding: 0% 0%;
     /* padding-left: 10px; */
     display: flex;
     align-items: center;
@@ -93,16 +93,24 @@ section .title::before {
     content: "";
     display: inline-block;
     width: 100%; /* 線の長さを調整 */
-    height: 2px;
+    height: 1px;
 }
 
 section .title::before,
 section .title::after {
     content: "";
     flex: 1;
-    height: 2px;
-    background-color: #bdbdbd;
+    height: 1px;
     margin: 0; /*左右の余白を調整*/
+}
+
+.title:before {
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,100));
+
+}
+
+.title:after {
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,100));
 }
 
 
@@ -133,8 +141,8 @@ section .title::after {
     border:3px solid rgb(226, 225, 225);
     border-radius: 10px;
     background-color:rgba(255, 255, 255, 0.7);
-    margin-left:15%;
-    margin-right:15%;
+    margin-left:0%;
+    margin-right:0%;
     /* color:#000; */
     /* font-size:12px; */
     overflow-y: scroll;
@@ -160,27 +168,28 @@ section .title::after {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* プロフィールが折り返されるようにする */
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 .profile {
-    background: #e2e1e1;
-    width: 175px;
-    height: 300px;
+    /* background: #ffffff; */
+    width: 150px;
+    height: 250px;
     padding: 3%;
     margin: 10px;
-    border: 0px solid #686868;
-    border-radius: 30px;
+    /* border: 1px solid #5e5e5e; */
+    border-radius: 10px;
     /* display: flex; */
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .profile__img {
     display: block;
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -201,8 +210,8 @@ section .title::after {
 
 .article {
     max-width: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 20px;
@@ -224,7 +233,7 @@ section .title::after {
 .article .toggle-btn::before {
     content: "＋";
     display: inline-block;
-    margin-right: 05px;
+    margin-right: 5px;
     color:rgb(92, 91, 91);
 }
 
@@ -262,6 +271,17 @@ section .title::after {
     border-radius: 5px;
 }
 
+.profile_tag {
+    display: inline-block;
+    margin: 0px 0px 5px 0px;
+    color: #3470f3;
+    /* background-color: rgba(255,255,255); */
+    padding: 0px 5px;
+    /* border-radius: 5px; */
+    /* font-size: 15px; */
+    border:0px solid rgb(0, 0, 0);
+
+}
 
 /* 選択されたタグのスタイル */
 .selected-tag {
