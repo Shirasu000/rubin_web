@@ -4,7 +4,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     margin: 0px;
-    /* background-image: url("../images/background_sea.jpg"); */
+    background-image: url("../images/background.png");
+    background-size: cover;
 }
 
 
@@ -38,6 +39,7 @@ nav {
 
 .parent {
     /* margin: 40px; */
+    padding: 0% 5%;
     height: 70px;
     background-color: white;
     display: flex;
@@ -91,14 +93,14 @@ section .title::before {
     content: "";
     display: inline-block;
     width: 100%; /* 線の長さを調整 */
-    height: 1px;
+    height: 2px;
 }
 
 section .title::before,
 section .title::after {
     content: "";
     flex: 1;
-    height: 1px;
+    height: 2px;
     background-color: #bdbdbd;
     margin: 0; /*左右の余白を調整*/
 }
@@ -130,7 +132,7 @@ section .title::after {
     padding:5px;
     border:3px solid rgb(226, 225, 225);
     border-radius: 10px;
-    /* background-color:#efefef; */
+    background-color:rgba(255, 255, 255, 0.7);
     margin-left:15%;
     margin-right:15%;
     /* color:#000; */
