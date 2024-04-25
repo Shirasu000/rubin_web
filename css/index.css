@@ -62,7 +62,7 @@ nav {
 
 .child2 {
     /* background-color: blue; */
-    padding: 15px 0px 0px 0px;
+    padding: 17px 0px 0px 0px;
 }
 
 .child2 a {
@@ -371,11 +371,8 @@ html {
     }
 
     .child2 a {
-        color: #000000;
-        text-decoration: none;
-        margin-right: 10px;
-        /* line-height: 2.5; */
-        font-size: 20px;
+        margin-right: 5px;
+        font-size: 18px;
     }
 
     /* #hamburger {
@@ -460,6 +457,6 @@ html {
     .toggle {
         transform: translateY(0);
         opacity: 1;
-    } */ */
+    } */
 
 }
