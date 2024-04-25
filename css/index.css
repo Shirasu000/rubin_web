@@ -32,8 +32,10 @@ nav {
     width: auto;
     background-color: green;
 }
+
 .menu {
-    float: right; /* メニューを右寄せ */
+    float: right;
+    /* メニューを右寄せ */
     background-color: red;
 }
 
@@ -47,23 +49,39 @@ nav {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
     /* position: fixed; */
 }
+
 .child1 {
     display: flex;
-    text-align:center;
+    text-align: center;
+    /* background-color: green; */
 }
-.child1 img{
+
+.child1 img {
     height: 60px;
 }
+
 .child2 {
     /* background-color: blue; */
     padding: 15px 0px 0px 0px;
 }
+
 .child2 a {
     color: #000000;
     text-decoration: none;
     margin-right: 30px;
     /* line-height: 2.5; */
     font-size: 18px;
+}
+
+.parent-smapho {
+    /* margin: 40px; */
+    padding: 0% 5%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    /* position: fixed; */
 }
 
 
@@ -73,7 +91,7 @@ nav a:hover {
     text-decoration: none;
 }
 
-#wrap{
+#wrap {
     margin: 1% 20%;
     /* background: rgba(255, 255, 255, 0.5); */
     /* opacity: 0.5; */
@@ -92,7 +110,8 @@ section .title {
 section .title::before {
     content: "";
     display: inline-block;
-    width: 100%; /* 線の長さを調整 */
+    width: 100%;
+    /* 線の長さを調整 */
     height: 1px;
 }
 
@@ -101,64 +120,68 @@ section .title::after {
     content: "";
     flex: 1;
     height: 1px;
-    margin: 0; /*左右の余白を調整*/
+    margin: 0;
+    /*左右の余白を調整*/
 }
 
 .title:before {
-    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,100));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100));
 
 }
 
 .title:after {
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,100));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100));
 }
 
 
-.description{
+.description {
     padding: 0px;
     text-align: center;
 }
 
 .description a:link {
     color: blue;
-    text-decoration: none; /* 下線をなくす */
+    text-decoration: none;
+    /* 下線をなくす */
 }
 
 .description a:visited {
     color: blue;
-    text-decoration: none; /* 下線をなくす */
+    text-decoration: none;
+    /* 下線をなくす */
 }
 
 .description a:hover {
     color: red;
-    text-decoration: underline; /* 下線を引く */
+    text-decoration: underline;
+    /* 下線を引く */
 }
 
 .table .box_scrollbar {
     /* width:auto; */
-    height:250px;
-    padding:5px;
-    border:3px solid rgb(226, 225, 225);
+    height: 250px;
+    padding: 5px;
+    border: 3px solid rgb(226, 225, 225);
     border-radius: 10px;
-    background-color:rgba(255, 255, 255, 0.7);
-    margin-left:0%;
-    margin-right:0%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 0%;
+    margin-right: 0%;
     /* color:#000; */
     /* font-size:12px; */
     overflow-y: scroll;
 }
 
-.table dl{
+.table dl {
     /* width: 800px; */
 }
 
-.table dt{
+.table dt {
     float: left;
     margin-left: 3%;
     /* margin-right: 10px; */
 }
 
-.table dd{
+.table dd {
     margin-left: 150px;
 }
 
@@ -167,7 +190,8 @@ section .title::after {
 .profiles {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* プロフィールが折り返されるようにする */
+    flex-wrap: wrap;
+    /* プロフィールが折り返されるようにする */
     margin-left: 0%;
     margin-right: 0%;
 }
@@ -221,12 +245,14 @@ section .title::after {
     font-family: Arial, sans-serif;
     background: #FFF;
     border: 1px solid #a3a2a2;
-    flex-direction: column; /* 縦方向の並びを維持 */
-    align-items: center; /* 要素を中央寄せ */
+    flex-direction: column;
+    /* 縦方向の並びを維持 */
+    align-items: center;
+    /* 要素を中央寄せ */
     border-radius: 10px;
 }
 
-.article-hidden{
+.article-hidden {
     display: none;
 }
 
@@ -234,7 +260,7 @@ section .title::after {
     content: "＋";
     display: inline-block;
     margin-right: 5px;
-    color:rgb(92, 91, 91);
+    color: rgb(92, 91, 91);
 }
 
 .article .toggle-btn.expanded::before {
@@ -279,7 +305,7 @@ section .title::after {
     padding: 0px 5px;
     /* border-radius: 5px; */
     /* font-size: 15px; */
-    border:0px solid rgb(0, 0, 0);
+    border: 0px solid rgb(0, 0, 0);
 
 }
 
@@ -295,11 +321,14 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-th, td {
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 7px;
     text-align: left;
 }
+
 th {
     background-color: #f2f2f2;
 }
@@ -313,7 +342,7 @@ html {
 /*語呂合わせ用スタイル*/
 .goro {
     width: fit-content;
-    display:inline-block;
+    display: inline-block;
     margin-right: 5px;
     background-color: #cecfcf;
     padding: 3px 10px;
@@ -321,8 +350,116 @@ html {
     color: black;
 }
 
+.parent-pc {
+    display: none;
+}
 
-@media screen and (max-width: 959px) {
-	/* 959px以下に適用されるCSS（タブレット用） */
-    
+/* スマホ・タブレット用CSS */
+@media screen and (max-width: 640px) {
+    #wrap {
+        margin: 1% 5%;
+        /* background: rgba(255, 255, 255, 0.5); */
+        /* opacity: 0.5; */
+    }
+
+    .parent {
+        display: none;
+    }
+
+    .parent-pc {
+        display: flex;
+    }
+
+    .child2 a {
+        color: #000000;
+        text-decoration: none;
+        margin-right: 10px;
+        /* line-height: 2.5; */
+        font-size: 20px;
+    }
+
+    /* #hamburger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 25px;
+        margin: 0px 0 0 0;
+    }
+
+    #hamburger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 25px;
+        margin: 0 0 0 auto;
+    }
+
+    #hamburger span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #313131;
+        transform: translateY(-50%);
+    }
+
+    #hamburger::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #313131;
+    }
+
+    #hamburger::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #313131;
+    }
+
+    /*-閉じるアイコンー*/
+    .close {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .close::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(45deg);
+    }
+
+    .close::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(-45deg);
+    }
+
+    .toggle {
+        transform: translateY(0);
+        opacity: 1;
+    } */
+
 }
