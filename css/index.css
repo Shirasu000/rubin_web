@@ -377,7 +377,17 @@ html {
 
     .profile {
         /* background: #ffffff; */
-        width: 130px;
+        width: 150px;
+        padding: 5% 3%;
+        /* margin: 0px 0px; */
+    }
+
+    .profile__img {
+        display: block;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin: 0 auto;
     }
 
     /* #hamburger {
