@@ -201,9 +201,9 @@ section .title::after {
     width: 150px;
     height: 250px;
     padding: 3%;
-    margin: 10px;
+    margin: 0px 5px;
     /* border: 1px solid #5e5e5e; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* display: flex; */
     flex-direction: column;
     align-items: center;
