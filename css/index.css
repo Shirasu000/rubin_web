@@ -350,12 +350,12 @@ html {
     color: black;
 }
 
-.parent-pc {
+.parent-smapho {
     display: none;
 }
 
 /* スマホ・タブレット用CSS */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
     #wrap {
         margin: 1% 5%;
         /* background: rgba(255, 255, 255, 0.5); */
@@ -366,7 +366,7 @@ html {
         display: none;
     }
 
-    .parent-pc {
+    .parent-smapho {
         display: flex;
     }
 
@@ -428,7 +428,7 @@ html {
     }
 
     /*-閉じるアイコンー*/
-    .close {
+    /* .close {
         position: relative;
         padding-left: 20px;
     }
@@ -460,6 +460,6 @@ html {
     .toggle {
         transform: translateY(0);
         opacity: 1;
-    } */
+    } */ */
 
 }
