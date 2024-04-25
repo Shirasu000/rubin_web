@@ -375,6 +375,11 @@ html {
         font-size: 18px;
     }
 
+    .profile {
+        /* background: #ffffff; */
+        width: 130px;
+    }
+
     /* #hamburger {
         position: relative;
         display: block;
