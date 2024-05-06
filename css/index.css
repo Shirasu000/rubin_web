@@ -178,6 +178,7 @@ section .title::after {
 .table dt {
     float: left;
     margin-left: 3%;
+    margin-top: 2.8px;
     /* margin-right: 10px; */
 }
 
@@ -390,20 +391,18 @@ html {
         margin: 0 auto;
     }
 
-    /* #hamburger {
-        position: relative;
-        display: block;
-        width: 30px;
-        height: 25px;
-        margin: 0px 0 0 0;
+        
+    .table dd {
+        margin-left: 130px;
+        /* margin-right: 10px; */
     }
-
+/*
     #hamburger {
         position: relative;
         display: block;
         width: 30px;
         height: 25px;
-        margin: 0 0 0 auto;
+        margin: 0px 0 0 0;
     }
 
     #hamburger span {
@@ -430,14 +429,14 @@ html {
 
     #hamburger::after {
         content: '';
-        display: block;
+        display: none;
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
         background-color: #313131;
-    }
+    }*/
 
     /*-閉じるアイコンー*/
     /* .close {
