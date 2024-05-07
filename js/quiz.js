@@ -102,8 +102,14 @@ function toggleTag(tagName, event) {
         // 記事をフィルタリングして表示・非表示を切り替える
         articles.forEach(function(article) {
             var tags = article.querySelectorAll('.tag'); // 記事のタグを取得
+            var tags_meta = article.querySelectorAll('.tag-meta'); // 記事のタグを取得
             var tagFound = false;
             tags.forEach(function(tag) {
+                if (tag.textContent === tagName) {
+                    tagFound = true; // 該当のタグが記事に含まれているかチェック
+                }
+            });
+            tags_meta.forEach(function(tag) {
                 if (tag.textContent === tagName) {
                     tagFound = true; // 該当のタグが記事に含まれているかチェック
                 }
