@@ -341,14 +341,25 @@ html {
 }
 
 /*語呂合わせ用スタイル*/
-.goro {
-    width: fit-content;
+.goro_box {
+    position: relative;
+    padding: 3px 4px;
+    border: 0px solid black;
+    background-color: #353535;
+    color: white;
+    z-index: 10;
+    margin: 0px 10px 0px 0px;
     display: inline-block;
-    margin-right: 5px;
-    background-color: #cecfcf;
-    padding: 3px 10px;
-    border-radius: 3px;
-    color: black;
+}
+.goro_box::after {
+    content: '';
+    border: 1px solid #353535;
+    position: absolute;
+    top: 2px;
+    right: -4px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .parent-smapho {
@@ -368,12 +379,21 @@ html {
     }
 
     .parent-smapho {
+        height: 45px;
         display: flex;
     }
 
+    .child1 img {
+        padding-top: 2px;
+        height: 50px;
+    }
+
+    .child2 {
+        margin-top: -3px;
+    }
     .child2 a {
-        margin-right: 5px;
-        font-size: 18px;
+        margin-right: 7px;
+        font-size: 20px;
     }
 
     .profile {
@@ -396,6 +416,18 @@ html {
         margin-left: 130px;
         /* margin-right: 10px; */
     }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        max-width: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
 /*
     #hamburger {
         position: relative;
