@@ -400,7 +400,7 @@ html {
     }
 
     .child2 {
-        display: none;
+        display: block;
     }
     
 
