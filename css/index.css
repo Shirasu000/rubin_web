@@ -97,6 +97,19 @@ nav a:hover {
     /* opacity: 0.5; */
 }
 
+.promotion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.promotion img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+}
 
 /* main部 */
 
