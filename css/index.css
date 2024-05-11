@@ -73,17 +73,6 @@ nav {
     font-size: 18px;
 }
 
-.parent-smapho {
-    /* margin: 40px; */
-    padding: 0% 5%;
-    height: 50px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-    /* position: fixed; */
-}
-
 
 /*カーソルを合わせたときの処理*/
 nav a:hover {
@@ -385,8 +374,12 @@ html {
     z-index: -1;
 }
 
-.parent-smapho {
-    display: none;
+.hamburger{
+    display:none;
+}
+
+.mobile-menu{
+    display:none;
 }
 
 /* スマホ・タブレット用CSS */
@@ -396,28 +389,20 @@ html {
         /* background: rgba(255, 255, 255, 0.5); */
         /* opacity: 0.5; */
     }
-
-    .parent {
-        display: none;
-    }
-
-    .parent-smapho {
-        height: 45px;
+    .child1 {
         display: flex;
+        text-align: center;
+        /* background-color: green; */
     }
-
+    
     .child1 img {
-        padding-top: 2px;
-        height: 50px;
+        height: 60px;
     }
 
     .child2 {
-        margin-top: -3px;
+        display: none;
     }
-    .child2 a {
-        margin-right: 7px;
-        font-size: 20px;
-    }
+    
 
     .profile {
         /* background: #ffffff; */
@@ -471,16 +456,18 @@ html {
         border-radius: 10px;
     }
 
-/*
-    #hamburger {
+    /* ハンバーガーボタン */
+    .hamburger {
         position: relative;
         display: block;
         width: 30px;
         height: 25px;
-        margin: 0px 0 0 0;
+        margin: 10px 0 0 0;
+        cursor: pointer; /* カーソルをポインターに変更 */
     }
 
-    #hamburger span {
+    /* ハンバーガーライン */
+    .hamburger span {
         position: absolute;
         top: 50%;
         left: 0;
@@ -489,29 +476,63 @@ html {
         height: 2px;
         background-color: #313131;
         transform: translateY(-50%);
+        transition: background-color 0.3s ease; /* 色の変化をアニメーション化 */
     }
 
-    #hamburger::before {
+    /* ハンバーガーラインのアクティブスタイル */
+    .hamburger.active span {
+        background-color: transparent; /* クリック時にラインを非表示 */
+    }
+
+    /* ハンバーガーラインのアニメーション */
+    .hamburger::before,
+    .hamburger::after {
         content: '';
         display: block;
         position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #313131;
+        transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーション追加 */
+    }
+
+    /* ハンバーガーメニューの上のライン */
+    .hamburger::before {
+        top: 0;
+    }
+
+    /* ハンバーガーメニューの下のライン */
+    .hamburger::after {
+        bottom: 0;
+    }
+
+    /* ハンバーガーメニューのアクティブスタイル */
+    .hamburger.active::before {
+        transform: translateY(10px) rotate(45deg); /* メニューアイコンに変形 */
+    }
+
+    .hamburger.active::after {
+        transform: translateY(-10px) rotate(-45deg); /* メニューアイコンに変形 */
+    }
+    .mobile-menu {
+        display: none; /* デフォルトは非表示 */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 2px;
-        background-color: #313131;
+        height: 100%;
+        background-color: #f9f9f9;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        z-index: 999;
     }
 
-    #hamburger::after {
-        content: '';
-        display: none;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #313131;
-    }*/
+    /* ハンバーガーメニューのアクティブ時のスタイル */
+    .mobile-menu.active {
+        display: block; /* アクティブ時に表示 */
+    }
+
+
 
     /*-閉じるアイコンー*/
     /* .close {
