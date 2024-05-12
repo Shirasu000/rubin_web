@@ -45,6 +45,7 @@ nav {
     height: 50px;
     background-color: white;
     display: flex;
+    position: relative;
     justify-content: space-between;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
     /* position: fixed; */
@@ -384,14 +385,10 @@ html {
 
 
 
-.c-hamburger-menu {
-    position: relative;
-}
-
 #hamburger:checked ~ .c-hamburger-menu__list {
     transform: translateX(0%);
     transition: 0.3s;
-  }
+}
 
 .c-hamburger-menu__input {
     display: none;
@@ -432,12 +429,16 @@ html {
         display: flex;
         flex-direction: column;
         left: 0;
-        padding: 2rem; /* カスタマイズしてください */
+        padding: 1rem; /* カスタマイズしてください */
         position: absolute;
         transform: translateX(-100%);
         transition: 0.3s; /* カスタマイズしてください */
         top: 100%;
         width: 100%;
+        opacity: 0.95;
+    }
+    .c-header__list-item{
+        margin-bottom: 5px;
     }
 
     .c-hamburger-menu__button {
@@ -449,7 +450,7 @@ html {
         display: flex;
         flex-direction: column;
         gap: 5px; /* カスタマイズしてください */
-        height: 32px; /* カスタマイズしてください */
+        height: 50px; /* カスタマイズしてください */
         justify-content: center;
         width: 32px; /* カスタマイズしてください */
         }
