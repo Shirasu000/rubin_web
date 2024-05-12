@@ -60,17 +60,25 @@ nav {
     height: 60px;
 }
 
-.child2 {
-    /* background-color: blue; */
+.c-header__list {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
     padding: 17px 0px 0px 0px;
 }
 
-.child2 a {
+
+.c-header__list a {
     color: #000000;
     text-decoration: none;
     margin-right: 30px;
     /* line-height: 2.5; */
     font-size: 18px;
+}
+
+.c-header__list-item {
+    list-style: none;
+    text-decoration: none;
 }
 
 
@@ -374,16 +382,95 @@ html {
     z-index: -1;
 }
 
-.hamburger{
-    display:none;
+
+
+.c-hamburger-menu {
+    position: relative;
 }
 
-.mobile-menu{
-    display:none;
+#hamburger:checked ~ .c-hamburger-menu__list {
+    transform: translateX(0%);
+    transition: 0.3s;
+  }
+
+.c-hamburger-menu__input {
+    display: none;
 }
 
+.c-hamburger-menu__bg {
+  background-color: #000; /* カスタマイズしてください */
+  cursor: pointer;
+  display: none;
+  height: 100vh;
+  left: 0;
+  opacity: 0.4; /* カスタマイズしてください */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#hamburger:checked ~ .c-hamburger-menu__bg {
+  display: block;
+}
+
+.c-hamburger-menu__button {
+  display: none;
+}
+.c-hamburger-menu__button-mark {
+    background-color: #000; /* カスタマイズしてください */
+    display: block;
+    height: 1px; /* カスタマイズしてください */
+    transition: 0.3s; /* カスタマイズしてください */
+    width: 20px; /* カスタマイズしてください */
+  }
 /* スマホ・タブレット用CSS */
 @media screen and (max-width: 800px) {
+    .c-hamburger-menu__list {
+        background-color: #eeeeee; /* カスタマイズしてください */
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 2rem; /* カスタマイズしてください */
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 0.3s; /* カスタマイズしてください */
+        top: 100%;
+        width: 100%;
+    }
+
+    .c-hamburger-menu__button {
+        align-items: center;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* カスタマイズしてください */
+        height: 32px; /* カスタマイズしてください */
+        justify-content: center;
+        width: 32px; /* カスタマイズしてください */
+        }
+        #hamburger:checked
+        ~ .c-hamburger-menu__button
+        .c-hamburger-menu__button-mark:nth-of-type(1) {
+        transform: translate(2px, 1px) rotate(45deg); /* カスタマイズしてください */
+        transform-origin: 0%; /* カスタマイズしてください */
+      }
+      #hamburger:checked
+        ~ .c-hamburger-menu__button
+        .c-hamburger-menu__button-mark:nth-of-type(2) {
+        opacity: 0;
+      }
+      #hamburger:checked
+        ~ .c-hamburger-menu__button
+        .c-hamburger-menu__button-mark:nth-of-type(3) {
+        transform: translate(2px, 3px) rotate(-45deg); /* カスタマイズしてください */
+        transform-origin: 0%; /* カスタマイズしてください */
+      }
+
     #wrap {
         margin: 1% 1%;
         /* background: rgba(255, 255, 255, 0.5); */
@@ -400,7 +487,7 @@ html {
     }
 
     .child2 {
-        display: block;
+        display: none;
     }
     
 
@@ -455,118 +542,5 @@ html {
         /* 要素を中央寄せ */
         border-radius: 10px;
     }
-
-    /* ハンバーガーボタン */
-    .hamburger {
-        position: relative;
-        display: block;
-        width: 30px;
-        height: 25px;
-        margin: 10px 0 0 0;
-        cursor: pointer; /* カーソルをポインターに変更 */
-    }
-
-    /* ハンバーガーライン */
-    .hamburger span {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #313131;
-        transform: translateY(-50%);
-        transition: background-color 0.3s ease; /* 色の変化をアニメーション化 */
-    }
-
-    /* ハンバーガーラインのアクティブスタイル */
-    .hamburger.active span {
-        background-color: transparent; /* クリック時にラインを非表示 */
-    }
-
-    /* ハンバーガーラインのアニメーション */
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #313131;
-        transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーション追加 */
-    }
-
-    /* ハンバーガーメニューの上のライン */
-    .hamburger::before {
-        top: 0;
-    }
-
-    /* ハンバーガーメニューの下のライン */
-    .hamburger::after {
-        bottom: 0;
-    }
-
-    /* ハンバーガーメニューのアクティブスタイル */
-    .hamburger.active::before {
-        transform: translateY(10px) rotate(45deg); /* メニューアイコンに変形 */
-    }
-
-    .hamburger.active::after {
-        transform: translateY(-10px) rotate(-45deg); /* メニューアイコンに変形 */
-    }
-    .mobile-menu {
-        display: none; /* デフォルトは非表示 */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #f9f9f9;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-
-    /* ハンバーガーメニューのアクティブ時のスタイル */
-    .mobile-menu.active {
-        display: block; /* アクティブ時に表示 */
-    }
-
-
-
-    /*-閉じるアイコンー*/
-    /* .close {
-        position: relative;
-        padding-left: 20px;
-    }
-
-    .close::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        display: block;
-        width: 16px;
-        height: 1px;
-        background: #fff;
-        transform: rotate(45deg);
-    }
-
-    .close::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        display: block;
-        width: 16px;
-        height: 1px;
-        background: #fff;
-        transform: rotate(-45deg);
-    }
-
-    .toggle {
-        transform: translateY(0);
-        opacity: 1;
-    } */
 
 }

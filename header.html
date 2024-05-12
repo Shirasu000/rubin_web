@@ -2,48 +2,55 @@
     <img src="images/rubin_banner_wide.png" loading="eager", alt="Rubin Logo">
 </div> -->
 
-<div class="parent">
-    <div class="child1">
-        <a href="index.html"></i>
-            <img src="images/rubin_logo.png" loading="eager" , alt="Rubin Logo">
-        </a>
-        <!-- <h3>ルビンの思うつぼ</h3> -->
-    </div>
-    <div class="child2">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="about-us.html"><i class="fas fa-users"></i> About us</a>
-        <!-- <a href="quiz.html"><i class="fas fa-question"></i> Play Quiz</a> -->
-        <a href="lexicon.html"><i class="fas fa-book"></i> Quiz</a>
-        <!-- <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a> -->
-    </div>
-    <div class="hamburger">
-        <span></span>
-    </div>
-    <div class="mobile-menu">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="about-us.html"><i class="fas fa-users"></i> About us</a>
-        <a href="lexicon.html"><i class="fas fa-book"></i> Quiz</a>
-    </div>
-</div>
-
-
-
-<!-- 
-<div class="parent-smapho">
+<!-- <div class="parent">
     <div class="child1">
         <a href="index.html"></i>
             <img src="images/rubin_logo.png" loading="eager" , alt="Rubin Logo">
         </a>
     </div>
     <div class="child2">
-        <a href="index.html"><i class="fas fa-home"></i></a>
-        <a href="about-us.html"><i class="fas fa-users"></i></a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about-us.html"><i class="fas fa-users"></i> About us</a>
         <a href="quiz.html"><i class="fas fa-question"></i> Play Quiz</a>
-        <a href="lexicon.html"><i class="fas fa-book"></i></a>
+        <a href="lexicon.html"><i class="fas fa-book"></i> Quiz</a>
         <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-        <li class="close"><span>閉じる</span></li>
-        <div id="hamburger">
-            <span></span>
-        </div>
     </div>
+    <nav>
+        <input id="menu_toggle" type="checkbox" />
+        <label class="menu_btn" for="menu_toggle">
+            <span></span>
+        </label>
+        <ul class="menu_box">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about-us.html"><i class="fas fa-users"></i> About us</a></li>
+            <li><a href="lexicon.html"><i class="fas fa-book"></i> Quiz</a></li>
+        </ul>
+    </nav>
 </div> -->
+
+
+<div class="parent c-hamburger-menu">
+    <div class="child1">
+        <a href="index.html"></i>
+            <img src="images/rubin_logo.png" loading="eager" , alt="Rubin Logo">
+        </a>
+    </div>
+    <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/><!-- 追記 idはlabelのforと同じにする -->
+    <label for="hamburger" class="c-hamburger-menu__bg"></label><!-- 追記 ハンバーガーメニュを開いた時の背景 -->
+    <ul class="c-header__list c-hamburger-menu__list"><!-- 追記 クラスを追記 -->
+        <li class="c-header__list-item">
+            <a href="index.html"><i class="fas fa-home c-header__list-link"></i> Home</a>
+        </li>
+        <li class="c-header__list-item">
+            <a href="about-us.html"><i class="fas fa-users"></i> About us</a>
+        </li>
+        <li class="c-header__list-item">
+            <a href="lexicon.html"><i class="fas fa-book"></i> Quiz</a>
+        </li>
+    </ul>
+    <label for="hamburger" class="c-hamburger-menu__button"><!-- 追記 ハンバーガーメニューのボタン -->
+        <span class="c-hamburger-menu__button-mark"></span>
+        <span class="c-hamburger-menu__button-mark"></span>
+        <span class="c-hamburger-menu__button-mark"></span>
+    </label>
+</div>
