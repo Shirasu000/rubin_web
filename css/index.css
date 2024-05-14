@@ -105,7 +105,6 @@ nav a:hover {
     border-radius: 5px;
     padding: 0;
     z-index: -1;
-    background-color: red;
 }
 
 .slideshow-slide li {
