@@ -149,6 +149,7 @@ function insert_header(){
         .then((data) => document.querySelector("#header").innerHTML = data);
 }
 
+// PR画像をスライドショーにする
 $(function(){
     $(".slideshow-slide li").css({"position":"relative"});
     $(".slideshow-slide li").hide().css({"position":"absolute"});
