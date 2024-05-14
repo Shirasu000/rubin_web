@@ -575,4 +575,16 @@ html {
         border-radius: 10px;
     }
 
+    .slideshow-slide {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: calc(100vw/4);
+        overflow: hidden;
+        border-color: #353535;
+        border-radius: 5px;
+        padding: 0;
+        z-index: -1;
+        background-color: red;
+    }
 }
