@@ -3,9 +3,9 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
-    background-image: url("../images/background3.png");
+    background-image: url("../images/background5.png");
     /* background-color: rgb(222, 237, 245); */
-    background-size: contain;
+    background-size: auto;
 }
 
 
@@ -446,7 +446,7 @@ html {
     height: 1px; /* カスタマイズしてください */
     transition: 0.3s; /* カスタマイズしてください */
     width: 20px; /* カスタマイズしてください */
-  }
+}
 /* スマホ・タブレット用CSS */
 @media screen and (max-width: 800px) {
     .c-hamburger-menu__list {
@@ -485,18 +485,18 @@ html {
         .c-hamburger-menu__button-mark:nth-of-type(1) {
         transform: translate(2px, 1px) rotate(45deg); /* カスタマイズしてください */
         transform-origin: 0%; /* カスタマイズしてください */
-      }
-      #hamburger:checked
+    }
+    #hamburger:checked
         ~ .c-hamburger-menu__button
         .c-hamburger-menu__button-mark:nth-of-type(2) {
         opacity: 0;
-      }
-      #hamburger:checked
+    }
+    #hamburger:checked
         ~ .c-hamburger-menu__button
         .c-hamburger-menu__button-mark:nth-of-type(3) {
         transform: translate(2px, 3px) rotate(-45deg); /* カスタマイズしてください */
         transform-origin: 0%; /* カスタマイズしてください */
-      }
+    }
 
     #wrap {
         margin: 1% 1%;
@@ -513,10 +513,6 @@ html {
         height: 60px;
     }
 
-    .child2 {
-        display: none;
-    }
-    
 
     .profile {
         /* background: #ffffff; */
