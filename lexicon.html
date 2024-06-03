@@ -19,18 +19,17 @@
 
 <body>
     <!-- header.htmlの内容を埋め込む -->
-    <div id="header"></div>
+    <header></header>
     <script>
         fetch("header.html")
             .then((response) => response.text())
-            .then((data) => document.querySelector("#header").innerHTML = data);
+            .then((data) => document.querySelector("header").innerHTML = data);
     </script>
     <main>
-        <div id="wrap">
-            <section>
+            <div class="content">
                 <!-- タイトルと説明 -->
-                <h2 class="title">　Lexicon　</h2>
-                <p class="description">
+                <h2 class="content__title">　Lexicon　</h2>
+                <p class="content__description">
                     クイズで使える知識をまとめていきます！
                 </p>
                 <!-- タグの選択肢 -->
@@ -70,7 +69,6 @@
                 </div>
                 <!-- 記事の一覧 -->
                 <div class="articles">
-                    <!-- 記事1 -->
                     <div class="article">
                         <h3 class="toggle-btn" onclick="toggle(this)">ロシア五人組</h3>
                         <div class="tags_view">

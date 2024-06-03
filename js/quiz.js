@@ -133,16 +133,16 @@ function insert_header(){
 
 // PR画像をスライドショーにする
 $(function(){
-    $(".slideshow-slide li").css({"position":"relative"});
-    $(".slideshow-slide li").hide().css({"position":"absolute"});
-    $(".slideshow-slide li:first").addClass("slide");
-    $(".slideshow-slide li:nth-child(2)").css({"display":"block"});
+    $(".PR__slideshow li").css({"position":"relative"});
+    $(".PR__slideshow li").hide().css({"position":"absolute"});
+    $(".PR__slideshow li:first").addClass("slide");
+    $(".PR__slideshow li:nth-child(2)").css({"display":"block"});
     setInterval(function(){
-      var $active = $(".slideshow-slide li.slide");
-      var $next = $active.next("li").length?$active.next("li"):$(".slideshow-slide li:first");
-      var $nextnext = $next.next("li");
-      $active.fadeOut(0).removeClass("slide");
-      $next.show().addClass("slide");
-      $nextnext.css({"display":"block"});
+        var $active = $(".PR__slideshow li.slide");
+        var $next = $active.next("li").length?$active.next("li"):$(".PR__slideshow li:first");
+        var $nextnext = $next.next("li");
+        $active.fadeOut(0).removeClass("slide");
+        $next.show().addClass("slide");
+        $nextnext.css({"display":"block"});
     },5000);
-  });
+});

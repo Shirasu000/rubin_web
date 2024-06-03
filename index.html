@@ -10,26 +10,26 @@
         gtag('js', new Date());
         gtag('config', 'G-BCM9RXVP08');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- 検索エンジンで表示される文章 -->
     <meta name="description" content="クイズの情報を発信するwebサイトです。">
     <meta name="keywords" content="ルビン,クイズ,イベント,思うつぼ">
-    
+
     <title>ルビンの思うつぼ</title>
-    
+
     <!-- CSSファイルを読み込む -->
-    <link rel="stylesheet" href="./css/index.css"> 
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-    
+
     <!-- ファビコンを設定 -->
     <link rel="icon" href="./images/rubin.png" type="image/png">
-    
+
     <!-- サムネイル画像を設定 -->
     <meta name="thumbnail" content="./images/rubin.png" />
-    
+
     <!-- JSファイルをdefer属性で読み込む -->
     <script src="./js/quiz.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -37,17 +37,17 @@
 
 <body>
     <!-- ヘッダーを外部ファイルから読み込む -->
-    <div id="header"></div>
+    <header></header>
     <script>
         fetch("header.html")
             .then(response => response.text())
-            .then(data => document.querySelector("#header").innerHTML = data);
+            .then(data => document.querySelector("header").innerHTML = data);
     </script>
 
     <main>
-        <div id="wrap">
-            <div class="pr">
-                <ul class="slideshow-slide">
+        <div class="content">
+            <div class="PR">
+                <ul class="PR__slideshow">
                     <!-- スライドショーの各アイテム -->
                     <li>
                         <a href="https://q-tak.com/?p=16998">
@@ -66,12 +66,14 @@
                     </li>
                 </ul>
             </div>
-            
-            <!-- ニュースセクション -->
-            <section>
-                <h2 class="title">News</h2>
-                <div class="table">
-                    <div class="box_scrollbar">
+        </div>
+
+        <!-- ニュースセクション -->
+        <div class="content">
+            <h2 class="content__title">　News　</h2>
+            <div class="news">
+                <div class="news__table">
+                    <div class="news__scrollbar">
                         <!-- ニュース項目 -->
                         <dl>
                             <dt>2024.02.26</dt>
@@ -82,7 +84,8 @@
                             <dt>2024.01.01</dt>
                             <dd>
                                 初のクイズ問題集『クイズの壺 ～日常に興を添える300問～』を発売しました！<br>
-                                <a href="https://rubin.booth.pm/items/5348850">BOOTH（ブース）</a>と<a href="https://q-tak.com/?p=16998">クイズ宅配便</a>にて販売中です。ぜひお買い求めください！
+                                <a href="https://rubin.booth.pm/items/5348850">BOOTH（ブース）</a>と<a
+                                    href="https://q-tak.com/?p=16998">クイズ宅配便</a>にて販売中です。ぜひお買い求めください！
                             </dd>
                         </dl>
                         <dl>
@@ -92,7 +95,7 @@
                         </dl>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </main>
 </body>
