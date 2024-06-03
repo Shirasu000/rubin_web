@@ -1,218 +1,181 @@
 /* body部（全体）*/
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0px;
-    background-image: url("../images/background5.png");
-    /* background-color: rgb(222, 237, 245); */
-    background-size: auto;
+    font-family: Arial, sans-serif; /* フォントファミリーを設定 */
+    margin: 0; /* ページの外側の余白を0に設定 */
+    background-image: url("../images/background5.png"); /* 背景画像を設定 */
+    background-size: auto; /* 背景画像のサイズを自動に設定 */
 }
-
 
 /* header部 */
 #banner img {
-    display: flex;
-    /* width: 100%; */
-    /* max-width: 100%; */
-    /* height: 100%; */
+    display: flex; /* イメージをフレックスボックスとして表示 */
 }
 
 nav {
-    background-color: #ffffff;
-    padding: 0px;
-    /* text-align: center; */
-    display: flex;
-    /* justify-content: center; */
-    /* overflow: hidden; floatをクリアするために必要 */
+    background-color: #ffffff; /* ナビゲーションバーの背景色を設定 */
+    padding: 0; /* パディングを0に設定 */
+    display: flex; /* ナビゲーションをフレックスボックスとして表示 */
 }
 
 .logo {
-    /* float: left; タイトルを左寄せ */
     height: 100px;
     width: auto;
-    background-color: green;
+    background-color: green; /* ロゴの背景色を設定 */
 }
 
 .menu {
-    float: right;
-    /* メニューを右寄せ */
-    background-color: red;
+    float: right; /* メニューを右寄せ */
+    background-color: red; /* メニューの背景色を設定 */
 }
 
 .parent {
-    /* margin: 40px; */
-    padding: 0% 19%;
-    height: 50px;
-    background-color: white;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-    /* position: fixed; */
+    padding: 0% 19%; /* 親要素のパディングを設定 */
+    height: 50px; /* 高さを設定 */
+    background-color: white; /* 背景色を設定 */
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    position: relative; /* 相対位置を設定 */
+    justify-content: space-between; /* 要素間のスペースを均等に配置 */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* 影を設定 */
 }
 
 .child1 {
-    display: flex;
-    text-align: center;
-    /* background-color: green; */
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    text-align: center; /* テキストを中央揃え */
 }
 
 .child1 img {
-    height: 60px;
+    height: 60px; /* 画像の高さを設定 */
 }
 
 .c-header__list {
-    box-sizing: border-box;
-    display: flex;
-    margin: 0;
-    padding: 17px 0px 0px 0px;
+    box-sizing: border-box; /* ボックスモデルのサイズ計算方法を設定 */
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    margin: 0; /* マージンを0に設定 */
+    padding: 17px 0; /* パディングを設定 */
 }
 
-
 .c-header__list a {
-    color: #000000;
-    text-decoration: none;
-    margin-right: 30px;
-    /* line-height: 2.5; */
-    font-size: 18px;
+    color: #000000; /* リンクの色を設定 */
+    text-decoration: none; /* 下線をなくす */
+    margin-right: 30px; /* 右マージンを設定 */
+    font-size: 18px; /* フォントサイズを設定 */
 }
 
 .c-header__list-item {
-    list-style: none;
-    text-decoration: none;
+    list-style: none; /* リストのマーカーをなくす */
 }
-
 
 /*カーソルを合わせたときの処理*/
 nav a:hover {
-    color: gray;
-    text-decoration: none;
+    color: gray; /* リンクのホバー時の色を設定 */
+    text-decoration: none; /* 下線をなくす */
 }
 
 #wrap {
-    margin: 1% 18%;
-    /* background: rgba(255, 255, 255, 0.5); */
-    /* opacity: 0.5; */
+    margin: 1% 18%; /* マージンを設定 */
 }
 
 .slideshow-slide {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height: calc(100vw/6);
-    overflow: hidden;
-    border-color: #353535;
-    border-radius: 5px;
-    padding: 0;
-    z-index: -1;
+    text-align: center; /* テキストを中央揃え */
+    position: relative; /* 相対位置を設定 */
+    width: 100%; /* 幅を100%に設定 */
+    height: calc(100vw/6); /* 高さを設定 */
+    overflow: hidden; /* オーバーフローを隠す */
+    border-color: #353535; /* ボーダーカラーを設定 */
+    border-radius: 5px; /* ボーダーの角を丸める */
+    padding: 0; /* パディングを0に設定 */
+    z-index: -1; /* Zインデックスを設定 */
 }
 
 .slideshow-slide li {
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    transition: 1s;
-    top: 0;
-    left: 0;
+    list-style: none; /* リストのマーカーをなくす */
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+    transition: 1s; /* アニメーションの速度を設定 */
+    top: 0; /* 上位置を0に設定 */
+    left: 0; /* 左位置を0に設定 */
 }
 
 .slideshow-slide li.slide {
-    top: 0;
-    left: 100%;
-    z-index: 10;
+    top: 0; /* 上位置を0に設定 */
+    left: 100%; /* 左位置を100%に設定 */
+    z-index: 10; /* Zインデックスを設定 */
 }
 
 .slideshow-slide li:first-of-type {
-    display: block!important;
+    display: block!important; /* 最初の要素を表示 */
 }
 
 .slideshow-slide img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto; /* アスペクト比を保つために height を auto に変更 */
-    max-width: 100%;
-    max-height: 100%;
+    position: absolute; /* 絶対位置を設定 */
+    left: 0; /* 左位置を0に設定 */
+    top: 0; /* 上位置を0に設定 */
+    width: 100%; /* 幅を100%に設定 */
+    height: auto; /* 高さを自動に設定 */
+    max-width: 100%; /* 最大幅を100%に設定 */
+    max-height: 100%; /* 最大高さを100%に設定 */
 }
 
 /* main部 */
 
+/* main部 */
 section .title {
-    padding: 0% 0%;
-    /* padding-left: 10px; */
-    display: flex;
-    align-items: center;
-}
-
-section .title::before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    /* 線の長さを調整 */
-    height: 1px;
+    padding: 0% 0%; /* パディングを設定 */
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    align-items: center; /* アイテムを中央揃え */
 }
 
 section .title::before,
 section .title::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    margin: 0;
-    /*左右の余白を調整*/
+    content: ""; /* コンテンツを追加 */
+    flex: 1; /* 伸縮可能な幅を設定 */
+    height: 1px; /* 高さを設定 */
+    margin: 0; /* マージンを0に設定 */
 }
 
 .title:before {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100));
-
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)); /* グラデーションを設定 */
 }
 
 .title:after {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)); /* 右から左へのグラデーションを設定 */
 }
 
 .pr {
-    display: flex;
-    justify-content: center;
-    /* background-color: red; */
-    margin: 0 10%;
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    justify-content: center; /* アイテムを中央揃え */
+    margin: 0 10%; /* マージンを設定 */
 }
 
 .description {
-    padding: 0px;
-    text-align: center;
+    padding: 0; /* パディングを0に設定 */
+    text-align: center; /* テキストを中央揃え */
 }
 
 .description a:link {
-    color: blue;
-    text-decoration: none;
-    /* 下線をなくす */
+    color: blue; /* リンクの色を設定 */
+    text-decoration: none; /* 下線をなくす */
 }
 
 .description a:visited {
-    color: blue;
-    text-decoration: none;
-    /* 下線をなくす */
+    color: blue; /* 訪問済みリンクの色を設定 */
+    text-decoration: none; /* 下線をなくす */
 }
 
 .description a:hover {
-    color: red;
-    text-decoration: underline;
-    /* 下線を引く */
+    color: red; /* ホバー時のリンクの色を設定 */
+    text-decoration: underline; /* 下線を引く */
 }
 
 .table .box_scrollbar {
-    /* width:auto; */
-    height: 250px;
-    padding: 5px;
-    border: 3px solid rgb(226, 225, 225);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin-left: 0%;
-    margin-right: 0%;
-    /* color:#000; */
-    /* font-size:12px; */
-    overflow-y: scroll;
+    height: 250px; /* 高さを設定 */
+    padding: 5px; /* パディングを設定 */
+    border: 3px solid rgb(226, 225, 225); /* ボーダーを設定 */
+    border-radius: 10px; /* ボーダーの角を丸める */
+    background-color: rgba(255, 255, 255, 0.7); /* 背景色を設定 */
+    margin-left: 0%; /* 左マージンを設定 */
+    margin-right: 0%; /* 右マージンを設定 */
+    overflow-y: scroll; /* 縦方向のスクロールバーを表示 */
 }
 
 .table dl {
@@ -220,365 +183,358 @@ section .title::after {
 }
 
 .table dt {
-    float: left;
-    margin-left: 3%;
-    margin-top: 2.8px;
+    float: left; /* 左寄せ */
+    margin-left: 3%; /* 左マージンを設定 */
+    margin-top: 2.8px; /* 上マージンを設定 */
     /* margin-right: 10px; */
 }
 
 .table dd {
-    margin-left: 150px;
+    margin-left: 150px; /* 左マージンを設定 */
 }
-
 
 /* プロフィール画面用設定 */
 .profiles {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* プロフィールが折り返されるようにする */
-    margin-left: 0%;
-    margin-right: 0%;
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    justify-content: center; /* アイテムを中央揃え */
+    flex-wrap: wrap; /* アイテムを折り返す */
+    margin-left: 0%; /* 左マージンを設定 */
+    margin-right: 0%; /* 右マージンを設定 */
 }
 
 .profile {
-    /* background: #ffffff; */
-    width: 150px;
-    height: 250px;
-    padding: 3%;
-    margin: 0px 5px;
+    width: 150px; /* 幅を設定 */
+    height: 250px; /* 高さを設定 */
+    padding: 3%; /* パディングを設定 */
+    margin: 0px 5px; /* マージンを設定 */
     /* border: 1px solid #5e5e5e; */
     /* border-radius: 10px; */
     /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* アイテムを縦方向に配置 */
+    align-items: center; /* アイテムを中央揃え */
+    text-align: center; /* テキストを中央揃え */
 }
 
 .profile__img {
-    display: block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
+    display: block; /* ブロック要素として表示 */
+    width: 150px; /* 幅を設定 */
+    height: 150px; /* 高さを設定 */
+    border-radius: 50%; /* 角を丸める */
+    margin: 0 auto; /* 自動的に中央揃え */
 }
 
 .profile__name {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 1rem auto 1rem;
-    letter-spacing: 0.1rem;
+    text-align: center; /* テキストを中央揃え */
+    font-weight: bold; /* フォントの太さを設定 */
+    font-size: 1.2rem; /* フォントサイズを設定 */
+    margin: 1rem auto 1rem; /* マージンを設定 */
+    letter-spacing: 0.1rem; /* 文字間隔を設定 */
 }
 
 .profile__desc {
-    line-height: 1.6rem;
+    line-height: 1.6rem; /* 行の高さを設定 */
 }
 
 /* Lexiconのスタイル */
 
 .article {
-    max-width: auto;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-    background: #FFF;
-    border: 1px solid #a3a2a2;
-    flex-direction: column;
+    max-width: auto; /* 最大幅を設定 */
+    margin-left: 3%; /* 左マージンを設定 */
+    margin-right: 3%; /* 右マージンを設定 */
+    margin-top: 10px; /* 上マージンを設定 */
+    margin-bottom: 10px; /* 下マージンを設定 */
+    padding: 20px; /* パディングを設定 */
+    padding-top: 0px; /* 上部のパディングを設定 */
+    padding-bottom: 0px; /* 下部のパディングを設定 */
+    background-color: #f9f9f9; /* 背景色を設定 */
+    font-family: Arial, sans-serif; /* フォントファミリーを設定 */
+    background: #FFF; /* 背景色を設定 */
+    border: 1px solid #a3a2a2; /* ボーダーを設定 */
+    flex-direction: column; /* アイテムを縦方向に配置 */
     /* 縦方向の並びを維持 */
-    align-items: center;
-    /* 要素を中央寄せ */
-    border-radius: 10px;
+    align-items: center; /* アイテムを中央揃え */
+    border-radius: 10px; /* ボーダーの角を丸める */
 }
 
 .article-hidden {
-    display: none;
+    display: none; /* 要素を非表示にする */
 }
 
+
 .article .toggle-btn::before {
-    content: "＋";
-    display: inline-block;
-    margin-right: 5px;
-    color: rgb(92, 91, 91);
+    content: "＋"; /* コンテンツを追加 */
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin-right: 5px;  /* コンテンツの間にマージンを設定 */
+    color: rgb(92, 91, 91); /* テキストの色を設定 */
 }
 
 .article .toggle-btn.expanded::before {
-    content: "－";
+    content: "－"; /* コンテンツを追加 */
 }
 
 /* タグのスタイル */
 .tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    flex-wrap: wrap; /* アイテムを折り返す */
     /* justify-content: center; */
-    max-width: auto;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    max-width: auto; /* 最大幅を設定 */
+    margin-left: 10%; /* 左マージンを設定 */
+    margin-right: 10%; /* 右マージンを設定 */
+    margin-top: 10px; /* 上マージンを設定 */
+    margin-bottom: 20px; /* 下マージンを設定 */
 }
 
 .tags_view {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* 要素をフレックスボックスとして表示 */
+    flex-wrap: wrap; /* アイテムを折り返す */
     /* justify-content: center; */
-    margin-top: -10px;
-    padding-left: 13px;
-    pointer-events: none;
+    margin-top: -10px; /* 上マージンを設定 */
+    padding-left: 13px; /* 左パディングを設定 */
+    pointer-events: none; /* ポインターイベントを無効化 */
 }
 
 .tag {
-    display: inline-block;
-    margin: 0px 0px 10px 10px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 1px solid rgb(161, 161, 161);
-    padding: 1px 5px;
-    border-radius: 0px;
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin: 0px 0px 10px 10px; /* マージンを設定 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    background-color: #ffffff; /* 背景色を設定 */
+    border: 1px solid rgb(161, 161, 161); /* ボーダーを設定 */
+    padding: 1px 5px; /* パディングを設定 */
+    border-radius: 0px; /* ボーダーの角を設定 */
 }
 
 .tag-meta {
-    display: inline-block;
-    margin: 0px 0px 10px 10px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 1px solid rgb(161, 161, 161);
-    padding: 1px 5px;
-    border-radius: 15px;
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin: 0px 0px 10px 10px; /* マージンを設定 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    background-color: #ffffff; /* 背景色を設定 */
+    border: 1px solid rgb(161, 161, 161); /* ボーダーを設定 */
+    padding: 1px 5px; /* パディングを設定 */
+    border-radius: 15px; /* ボーダーの角を設定 */
 }
 
 .profile_tag {
-    display: inline-block;
-    margin: 0px 0px 5px 0px;
-    color: #3470f3;
-    /* background-color: rgba(255,255,255); */
-    padding: 0px 5px;
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin: 0px 0px 5px 0px; /* マージンを設定 */
+    color: #3470f3; /* テキストの色を設定 */
+    padding: 0px 5px; /* パディングを設定 */
     /* border-radius: 5px; */
     /* font-size: 15px; */
-    border: 0px solid rgb(0, 0, 0);
-
+    border: 0px solid rgb(0, 0, 0); /* ボーダーを設定 */
 }
 
 /* 選択されたタグのスタイル */
 .selected-tag {
-    background-color: #0074d9;
-    color: #ffffff;
+    background-color: #0074d9; /* 背景色を設定 */
+    color: #ffffff; /* テキストの色を設定 */
 }
-
 
 /* 表のスタイルを設定 */
 table {
-    border-collapse: collapse;
-    width: 100%;
+    border-collapse: collapse; /* テーブルの境界線を折り畳む */
+    width: 100%; /* 幅を100%に設定 */
 }
 
 th,
 td {
-    border: 1px solid #ddd;
-    padding: 7px;
-    text-align: left;
+    border: 1px solid #ddd; /* ボーダーを設定 */
+    padding: 7px; /* パディングを設定 */
+    text-align: left; /* テキストを左寄せ */
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 背景色を設定 */
 }
-
 
 /*スクロールバーを常に表示する*/
 html {
-    overflow-y: scroll;
+    overflow-y: scroll; /* 縦方向のスクロールバーを常に表示 */
 }
 
 /*語呂合わせ用スタイル*/
 .goro_box {
-    position: relative;
-    padding: 3px 4px;
-    border: 0px solid black;
-    background-color: #353535;
-    color: white;
-    z-index: 10;
-    margin: 0px 10px 0px 0px;
-    display: inline-block;
+    position: relative; /* 相対位置を設定 */
+    padding: 3px 4px; /* パディングを設定 */
+    border: 0px solid black; /* ボーダーを設定 */
+    background-color: #353535; /* 背景色を設定 */
+    color: white; /* テキストの色を設定 */
+    z-index: 10; /* Zインデックスを設定 */
+    margin: 0px 10px 0px 0px; /* マージンを設定 */
+    display: inline-block; /* インラインブロック要素として表示 */
 }
+
 .goro_box::after {
-    content: '';
-    border: 1px solid #353535;
-    position: absolute;
-    top: 2px;
-    right: -4px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    content: ''; /* コンテンツを追加 */
+    border: 1px solid #353535; /* ボーダーを設定 */
+    position: absolute; /* 絶対位置を設定 */
+    top: 2px; /* 上位置を設定 */
+    right: -4px; /* 右位置を設定 */
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+    z-index: -1; /* Zインデックスを設定 */
 }
-
-
 
 #hamburger:checked ~ .c-hamburger-menu__list {
-    transform: translateX(0%);
-    transition: 0.3s;
+    transform: translateX(0%); /* X軸方向に要素を移動 */
+    transition: 0.3s; /* アニメーションの時間を設定 */
 }
 
 .c-hamburger-menu__input {
-    display: none;
+    display: none; /* 入力を非表示にする */
 }
 
 .c-hamburger-menu__bg {
-  /* background-color: #000; */
-  cursor: pointer;
-  display: none;
-  height: 100vh;
-  left: 0;
-  opacity: 0.4; /* カスタマイズしてください */
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+    /* background-color: #000; */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    display: none; /* 要素を非表示にする */
+    height: 100vh; /* 高さを100vhに設定 */
+    left: 0; /* 左位置を設定 */
+    opacity: 0.4; /* 透明度を設定 */
+    position: absolute; /* 絶対位置を設定 */
+    top: 0; /* 上位置を設定 */
+    width: 100%; /* 幅を100%に設定 */
+    z-index: -1; /* Zインデックスを設定 */
 }
 
 #hamburger:checked ~ .c-hamburger-menu__bg {
-  display: block;
+    display: block; /* 要素を表示する */
 }
 
 .c-hamburger-menu__button {
-  display: none;
+    display: none; /* 要素を非表示にする */
 }
+
 .c-hamburger-menu__button-mark {
-    background-color: #000; /* カスタマイズしてください */
-    display: block;
-    height: 1px; /* カスタマイズしてください */
-    transition: 0.3s; /* カスタマイズしてください */
-    width: 20px; /* カスタマイズしてください */
+    background-color: #000; /* 背景色を設定 */
+    display: block; /* 要素をブロック要素として表示 */
+    height: 1px; /* 高さを設定 */
+    transition: 0.3s; /* アニメーションの時間を設定 */
+    width: 20px; /* 幅を設定 */
 }
+
 /* スマホ・タブレット用CSS */
 @media screen and (max-width: 800px) {
     .c-hamburger-menu__list {
-        background-color: #eeeeee; /* カスタマイズしてください */
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        padding: 1rem; /* カスタマイズしてください */
-        position: absolute;
-        transform: translateX(-100%);
-        transition: 0.3s; /* カスタマイズしてください */
-        top: 100%;
-        width: 100%;
-        opacity: 0.95;
+        background-color: #eeeeee; /* 背景色を設定 */
+        align-items: flex-start; /* アイテムを上揃え */
+        display: flex; /* 要素をフレックスボックスとして表示 */
+        flex-direction: column; /* アイテムを縦方向に配置 */
+        left: 0; /* 左位置を設定 */
+        padding: 1rem; /* パディングを設定 */
+        position: absolute; /* 絶対位置を設定 */
+        transform: translateX(-100%); /* X軸方向に要素を移動 */
+        transition: 0.3s; /* アニメーションの時間を設定 */
+        top: 100%; /* 上位置を設定 */
+        width: 100%; /* 幅を100%に設定 */
+        opacity: 0.95; /* 透明度を設定 */
     }
+    
     .c-header__list-item{
-        margin-bottom: 5px;
+        margin-bottom: 5px; /* 下マージンを設定 */
     }
 
     .c-hamburger-menu__button {
-        align-items: center;
-        appearance: none;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        gap: 5px; /* カスタマイズしてください */
-        height: 50px; /* カスタマイズしてください */
-        justify-content: center;
-        width: 32px; /* カスタマイズしてください */
-        }
-        #hamburger:checked
-        ~ .c-hamburger-menu__button
-        .c-hamburger-menu__button-mark:nth-of-type(1) {
-        transform: translate(2px, 1px) rotate(45deg); /* カスタマイズしてください */
-        transform-origin: 0%; /* カスタマイズしてください */
+        align-items: center; /* アイテムを中央揃え */
+        appearance: none; /* デフォルトの外観を無効にする */
+        background-color: transparent; /* 背景色を透明に設定 */
+        border: none; /* ボーダーをなくす */
+        cursor: pointer; /* カーソルをポインターに設定 */
+        display: flex; /* 要素をフレックスボックスとして表示 */
+        flex-direction: column; /* アイテムを縦方向に配置 */
+        gap: 5px; /* アイテム間の間隔を設定 */
+        height: 50px; /* 高さを設定 */
+        justify-content: center; /* アイテムを中央揃え */
+        width: 32px; /* 幅を設定 */
     }
-    #hamburger:checked
-        ~ .c-hamburger-menu__button
-        .c-hamburger-menu__button-mark:nth-of-type(2) {
-        opacity: 0;
+    
+    #hamburger:checked ~ .c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(1) {
+        transform: translate(2px, 1px) rotate(45deg); /* X軸とY軸方向に要素を移動し、45度回転 */
+        transform-origin: 0%; /* 回転の中心を設定 */
     }
-    #hamburger:checked
-        ~ .c-hamburger-menu__button
-        .c-hamburger-menu__button-mark:nth-of-type(3) {
-        transform: translate(2px, 3px) rotate(-45deg); /* カスタマイズしてください */
-        transform-origin: 0%; /* カスタマイズしてください */
+
+    #hamburger:checked ~ .c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(2) {
+        opacity: 0; /* 透明度を0に設定 */
+    }
+
+    #hamburger:checked ~ .c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(3) {
+        transform: translate(2px, 3px) rotate(-45deg); /* X軸とY軸方向に要素を移動し、-45度回転 */
+        transform-origin: 0%; /* 回転の中心を設定 */
     }
 
     #wrap {
-        margin: 1% 1%;
+        margin: 1% 1%; /* マージンを設定 */
         /* background: rgba(255, 255, 255, 0.5); */
         /* opacity: 0.5; */
     }
+
     .child1 {
-        display: flex;
-        text-align: center;
+        display: flex; /* 要素をフレックスボックスとして表示 */
+        text-align: center; /* テキストを中央揃え */
         /* background-color: green; */
     }
     
     .child1 img {
-        height: 60px;
+        height: 60px; /* 高さを設定 */
     }
 
 
     .profile {
         /* background: #ffffff; */
-        width: 150px;
-        padding: 5% 3%;
+        width: 150px; /* 幅を設定 */
+        padding: 5% 3%; /* パディングを設定 */
         /* margin: 0px 0px; */
     }
 
     .profile__img {
-        display: block;
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        margin: 0 auto;
+        display: block; /* ブロック要素として表示 */
+        width: 140px; /* 幅を設定 */
+        height: 140px; /* 高さを設定 */
+        border-radius: 50%; /* ボーダーの半径を50%に設定 */
+        margin: 0 auto; /* 左右のマージンを自動に設定 */
     }
 
-        
+
     .table dd {
-        margin-left: 130px;
+        margin-left: 130px; /* 左マージンを設定 */
         /* margin-right: 10px; */
     }
 
     .tags {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex; /* 要素をフレックスボックスとして表示 */
+        flex-wrap: wrap; /* アイテムを折り返す */
         /* justify-content: center; */
-        max-width: auto;
-        margin-left: 1%;
-        margin-right: 1%;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        max-width: auto; /* 最大幅を設定 */
+        margin-left: 1%; /* 左マージンを設定 */
+        margin-right: 1%; /* 右マージンを設定 */
+        margin-top: 10px; /* 上マージンを設定 */
+        margin-bottom: 20px; /* 下マージンを設定 */
     }
 
     .article {
-        max-width: auto;
-        margin-left: 1%;
-        margin-right: 1%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 10px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        background-color: #f9f9f9;
-        font-family: Arial, sans-serif;
-        background: #FFF;
-        border: 1px solid #a3a2a2;
-        flex-direction: column;
+        max-width: auto; /* 最大幅を設定 */
+        margin-left: 1%; /* 左マージンを設定 */
+        margin-right: 1%; /* 右マージンを設定 */
+        margin-top: 10px; /* 上マージンを設定 */
+        margin-bottom: 10px; /* 下マージンを設定 */
+        padding: 10px; /* パディングを設定 */
+        padding-top: 0px; /* 上パディングを設定 */
+        padding-bottom: 0px; /* 下パディングを設定 */
+        background-color: #f9f9f9; /* 背景色を設定 */
+        font-family: Arial, sans-serif; /* フォントファミリーを設定 */
+        background: #FFF; /* 背景色を設定 */
+        border: 1px solid #a3a2a2; /* ボーダーを設定 */
+        flex-direction: column; /* アイテムを縦方向に配置 */
         /* 縦方向の並びを維持 */
-        align-items: center;
-        /* 要素を中央寄せ */
-        border-radius: 10px;
+        align-items: center; /* アイテムを中央揃え */
+        border-radius: 10px; /* ボーダーの半径を設定 */
     }
 
     .slideshow-slide {
-        height: calc(100vw/3.8);
+        height: calc(100vw/3.8); /* 高さを計算して設定 */
     }
 
+
     .pr {
-        margin: 0 5%;
+        margin: 0 5%; /* 上下マージンを0、左右マージンを5%に設定 */
     }
 }
