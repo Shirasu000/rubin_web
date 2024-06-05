@@ -34,40 +34,40 @@
                 </p>
                 <!-- タグの選択肢 -->
                 <div class="tags">
-                    <span class="tag" onclick="toggleTag('数学', event)">数学</span>
-                    <span class="tag" onclick="toggleTag('物理', event)">物理</span>
-                    <span class="tag" onclick="toggleTag('化学', event)">化学</span>
-                    <span class="tag" onclick="toggleTag('生物', event)">生物</span>
-                    <span class="tag" onclick="toggleTag('地学', event)">地学</span>
-                    <span class="tag" onclick="toggleTag('医療', event)">医療</span>
-                    <span class="tag" onclick="toggleTag('情報', event)">情報</span>
-                    <span class="tag" onclick="toggleTag('心理学', event)">心理学</span>
-                    <span class="tag" onclick="toggleTag('日本史', event)">日本史</span>
-                    <span class="tag" onclick="toggleTag('世界史', event)">世界史</span>
-                    <span class="tag" onclick="toggleTag('地理', event)">地理</span>
-                    <span class="tag" onclick="toggleTag('哲学', event)">哲学</span>
-                    <span class="tag" onclick="toggleTag('政治', event)">政治</span>
-                    <span class="tag" onclick="toggleTag('経済', event)">経済</span>
-                    <span class="tag" onclick="toggleTag('生活', event)">生活</span>
-                    <span class="tag" onclick="toggleTag('文学', event)">文学</span>
-                    <span class="tag" onclick="toggleTag('芸術', event)">美術</span>
-                    <span class="tag" onclick="toggleTag('音楽', event)">音楽</span>
-                    <span class="tag" onclick="toggleTag('建築', event)">建築</span>
-                    <span class="tag" onclick="toggleTag('アニメ・漫画', event)">アニメ・漫画</span>
-                    <span class="tag" onclick="toggleTag('語学', event)">語学</span>
-                    <span class="tag" onclick="toggleTag('芸能', event)">芸能</span>
-                    <span class="tag" onclick="toggleTag('食', event)">食</span>
-                    <span class="tag" onclick="toggleTag('スポーツ', event)">スポーツ</span>
+                    <span class="tags__tag" onclick="toggleTag('数学', event)">数学</span>
+                    <span class="tags__tag" onclick="toggleTag('物理', event)">物理</span>
+                    <span class="tags__tag" onclick="toggleTag('化学', event)">化学</span>
+                    <span class="tags__tag" onclick="toggleTag('生物', event)">生物</span>
+                    <span class="tags__tag" onclick="toggleTag('地学', event)">地学</span>
+                    <span class="tags__tag" onclick="toggleTag('医療', event)">医療</span>
+                    <span class="tags__tag" onclick="toggleTag('情報', event)">情報</span>
+                    <span class="tags__tag" onclick="toggleTag('心理学', event)">心理学</span>
+                    <span class="tags__tag" onclick="toggleTag('日本史', event)">日本史</span>
+                    <span class="tags__tag" onclick="toggleTag('世界史', event)">世界史</span>
+                    <span class="tags__tag" onclick="toggleTag('地理', event)">地理</span>
+                    <span class="tags__tag" onclick="toggleTag('哲学', event)">哲学</span>
+                    <span class="tags__tag" onclick="toggleTag('政治', event)">政治</span>
+                    <span class="tags__tag" onclick="toggleTag('経済', event)">経済</span>
+                    <span class="tags__tag" onclick="toggleTag('生活', event)">生活</span>
+                    <span class="tags__tag" onclick="toggleTag('文学', event)">文学</span>
+                    <span class="tags__tag" onclick="toggleTag('芸術', event)">美術</span>
+                    <span class="tags__tag" onclick="toggleTag('音楽', event)">音楽</span>
+                    <span class="tags__tag" onclick="toggleTag('建築', event)">建築</span>
+                    <span class="tags__tag" onclick="toggleTag('アニメ・漫画', event)">アニメ・漫画</span>
+                    <span class="tags__tag" onclick="toggleTag('語学', event)">語学</span>
+                    <span class="tags__tag" onclick="toggleTag('芸能', event)">芸能</span>
+                    <span class="tags__tag" onclick="toggleTag('食', event)">食</span>
+                    <span class="tags__tag" onclick="toggleTag('スポーツ', event)">スポーツ</span>
 
                 </div>
                 <!-- 記事の一覧 -->
                 <div class="articles">
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">ロシア五人組</h3>
-                        <div class="tags_view">
-                            <span class="tag">音楽</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">ロシア五人組</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">音楽</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                                 19世紀後半のロシアで民族主義的な音楽を作った人たち。
                             <table>
@@ -96,17 +96,17 @@
                             </table>
                             </p>
                             <p>
-                            <h5 class="goro_box"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5>リボ払い急務
+                            <h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5>リボ払い急務
                             </p>
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">六歌仙</h3>
-                        <div class="tags_view">
-                            <span class="tag">歴史</span>
-                            <span class="tag">音楽</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">六歌仙</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">歴史</span>
+                            <span class="tags__tag">音楽</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -140,17 +140,17 @@
                             </table>
                             </p>
                             <p>
-                            <h5 class="goro_box"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5> 大小の僧が喜ぶ文あり
+                            <h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5> 大小の僧が喜ぶ文あり
                             </p>
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">特定原材料</h3>
-                        <div class="tags_view">
-                            <span class="tag">食</span>
-                            <span class="tag">生活</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">特定原材料</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">食</span>
+                            <span class="tags__tag">生活</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <ul>
                                 <li>かに</li>
@@ -164,16 +164,16 @@
                             </ul>
                             </p>
                             <p>
-                            <h5 class="goro_box"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5> カニこそ食えたら
+                            <h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5> カニこそ食えたら
                             </p>
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">数列</h3>
-                        <div class="tags_view">
-                            <span class="tag">数学</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">数列</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">数学</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -201,12 +201,12 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">和名に「オランダ」が付く野菜</h3>
-                        <div class="tags_view">
-                            <span class="tag">生物</span>
-                            <span class="tag">食</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">和名に「オランダ」が付く野菜</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">生物</span>
+                            <span class="tags__tag">食</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -234,11 +234,11 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">硬さ</h3>
-                        <div class="tags_view">
-                            <span class="tag">物理</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">硬さ</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">物理</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -273,17 +273,17 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">3桁番号サービス</h3>
-                        <div class="tags_view">
-                            <span class="tag">生活</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">3桁番号サービス</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">生活</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
                                     <th>電話番号</th>
                                     <th>サービス内容</th>
-                                    <th><h5 class="goro_box"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5></th>
+                                    <th><h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5></th>
                                 </tr>
                                 <tr>
                                     <td>104</td>
@@ -355,11 +355,11 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">楽曲の種類</h3>
-                        <div class="tags_view">
-                            <span class="tag">音楽</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">楽曲の種類</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">音楽</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -446,11 +446,11 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">パスタ</h3>
-                        <div class="tags_view">
-                            <span class="tag">食</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">パスタ</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">食</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -510,10 +510,10 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">〇〇界のノーベル賞</h3>
-                        <div class="tags_view">
+                        <h3 class="article__togglebtn" onclick="toggle(this)">〇〇界のノーベル賞</h3>
+                        <div class="tags--view">
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>
@@ -573,11 +573,11 @@
                         </div>
                     </div>
                     <div class="article">
-                        <h3 class="toggle-btn" onclick="toggle(this)">擬態</h3>
-                        <div class="tags_view">
-                            <span class="tag">生物</span>
+                        <h3 class="article__togglebtn" onclick="toggle(this)">擬態</h3>
+                        <div class="tags--view">
+                            <span class="tags__tag">生物</span>
                         </div>
-                        <div class="article-hidden">
+                        <div class="article__hidden">
                             <p>
                             <table>
                                 <tr>

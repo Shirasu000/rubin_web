@@ -269,19 +269,19 @@ content{
     border-radius: 10px; /* ボーダーの角を丸める */
 }
 
-.article-hidden {
+.article__hidden {
     display: none; /* 要素を非表示にする */
 }
 
 
-.article .toggle-btn::before {
+.article .article__togglebtn::before {
     content: "＋"; /* コンテンツを追加 */
     display: inline-block; /* インラインブロック要素として表示 */
     margin-right: 5px;  /* コンテンツの間にマージンを設定 */
     color: rgb(92, 91, 91); /* テキストの色を設定 */
 }
 
-.article .toggle-btn.expanded::before {
+.article .article__togglebtn.expanded::before {
     content: "－"; /* コンテンツを追加 */
 }
 
@@ -297,7 +297,7 @@ content{
     margin-bottom: 20px; /* 下マージンを設定 */
 }
 
-.tags_view {
+.tags--view {
     display: flex; /* 要素をフレックスボックスとして表示 */
     flex-wrap: wrap; /* アイテムを折り返す */
     /* justify-content: center; */
@@ -306,7 +306,7 @@ content{
     pointer-events: none; /* ポインターイベントを無効化 */
 }
 
-.tag {
+.tags__tag {
     display: inline-block; /* インラインブロック要素として表示 */
     margin: 0px 0px 10px 10px; /* マージンを設定 */
     cursor: pointer; /* カーソルをポインターに設定 */
@@ -314,16 +314,6 @@ content{
     border: 1px solid rgb(161, 161, 161); /* ボーダーを設定 */
     padding: 1px 5px; /* パディングを設定 */
     border-radius: 0px; /* ボーダーの角を設定 */
-}
-
-.tag-meta {
-    display: inline-block; /* インラインブロック要素として表示 */
-    margin: 0px 0px 10px 10px; /* マージンを設定 */
-    cursor: pointer; /* カーソルをポインターに設定 */
-    background-color: #ffffff; /* 背景色を設定 */
-    border: 1px solid rgb(161, 161, 161); /* ボーダーを設定 */
-    padding: 1px 5px; /* パディングを設定 */
-    border-radius: 15px; /* ボーダーの角を設定 */
 }
 
 .profile__tag {
@@ -360,7 +350,7 @@ table th {
 
 
 /*語呂合わせ用スタイル*/
-.goro_box {
+.article__goro {
     position: relative; /* 相対位置を設定 */
     padding: 3px 4px; /* パディングを設定 */
     border: 0px solid black; /* ボーダーを設定 */
@@ -371,7 +361,7 @@ table th {
     display: inline-block; /* インラインブロック要素として表示 */
 }
 
-.goro_box::after {
+.article__goro::after {
     content: ''; /* コンテンツを追加 */
     border: 1px solid #353535; /* ボーダーを設定 */
     position: absolute; /* 絶対位置を設定 */

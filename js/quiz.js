@@ -66,7 +66,7 @@ function checkAnswer() {
 // クリック時に記事の表示を切り替える関数
 function toggle(element) {
     // 記事の非表示要素を取得
-    var hidden = element.parentElement.querySelector('.article-hidden');
+    var hidden = element.parentElement.querySelector('.article__hidden');
 
     // 要素の表示状態を取得
     var displayStyle = hidden.style.display || window.getComputedStyle(hidden).display;
@@ -90,7 +90,7 @@ function toggleTag(tagName, event) {
         event.target.classList.remove('selected-tag'); // クリックされたタグの色を解除
         // すべての記事を表示
         articles.forEach(function(article) {
-            article.classList.remove('article-hidden'); // 記事の表示状態をリセットして全ての記事を表示
+            article.classList.remove('article__hidden'); // 記事の表示状態をリセットして全ての記事を表示
         });
     } else {
         var selectedTag = document.querySelector('.selected-tag');
@@ -101,23 +101,17 @@ function toggleTag(tagName, event) {
 
         // 記事をフィルタリングして表示・非表示を切り替える
         articles.forEach(function(article) {
-            var tags = article.querySelectorAll('.tag'); // 記事のタグを取得
-            var tags_meta = article.querySelectorAll('.tag-meta'); // 記事のタグを取得
+            var tags = article.querySelectorAll('.tags__tag'); // 記事のタグを取得
             var tagFound = false;
-            tags.forEach(function(tag) {
-                if (tag.textContent === tagName) {
-                    tagFound = true; // 該当のタグが記事に含まれているかチェック
-                }
-            });
-            tags_meta.forEach(function(tag) {
-                if (tag.textContent === tagName) {
+            tags.forEach(function(tags__tag) {
+                if (tags__tag.textContent === tagName) {
                     tagFound = true; // 該当のタグが記事に含まれているかチェック
                 }
             });
             if (tagFound) {
-                article.classList.remove('article-hidden'); // 該当のタグを持つ記事は表示
+                article.classList.remove('article__hidden'); // 該当のタグを持つ記事は表示
             } else {
-                article.classList.add('article-hidden'); // 該当のタグを持たない記事は非表示
+                article.classList.add('article__hidden'); // 該当のタグを持たない記事は非表示
             }
         });
     }
@@ -128,7 +122,7 @@ function toggleTag(tagName, event) {
 function insert_header(){
     fetch("header.html")
         .then((response) => response.text())
-        .then((data) => document.querySelector("#header").innerHTML = data);
+        .then((data) => document.querySelector("header").innerHTML = data);
 }
 
 // PR画像をスライドショーにする
