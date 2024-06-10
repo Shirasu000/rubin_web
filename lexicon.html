@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/index.css">
     <script src="./js/quiz.js" defer></script>
 </head>
 
@@ -26,582 +26,610 @@
             .then((data) => document.querySelector("header").innerHTML = data);
     </script>
     <main>
-            <div class="content">
-                <!-- タイトルと説明 -->
-                <h2 class="content__title">　Lexicon　</h2>
-                <p class="content__description">
-                    クイズで使える知識をまとめていきます！
-                </p>
-                <!-- タグの選択肢 -->
-                <div class="tags">
-                    <span class="tags__tag" onclick="toggleTag('数学', event)">数学</span>
-                    <span class="tags__tag" onclick="toggleTag('物理', event)">物理</span>
-                    <span class="tags__tag" onclick="toggleTag('化学', event)">化学</span>
-                    <span class="tags__tag" onclick="toggleTag('生物', event)">生物</span>
-                    <span class="tags__tag" onclick="toggleTag('地学', event)">地学</span>
-                    <span class="tags__tag" onclick="toggleTag('医療', event)">医療</span>
-                    <span class="tags__tag" onclick="toggleTag('情報', event)">情報</span>
-                    <span class="tags__tag" onclick="toggleTag('心理学', event)">心理学</span>
-                    <span class="tags__tag" onclick="toggleTag('歴史', event)">歴史</span>
-                    <span class="tags__tag" onclick="toggleTag('地理', event)">地理</span>
-                    <span class="tags__tag" onclick="toggleTag('哲学', event)">哲学</span>
-                    <span class="tags__tag" onclick="toggleTag('政治', event)">政治</span>
-                    <span class="tags__tag" onclick="toggleTag('経済', event)">経済</span>
-                    <span class="tags__tag" onclick="toggleTag('生活', event)">生活</span>
-                    <span class="tags__tag" onclick="toggleTag('文学', event)">文学</span>
-                    <span class="tags__tag" onclick="toggleTag('芸術', event)">美術</span>
-                    <span class="tags__tag" onclick="toggleTag('音楽', event)">音楽</span>
-                    <span class="tags__tag" onclick="toggleTag('建築', event)">建築</span>
-                    <span class="tags__tag" onclick="toggleTag('アニメ・漫画', event)">アニメ・漫画</span>
-                    <span class="tags__tag" onclick="toggleTag('語学', event)">語学</span>
-                    <span class="tags__tag" onclick="toggleTag('芸能', event)">芸能</span>
-                    <span class="tags__tag" onclick="toggleTag('食', event)">食</span>
-                    <span class="tags__tag" onclick="toggleTag('スポーツ', event)">スポーツ</span>
+        <div class="content">
+            <!-- タイトルと説明 -->
+            <h2 class="content__title">　Lexicon　</h2>
+            <p class="content__description">
+                クイズで使える知識をまとめていきます！
+            </p>
+            <!-- タグの選択肢 -->
+            <div class="tags">
+                <span class="tags__tag" onclick="toggleTag('数学', event)">数学</span>
+                <span class="tags__tag" onclick="toggleTag('物理', event)">物理</span>
+                <span class="tags__tag" onclick="toggleTag('化学', event)">化学</span>
+                <span class="tags__tag" onclick="toggleTag('生物', event)">生物</span>
+                <span class="tags__tag" onclick="toggleTag('地学', event)">地学</span>
+                <span class="tags__tag" onclick="toggleTag('医療', event)">医療</span>
+                <span class="tags__tag" onclick="toggleTag('情報', event)">情報</span>
+                <span class="tags__tag" onclick="toggleTag('心理学', event)">心理学</span>
+                <span class="tags__tag" onclick="toggleTag('歴史', event)">歴史</span>
+                <span class="tags__tag" onclick="toggleTag('地理', event)">地理</span>
+                <span class="tags__tag" onclick="toggleTag('哲学', event)">哲学</span>
+                <span class="tags__tag" onclick="toggleTag('政治', event)">政治</span>
+                <span class="tags__tag" onclick="toggleTag('経済', event)">経済</span>
+                <span class="tags__tag" onclick="toggleTag('生活', event)">生活</span>
+                <span class="tags__tag" onclick="toggleTag('文学', event)">文学</span>
+                <span class="tags__tag" onclick="toggleTag('芸術', event)">美術</span>
+                <span class="tags__tag" onclick="toggleTag('音楽', event)">音楽</span>
+                <span class="tags__tag" onclick="toggleTag('建築', event)">建築</span>
+                <span class="tags__tag" onclick="toggleTag('アニメ・漫画', event)">アニメ・漫画</span>
+                <span class="tags__tag" onclick="toggleTag('語学', event)">語学</span>
+                <span class="tags__tag" onclick="toggleTag('芸能', event)">芸能</span>
+                <span class="tags__tag" onclick="toggleTag('食', event)">食</span>
+                <span class="tags__tag" onclick="toggleTag('スポーツ', event)">スポーツ</span>
 
-                </div>
-                <!-- 記事の一覧 -->
-                <div class="articles">
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">ロシア五人組</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">音楽</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                                19世紀後半のロシアで民族主義的な音楽を作った人たち。
-                            <table>
-                                <tr>
-                                    <th>名前</th>
-                                    <th>代表曲など</th>
-                                </tr>
-                                <tr>
-                                    <td>ニコライ・<b>リ</b>ムスキー＝コルサコフ</td>
-                                    <td>『シェヘラザード』</td>
-                                </tr>
-                                <tr>
-                                    <td>アレクサンドル・<b>ボ</b>ロディン</td>
-                                    <td>『イーゴリ公』</td>
-                                </tr>
-                                <td>ミリィ・<b>バラ</b>キレフ</td>
-                                <td>『イスラメイ』</td>
-                                <tr>
-                                    <td>ツェーザリ・<b>キュ</b>イ</td>
-                                    <td>『25の前奏曲』 ※軍事教育家としても有名</td>
-                                </tr>
-                                <tr>
-                                    <td>モデスト・<b>ム</b>ソルグスキー</td>
-                                    <td>『禿山の一夜』『展覧会の絵』</td>
-                                </tr>
-                            </table>
-                            </p>
-                            <p>
-                            <h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5>リボ払い急務
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">六歌仙</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">歴史</span>
-                            <span class="tags__tag">音楽</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>名前</th>
-                                    <th>代表的な歌</th>
-                                </tr>
-                                <tr>
-                                    <td>大伴黒主（おおとものくろぬし）</td>
-                                    <td>春雨のふるは涙か桜花ちるを惜しまぬ人しなければ</td>
-                                </tr>
-                                <tr>
-                                    <td>小野小町（おののこまち）</td>
-                                    <td>花の色はうつりにけりないたづらに わが身世にふるながめせしまに</td>
-                                </tr>
-                                <tr>
-                                    <td>僧正遍昭（そうじょうへんじょう）</td>
-                                    <td>天つ風（あまつかぜ）雲の通ひ路（かよいじ）吹きとぢよ をとめの姿しばしとどめむ</td>
-                                </tr>
-                                <tr>
-                                    <td>喜撰法師（きせんほうし）</td>
-                                    <td>わが庵（いほ）は都のたつみしかぞすむ 世をうぢ山と人はいふなり</td>
-                                </tr>
-                                <tr>
-                                    <td>文屋康秀（ふんやのやすひで）</td>
-                                    <td>吹くからに秋の草木（くさき）のしをるれば むべ山風を嵐といふらむ</td>
-                                </tr>
-                                <tr>
-                                    <td>在原業平（ありわらのなりひら）</td>
-                                    <td>千早（ちはや）ぶる神代（かみよ）もきかず龍田川（たつたがわ）からくれなゐに水くくるとは</td>
-                                </tr>
-                            </table>
-                            </p>
-                            <p>
-                            <h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5> 大小の僧が喜ぶ文あり
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">特定原材料</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">食</span>
-                            <span class="tags__tag">生活</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <ul>
-                                <li>かに</li>
-                                <li>乳</li>
-                                <li>小麦</li>
-                                <li>そば</li>
-                                <li>くるみ</li>
-                                <li>えび</li>
-                                <li>卵</li>
-                                <li>落花生（ピーナッツ）</li>
-                            </ul>
-                            </p>
-                            <p>
-                            <h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5> カニこそ食えたら
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">数列</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">数学</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>名称</th>
-                                    <th>数列</th>
-                                    <th>解説</th>
-                                </tr>
-                                <tr>
-                                    <td>フィボナッチ数列</td>
-                                    <td>1, 1, 2, 3, 5, 8, 13, 21, ...</td>
-                                    <td>どの項も直前２つ項を足した数字 (たとえば 13=5+8) になるという規則がある</td>
-                                </tr>
-                                <tr>
-                                    <td>レピュニット数列</td>
-                                    <td>1, 11, 111, 1111, 11111, ...</td>
-                                    <td>レピュニット (repunit) は repeated unit を省略した単語</td>
-                                </tr>
-                                <tr>
-                                    <td>Look-and-say（見て言って / 読み上げ）数列</td>
-                                    <td>1, 11, 21, 1211, 111221, 312211, ...</td>
-                                    <td>1つ前の項を見て数字の並び方を言えばよい（たとえば、1211は左から1個の1、1個の2、2個の1が並ぶので、その次の項は111221となる）</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">和名に「オランダ」が付く野菜</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">生物</span>
-                            <span class="tags__tag">食</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>一般名</th>
-                                    <th>和名</th>
-                                </tr>
-                                <tr>
-                                    <td>アスパラガス</td>
-                                    <td>オランダキジカクシ</td>
-                                </tr>
-                                <tr>
-                                    <td>パセリ</td>
-                                    <td>オランダゼリ</td>
-                                </tr>
-                                <tr>
-                                    <td>セロリ</td>
-                                    <td>オランダミツバ</td>
-                                </tr>
-                                <tr>
-                                    <td>クレソン</td>
-                                    <td>オランダガラシ</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">硬さ</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">物理</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>硬さ</th>
-                                    <th>備考</th>
-                                </tr>
-                                <tr>
-                                    <td>モース硬度</td>
-                                    <td>基準となる<b>鉱物</b>でひっかいたときに<b>傷</b>が付くかどうか</td>
-                                </tr>
-                                <tr>
-                                    <td>ショア硬さ</td>
-                                    <td><b>ハンマー</b>を落とした時の跳ね返りの<b>高さ</b></td>
-                                </tr>
-                                <tr>
-                                    <td>ビッカース硬さ</td>
-                                    <td><b>四角錘のダイヤモンド</b>を押し込んだ時のくぼみの<b>対角線の長さ</b></td>
-                                </tr>
-                                <tr>
-                                    <td>ヌープ硬さ</td>
-                                    <td><b>ひし形のダイヤモンド</b>を押し込んだ時のくぼみの<b>長い方の対角線の長さ</b></td>
-                                </tr>
-                                <tr>
-                                    <td>ロックウェル硬さ</td>
-                                    <td><b>ダイヤモンドもしくは鋼球</b>を押し込んだ時のくぼみの<b>深さ</b></td>
-                                <tr>
-                                    <td>ブリネル硬さ</td>
-                                    <td><b>金属球</b>を押し込んだ時のくぼみの<b>直径</b></td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">3桁番号サービス</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">生活</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>電話番号</th>
-                                    <th>サービス内容</th>
-                                    <th><h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5></th>
-                                </tr>
-                                <tr>
-                                    <td>104</td>
-                                    <td>電話番号案内</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>110</td>
-                                    <td>警察</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>113</td>
-                                    <td>電話の故障</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>114</td>
-                                    <td>通話中調べ</td>
-                                    <td>通話中でも別に<b>いいし</b></td>
-                                </tr>
-                                <tr>
-                                    <td>115</td>
-                                    <td>電報</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>116</td>
-                                    <td>電話の新設・移転相談</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>117</td>
-                                    <td>時報</td>
-                                    <td>時間が知れたら<b>いいな</b></td>
-                                </tr>  
-                                <tr>
-                                    <td>118</td>
-                                    <td>海上の事件・事故</td>
-                                    <td>海のことはどうでも<b>いいや</b></td>
-                                </tr> 
-                                <tr>
-                                    <td>119</td>
-                                    <td>救急・消防</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>171</td>
-                                    <td>災害用伝言ダイヤル</td>
-                                    <td>忘れて<b>いない</b>？災害用伝言</td>
-                                </tr>
-                                <tr>
-                                    <td>177</td>
-                                    <td>天気予報</td>
-                                    <td>明日天気が<b>いいならなぁ</b></td>
-                                </tr>
-                                <tr>
-                                    <td>188</td>
-                                    <td>消費者ホットライン</td>
-                                    <td>詐欺は<b>嫌や</b></td>
-                                </tr>
-                                <tr>
-                                    <td>189</td>
-                                    <td>児童相談所</td>
-                                    <td><b>いちはやく</b>相談</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">楽曲の種類</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">音楽</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>和名</th>
-                                    <th>カタカナ</th>
-                                </tr>
-                                <tr>
-                                    <td>即興曲</td>
-                                    <td>アンプロンプチュ</td>
-                                </tr>
-                                <tr>
-                                    <td>間奏曲</td>
-                                    <td>インテルメッツォ</td>
-                                </tr>
-                                <tr>
-                                    <td>練習曲</td>
-                                    <td>エチュード</td>
-                                </tr>
-                                <tr>
-                                    <td>聖譚曲</td>
-                                    <td>オラトリオ</td>
-                                <tr>
-                                    <td>奇想曲 / 狂想曲</td>
-                                    <td>カプリッチョ</td>
-                                </tr>
-                                <tr>
-                                    <td>交声曲</td>
-                                    <td>カンタータ</td>
-                                </tr>
-                                <tr>
-                                    <td>協奏曲</td>
-                                    <td>コンチェルト</td>
-                                </tr>
-                                <tr>
-                                    <td>交響曲</td>
-                                    <td>シンフォニー</td>
-                                </tr>
-                                <tr>
-                                    <td>諧謔曲</td>
-                                    <td>スケルツォ</td>
-                                </tr>
-                                <tr>
-                                    <td>小夜曲</td>
-                                    <td>セレナーデ</td>
-                                </tr>
-                                <tr>
-                                    <td>嬉遊曲</td>
-                                    <td>ディヴェルティメント</td>
-                                </tr>
-                                <tr>
-                                    <td>夜想曲</td>
-                                    <td>ノクターン</td>
-                                </tr>
-                                <tr>
-                                    <td>遁走曲</td>
-                                    <td>フーガ</td>
-                                </tr>
-                                <tr>
-                                    <td>前奏曲</td>
-                                    <td>プレリュード</td>
-                                </tr>
-                                <tr>
-                                    <td>行進曲</td>
-                                    <td>マーチ</td>
-                                </tr>
-                                <tr>
-                                    <td>狂詩曲</td>
-                                    <td>ラプソディー</td>
-                                </tr>
-                                <tr>
-                                    <td>鎮魂曲</td>
-                                    <td>レクイエム</td>
-                                </tr>
-                                <tr>
-                                    <td>輪舞曲</td>
-                                    <td>ロンド</td>
-                                </tr>
-                                <tr>
-                                    <td>円舞曲</td>
-                                    <td>ワルツ</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">パスタ</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">食</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>パスタ</th>
-                                    <th>イタリア語</th>
-                                </tr>
-                                <tr>
-                                    <td>オレキエッテ</td>
-                                    <td>耳</td>
-                                </tr>
-                                <tr>
-                                    <td>カペッリーニ</td>
-                                    <td>髪の毛</td>
-                                </tr>
-                                <tr>
-                                    <td>コンキリエ</td>
-                                    <td>貝殻</td>
-                                </tr>
-                                <tr>
-                                    <td>ニョッキ</td>
-                                    <td>塊</td>
-                                </tr>
-                                <tr>
-                                    <td>パッパルデッレ</td>
-                                    <td>食いしん坊</td>
-                                </tr>
-                                <tr>
-                                    <td>ファルファッレ</td>
-                                    <td>蝶</td>
-                                </tr>
-                                <tr>    
-                                    <td>フィットチーネ</td>
-                                    <td>リボン</td>
-                                </tr>
-                                <tr>
-                                    <td>ブカティーニ</td>
-                                    <td>穴</td>
-                                </tr>
-                                <tr>
-                                    <td>フジッリ</td>
-                                    <td>ライフル</td>
-                                </tr>
-                                <tr>
-                                    <td>ペン</td>
-                                    <td>ペンネ</td>
-                                </tr>
-                                <tr>
-                                    <td>リングイネ</td>
-                                    <td>舌</td>
-                                </tr>
-                                <tr>
-                                    <td>ルオーテ</td>
-                                    <td>車輪</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">〇〇界のノーベル賞</h3>
-                        <div class="tags--view">
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>〇〇界</th>
-                                    <th>賞</th>
-                                </tr>
-                                <tr>
-                                    <td>オレキエッテ</td>
-                                    <td>耳</td>
-                                </tr>
-                                <tr>
-                                    <td>カペッリーニ</td>
-                                    <td>髪の毛</td>
-                                </tr>
-                                <tr>
-                                    <td>コンキリエ</td>
-                                    <td>貝殻</td>
-                                </tr>
-                                <tr>
-                                    <td>ニョッキ</td>
-                                    <td>塊</td>
-                                </tr>
-                                <tr>
-                                    <td>パッパルデッレ</td>
-                                    <td>食いしん坊</td>
-                                </tr>
-                                <tr>
-                                    <td>ファルファッレ</td>
-                                    <td>蝶</td>
-                                </tr>
-                                <tr>    
-                                    <td>フィットチーネ</td>
-                                    <td>リボン</td>
-                                </tr>
-                                <tr>
-                                    <td>ブカティーニ</td>
-                                    <td>穴</td>
-                                </tr>
-                                <tr>
-                                    <td>フジッリ</td>
-                                    <td>ライフル</td>
-                                </tr>
-                                <tr>
-                                    <td>ペン</td>
-                                    <td>ペンネ</td>
-                                </tr>
-                                <tr>
-                                    <td>リングイネ</td>
-                                    <td>舌</td>
-                                </tr>
-                                <tr>
-                                    <td>ルオーテ</td>
-                                    <td>車輪</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="article">
-                        <h3 class="article__togglebtn" onclick="toggle(this)">擬態</h3>
-                        <div class="tags--view">
-                            <span class="tags__tag">生物</span>
-                        </div>
-                        <div class="article__hidden">
-                            <p>
-                            <table>
-                                <tr>
-                                    <th>擬態の方法</th>
-                                    <th>名称</th>
-                                </tr>
-                                <tr>
-                                    <td>毒を持たない生物が、中程度の毒を持つ生物に擬態</td>
-                                    <td>ベイツ型擬態</td>
-                                </tr>
-                                <tr>
-                                    <td>弱毒を持つ生物が、中程度の毒を持つ生物に擬態</td>
-                                    <td>ミューラー型擬態</td>
-                                </tr>
-                                <tr>
-                                    <td>強毒を持つ生物が、中程度の毒を持つ生物に擬態</td>
-                                    <td>メルテンス型擬態</td>
-                                </tr>
-                            </table>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+            <!-- ここから記事 -->
+<div class="articles">
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">NTT3桁番号サービス</h3>
+<div class="tags--view">
+<span class="tags__tag">生活</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>電話番号</th>
+<th>サービス内容</th>
+<th><h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5></th>
+</tr>
+<tr>
+<td>104</td>
+<td>電話番号案内</td>
+<td></td>
+</tr>
+<tr>
+<td>110</td>
+<td>警察</td>
+<td></td>
+</tr>
+<tr>
+<td>113</td>
+<td>電話の故障</td>
+<td></td>
+</tr>
+<tr>
+<td>114</td>
+<td>通話中調べ</td>
+<td>通話中でも別にいいし</td>
+</tr>
+<tr>
+<td>115</td>
+<td>電報</td>
+<td></td>
+</tr>
+<tr>
+<td>116</td>
+<td>電話の新設・移転相談</td>
+<td></td>
+</tr>
+<tr>
+<td>117</td>
+<td>時報</td>
+<td>時間が知れたらいいな</td>
+</tr>
+<tr>
+<td>118</td>
+<td>海上の事件・事故</td>
+<td>海のことはどうでもいいや</td>
+</tr>
+<tr>
+<td>119</td>
+<td>救急・消防</td>
+<td></td>
+</tr>
+<tr>
+<td>171</td>
+<td>災害用伝言ダイヤル</td>
+<td>忘れていない？災害用伝言</td>
+</tr>
+<tr>
+<td>177</td>
+<td>天気予報</td>
+<td>明日天気がいいならなぁ</td>
+</tr>
+<tr>
+<td>188</td>
+<td>消費者ホットライン</td>
+<td>詐欺は嫌や</td>
+</tr>
+<tr>
+<td>189</td>
+<td>児童相談所</td>
+<td>いちはやく相談</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">パティシエ</h3>
+<div class="tags--view">
+<span class="tags__tag">生活</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>種類</th>
+<th>役割（専門性）</th>
+</tr>
+<tr>
+<td>ショコラティエ</td>
+<td>チョコレート菓子</td>
+</tr>
+<tr>
+<td>グラシエ</td>
+<td>アイスクリームなどの氷菓子</td>
+</tr>
+<tr>
+<td>コンフィズール</td>
+<td>砂糖菓子</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">ロシア五人組</h3>
+<div class="tags--view">
+<span class="tags__tag">音楽</span>
+</div>
+<div class="article__hidden">
+<p>
+19世紀後半のロシアで民族主義的な音楽を作った人たち。
+<table>
+<tr>
+<th>名前</th>
+<th>代表曲など</th>
+</tr>
+<tr>
+<td>ニコライ・リムスキー＝コルサコフ</td>
+<td>『シェヘラザード』</td>
+</tr>
+<tr>
+<td>アレクサンドル・ボロディン</td>
+<td>『イーゴリ公』</td>
+</tr>
+<tr>
+<td>ミリィ・バラキレフ</td>
+<td>『イスラメイ』</td>
+</tr>
+<tr>
+<td>ツェーザリ・キュイ</td>
+<td>『25の前奏曲』 ※軍事教育家としても有名</td>
+</tr>
+<tr>
+<td>モデスト・ムソルグスキー</td>
+<td>『禿山の一夜』『展覧会の絵』</td>
+</tr>
+</table>
+</p>
+<p><h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5>リボ払い急務
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">和名に「オランダ」が付く野菜</h3>
+<div class="tags--view">
+<span class="tags__tag">生物</span>
+<span class="tags__tag">食</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>和名</th>
+<th>一般名</th>
+</tr>
+<tr>
+<td>オランダキジカクシ</td>
+<td>アスパラガス</td>
+</tr>
+<tr>
+<td>オランダゼリ</td>
+<td>パセリ</td>
+</tr>
+<tr>
+<td>オランダミツバ</td>
+<td>セロリ</td>
+</tr>
+<tr>
+<td>オランダガラシ</td>
+<td>クレソン</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">擬態</h3>
+<div class="tags--view">
+<span class="tags__tag">生物</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>名称</th>
+<th>擬態の方法</th>
+</tr>
+<tr>
+<td>ベイツ型擬態</td>
+<td>毒を持たない生物が、中程度の毒を持つ生物に擬態</td>
+</tr>
+<tr>
+<td>ミューラー型擬態</td>
+<td>弱毒を持つ生物が、中程度の毒を持つ生物に擬態</td>
+</tr>
+<tr>
+<td>メルテンス型擬態</td>
+<td>強毒を持つ生物が、中程度の毒を持つ生物に擬態</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">キムチ</h3>
+<div class="tags--view">
+<span class="tags__tag">食</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>種類</th>
+<th>使われている野菜</th>
+</tr>
+<tr>
+<td>ペチュキムチ</td>
+<td>白菜</td>
+</tr>
+<tr>
+<td>カクテキ</td>
+<td>大根</td>
+</tr>
+<tr>
+<td>オイキムチ</td>
+<td>キュウリ</td>
+</tr>
+<tr>
+<td>ヤンベチュキムチ</td>
+<td>キャベツ</td>
+</tr>
+<tr>
+<td>パキムチ</td>
+<td>ネギ</td>
+</tr>
+<tr>
+<td>カジキムチ</td>
+<td>ナス</td>
+</tr>
+<tr>
+<td>コグマキムチ</td>
+<td>サツマイモ</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">漢字の成り立ち</h3>
+<div class="tags--view">
+<span class="tags__tag">文学</span>
+<span class="tags__tag">語学</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>種類</th>
+<th>説明</th>
+<th>例</th>
+</tr>
+<tr>
+<td>象形文字</td>
+<td>物の形をかたどって作られた漢字</td>
+<td>山、日</td>
+</tr>
+<tr>
+<td>指事文字</td>
+<td>形に表すことのできないものを点や線の組み合わせで表した漢字</td>
+<td>上、下</td>
+</tr>
+<tr>
+<td>会意文字</td>
+<td>2つ以上の漢字を組み合わせて意味を表した漢字</td>
+<td>休、鳴</td>
+</tr>
+<tr>
+<td>形声文字</td>
+<td>意味を表す部分と発音を表す部分を組み合わせてできた漢字</td>
+<td>講、清</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">銀行の支店</h3>
+<div class="tags--view">
+<span class="tags__tag">生活</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>銀行名</th>
+<th>使われているもの</th>
+<th>例</th>
+</tr>
+<tr>
+<td>楽天銀行</td>
+<td>音楽に関係するもの</td>
+<td></td>
+</tr>
+<tr>
+<td>イオン銀行</td>
+<td>宝石</td>
+<td></td>
+</tr>
+<tr>
+<td>セブン銀行</td>
+<td>花</td>
+<td></td>
+</tr>
+<tr>
+<td>ローソン銀行</td>
+<td>食べ物</td>
+<td></td>
+</tr>
+<tr>
+<td>PayPay銀行</td>
+<td>鳥類</td>
+<td></td>
+</tr>
+<tr>
+<td>住信SBIネット銀行</td>
+<td>果物</td>
+<td></td>
+</tr>
+<tr>
+<td>auじぶん銀行</td>
+<td>色</td>
+<td></td>
+</tr>
+<tr>
+<td>大和ネクスト銀行</td>
+<td>日本の神様</td>
+<td></td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">楽曲の種類</h3>
+<div class="tags--view">
+<span class="tags__tag">音楽</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>和名</th>
+<th>カタカナ</th>
+</tr>
+<tr>
+<td>即興曲</td>
+<td>アンプロンプチュ</td>
+</tr>
+<tr>
+<td>間奏曲</td>
+<td>インテルメッツォ</td>
+</tr>
+<tr>
+<td>練習曲</td>
+<td>エチュード</td>
+</tr>
+<tr>
+<td>聖譚曲</td>
+<td>オラトリオ</td>
+</tr>
+<tr>
+<td>奇想曲 / 狂想曲</td>
+<td>カプリッチョ</td>
+</tr>
+<tr>
+<td>交声曲</td>
+<td>カンタータ</td>
+</tr>
+<tr>
+<td>協奏曲</td>
+<td>コンチェルト</td>
+</tr>
+<tr>
+<td>交響曲</td>
+<td>シンフォニー</td>
+</tr>
+<tr>
+<td>諧謔曲</td>
+<td>スケルツォ</td>
+</tr>
+<tr>
+<td>小夜曲</td>
+<td>セレナーデ</td>
+</tr>
+<tr>
+<td>嬉遊曲</td>
+<td>ディヴェルティメント</td>
+</tr>
+<tr>
+<td>夜想曲</td>
+<td>ノクターン</td>
+</tr>
+<tr>
+<td>遁走曲</td>
+<td>フーガ</td>
+</tr>
+<tr>
+<td>前奏曲</td>
+<td>プレリュード</td>
+</tr>
+<tr>
+<td>行進曲</td>
+<td>マーチ</td>
+</tr>
+<tr>
+<td>狂詩曲</td>
+<td>ラプソディー</td>
+</tr>
+<tr>
+<td>鎮魂曲</td>
+<td>レクイエム</td>
+</tr>
+<tr>
+<td>輪舞曲</td>
+<td>ロンド</td>
+</tr>
+<tr>
+<td>円舞曲</td>
+<td>ワルツ</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">硬さ</h3>
+<div class="tags--view">
+<span class="tags__tag">物理</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>硬さ</th>
+<th>備考</th>
+</tr>
+<tr>
+<td>モース硬度</td>
+<td>基準となる鉱物でひっかいたときに傷が付くかどうか</td>
+</tr>
+<tr>
+<td>ショア硬さ</td>
+<td>ハンマーを落とした時の跳ね返りの高さ</td>
+</tr>
+<tr>
+<td>ビッカース硬さ</td>
+<td>四角錘のダイヤモンドを押し込んだ時のくぼみの対角線の長さ</td>
+</tr>
+<tr>
+<td>ヌープ硬さ</td>
+<td>ひし形のダイヤモンドを押し込んだ時のくぼみの長い方の対角線の長さ</td>
+</tr>
+<tr>
+<td>ロックウェル硬さ</td>
+<td>ダイヤモンドもしくは鋼球を押し込んだ時のくぼみの深さ</td>
+</tr>
+<tr>
+<td>ブリネル硬さ</td>
+<td>金属球を押し込んだ時のくぼみの直径</td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">特定原材料</h3>
+<div class="tags--view">
+<span class="tags__tag">食</span>
+<span class="tags__tag">生活</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>特定原材料</th>
+</tr>
+<tr>
+<td>かに</td>
+</tr>
+<tr>
+<td>乳</td>
+</tr>
+<tr>
+<td>小麦</td>
+</tr>
+<tr>
+<td>そば</td>
+</tr>
+<tr>
+<td>くるみ</td>
+</tr>
+<tr>
+<td>えび</td>
+</tr>
+<tr>
+<td>卵</td>
+</tr>
+<tr>
+<td>落花生（ピーナッツ）</td>
+</tr>
+</table>
+</p>
+<p><h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5>カニこそ食えたら
+</p>
+</div>
+</div>
+<div class="article">
+<h3 class="article__togglebtn" onclick="toggle(this)">六歌仙</h3>
+<div class="tags--view">
+<span class="tags__tag">歴史</span>
+<span class="tags__tag">文学</span>
+</div>
+<div class="article__hidden">
+<p>
+<table>
+<tr>
+<th>名前</th>
+<th>代表的な歌</th>
+</tr>
+<tr>
+<td>大伴黒主（おおとものくろぬし）</td>
+<td>春雨のふるは涙か桜花ちるを惜しまぬ人しなければ</td>
+</tr>
+<tr>
+<td>小野小町（おののこまち）</td>
+<td>花の色はうつりにけりないたづらに わが身世にふるながめせしまに</td>
+</tr>
+<tr>
+<td>僧正遍昭（そうじょうへんじょう）</td>
+<td>天つ風（あまつかぜ）雲の通ひ路（かよいじ）吹きとぢよ をとめの姿しばしとどめむ</td>
+</tr>
+<tr>
+<td>喜撰法師（きせんほうし）</td>
+<td>わが庵（いほ）は都のたつみしかぞすむ 世をうぢ山と人はいふなり</td>
+</tr>
+<tr>
+<td>文屋康秀（ふんやのやすひで）</td>
+<td>吹くからに秋の草木（くさき）のしをるれば むべ山風を嵐といふらむ</td>
+</tr>
+<tr>
+<td>在原業平（ありわらのなりひら）</td>
+<td>千早（ちはや）ぶる神代（かみよ）もきかず龍田川（たつたがわ）からくれなゐに水くくるとは</td>
+</tr>
+</table>
+</p>
+<p><h5 class="article__goro"><i class="fas fa-pen-nib"></i>&nbsp;語呂合わせ</h5>大小の僧が喜ぶ文あり
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ここまで記事 -->
     </main>
 </body>
 
