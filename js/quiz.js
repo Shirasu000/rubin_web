@@ -84,29 +84,31 @@ function toggle(element) {
 // タグをクリックしたときに記事をフィルタリングする関数
 function toggleTag(tagName, event) {
     var articles = document.querySelectorAll('.article');
+    var selectedTags = document.querySelectorAll('.selected-tag');
 
-    // 選択されたタグの色を変更
     if (event.target.classList.contains('selected-tag')) {
         event.target.classList.remove('selected-tag'); // クリックされたタグの色を解除
+    } else {
+        event.target.classList.add('selected-tag'); // クリックされたタグに色を付ける
+    }
+
+    // 更新後の選択されたタグのリストを再取得
+    selectedTags = document.querySelectorAll('.selected-tag');
+    var selectedTagNames = Array.from(selectedTags).map(function(tag) {
+        return tag.textContent;
+    });
+
+    if (selectedTagNames.length === 0) {
         // すべての記事を表示
         articles.forEach(function(article) {
-            article.classList.remove('article__hidden'); // 記事の表示状態をリセットして全ての記事を表示
+            article.classList.remove('article__hidden');
         });
     } else {
-        var selectedTag = document.querySelector('.selected-tag');
-        if (selectedTag) {
-            selectedTag.classList.remove('selected-tag'); // 他のタグの色を解除
-        }
-        event.target.classList.add('selected-tag'); // クリックされたタグに色を付ける
-
         // 記事をフィルタリングして表示・非表示を切り替える
         articles.forEach(function(article) {
             var tags = article.querySelectorAll('.tags__tag'); // 記事のタグを取得
-            var tagFound = false;
-            tags.forEach(function(tags__tag) {
-                if (tags__tag.textContent === tagName) {
-                    tagFound = true; // 該当のタグが記事に含まれているかチェック
-                }
+            var tagFound = Array.from(tags).some(function(tags__tag) {
+                return selectedTagNames.includes(tags__tag.textContent);
             });
             if (tagFound) {
                 article.classList.remove('article__hidden'); // 該当のタグを持つ記事は表示
@@ -116,6 +118,26 @@ function toggleTag(tagName, event) {
         });
     }
 }
+
+function clearTags() {
+    var articles = document.querySelectorAll('.article');
+    var selectedTags = document.querySelectorAll('.selected-tag');
+
+    // すべてのタグの選択を解除
+    selectedTags.forEach(function(tag) {
+        tag.classList.remove('selected-tag');
+    });
+
+    // すべての記事を表示
+    articles.forEach(function(article) {
+        article.classList.remove('article__hidden');
+    });
+}
+
+// 全解除ボタンのクリックイベントリスナーを追加
+document.getElementById('clearTagsButton').addEventListener('click', clearTags);
+
+
 
 
 // headerを自動表示する
