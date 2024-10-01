@@ -103,7 +103,7 @@ content{
     text-align: center; /* テキストを中央揃え */
     position: relative; /* 相対位置を設定 */
     width: 100%; /* 幅を100%に設定 */
-    height: calc(100vw/6); /* 高さを設定 */
+    height: calc(100vw/5); /* 高さを設定 */
     overflow: hidden; /* オーバーフローを隠す */
     border-color: #353535; /* ボーダーカラーを設定 */
     border-radius: 5px; /* ボーダーの角を丸める */
@@ -481,6 +481,6 @@ table th {
     }
 
     .PR__slideshow  {
-        height: calc(100vw/3.8); /* 高さを計算して設定 */
+        height: calc(100vw/3); /* 高さを計算して設定 */
     }
 }
