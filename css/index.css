@@ -375,6 +375,10 @@ table th {
 /* スマホ・タブレット用CSS */
 @media screen and (max-width: 900px) {
     /* header部 */
+    header {
+        padding: 0% 10%; /* 親要素のパディングを設定 */
+    }
+
     .header__list_hamburger {
         background-color: #eeeeee; /* 背景色を設定 */
         align-items: flex-start; /* アイテムを上揃え */
@@ -424,7 +428,7 @@ table th {
 
     /* main部 */
     main {
-        margin: 1% 1%; /* マージンを設定 */
+        margin: 1% 5%; /* マージンを設定 */
         /* background: rgba(255, 255, 255, 0.5); */
         /* opacity: 0.5; */
     }
