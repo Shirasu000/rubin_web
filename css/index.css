@@ -17,11 +17,6 @@ header {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* 影を設定 */
 }
 
-.header__logo {
-    display: flex; /* 要素をフレックスボックスとして表示 */
-    text-align: center; /* テキストを中央揃え */
-}
-
 .header__logo img {
     height: 60px; /* 画像の高さを設定 */
 }
@@ -103,7 +98,7 @@ content{
     text-align: center; /* テキストを中央揃え */
     position: relative; /* 相対位置を設定 */
     width: 100%; /* 幅を100%に設定 */
-    height: calc(100vw/5); /* 高さを設定 */
+    height: calc(100vw/4.5); /* 高さを設定 */
     overflow: hidden; /* オーバーフローを隠す */
     border-color: #353535; /* ボーダーカラーを設定 */
     border-radius: 5px; /* ボーダーの角を丸める */
