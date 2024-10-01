@@ -8,7 +8,7 @@ body {
 
 /* header部 */
 header {
-    padding: 0% 19%; /* 親要素のパディングを設定 */
+    padding: 0% 15%; /* 親要素のパディングを設定 */
     height: 50px; /* 高さを設定 */
     background-color: white; /* 背景色を設定 */
     display: flex; /* 要素をフレックスボックスとして表示 */
@@ -37,7 +37,7 @@ header {
     color: #000000; /* リンクの色を設定 */
     text-decoration: none; /* 下線をなくす */
     margin-right: 30px; /* 右マージンを設定 */
-    font-size: 18px; /* フォントサイズを設定 */
+    font-size: 17px; /* フォントサイズを設定 */
 }
 
 /* カーソルを合わせたときの処理 */
@@ -92,7 +92,7 @@ header {
 /* main部 */
 
 main{
-    margin: 1% 18%; /* マージンを設定 */
+    margin: 1% 15%; /* マージンを設定 */
 }
 
 content{
@@ -373,7 +373,7 @@ table th {
 }
 
 /* スマホ・タブレット用CSS */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     /* header部 */
     .header__list_hamburger {
         background-color: #eeeeee; /* 背景色を設定 */
