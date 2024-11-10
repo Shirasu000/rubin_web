@@ -146,19 +146,3 @@ function insert_header(){
         .then((response) => response.text())
         .then((data) => document.querySelector("header").innerHTML = data);
 }
-
-// PR画像をスライドショーにする
-$(function(){
-    $(".PR__slideshow li").css({"position":"relative"});
-    $(".PR__slideshow li").hide().css({"position":"absolute"});
-    $(".PR__slideshow li:first").addClass("slide");
-    $(".PR__slideshow li:nth-child(2)").css({"display":"block"});
-    setInterval(function(){
-        var $active = $(".PR__slideshow li.slide");
-        var $next = $active.next("li").length?$active.next("li"):$(".PR__slideshow li:first");
-        var $nextnext = $next.next("li");
-        $active.fadeOut(0).removeClass("slide");
-        $next.show().addClass("slide");
-        $nextnext.css({"display":"block"});
-    },5000);
-});

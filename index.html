@@ -21,6 +21,7 @@
     <title>ルビンの思うつぼ</title>
 
     <!-- CSSファイルを読み込む -->
+    <link rel="stylesheet" href="https:/unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <link rel="stylesheet" href="./css/index.css">
 
@@ -47,24 +48,17 @@
     <main>
         <div class="content">
             <div class="PR">
-                <ul class="PR__slideshow">
-                    <!-- スライドショーの各アイテム -->
-                    <li>
-                        <a href="https://q-tak.com/?p=16998">
-                            <img src="images/Quiz_no_tsubo_PR.jpg" loading="eager" alt="クイズの壺">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://q-tak.com/?p=16998">
-                            <img src="images/Quiz_no_tsubo_PR.jpg" loading="eager" alt="クイズの壺">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://q-tak.com/?p=16998">
-                            <img src="images/Quiz_no_tsubo_PR.jpg" loading="eager" alt="クイズの壺">
-                        </a>
-                    </li>
-                </ul>
+                <div class="css-carousel-slider">
+                    <div class="slide-wrap-main">
+                        <div class="slide"><a href="https://q-tak.com/?p=16998"></a><img src="images/Quiz_no_tsubo_PR.jpg" alt="クイズの壺"></div><!-- 最初に表示される画像(*1) -->
+                    </div>
+                    <div class="slide-wrap">
+                        <div class="slide"><a href="https://q-tak.com/?p=16998"></a><img src="images/Quiz_no_tsubo_PR.jpg" alt="クイズの壺"></div><!-- スライド画像(*2) -->
+                        <div class="slide"><a href="https://q-tak.com/?p=16998"></a><img src="images/Quiz_no_tsubo_PR.jpg" alt="クイズの壺"></div>
+                        <div class="slide"><a href="https://q-tak.com/?p=16998"></a><img src="images/Quiz_no_tsubo_PR.jpg" alt="クイズの壺"></div>
+                        <div class="slide"><a href="https://q-tak.com/?p=16998"></a><img src="images/Quiz_no_tsubo_PR.jpg" alt="クイズの壺"></div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -64,7 +64,7 @@ header {
     position: absolute; /* 絶対位置を設定 */
     top: 0; /* 上位置を設定 */
     width: 100%; /* 幅を100%に設定 */
-    z-index: -1; /* Zインデックスを設定 */
+    z-index: 20; /* Zインデックスを設定 */
 }
 
 #header__hamburger:checked ~ .header__hamburger_bg {
@@ -87,56 +87,72 @@ header {
 /* main部 */
 
 main{
-    margin: 1% 15%; /* マージンを設定 */
+    margin: 2% 15%; /* マージンを設定 */
 }
 
-content{
-    margin: 0 5%
+.content{
+    margin:3%
+}
+.css-carousel-slider {
+    width: 100%;
+    /* max-width: 800px */ /* サイズ設定をする場合はここ(*1) */
+    overflow: hidden;
+    position: relative;
+    z-index:-1;
+}
+.css-carousel-slider img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
 }
 
-.PR__slideshow {
-    text-align: center; /* テキストを中央揃え */
-    position: relative; /* 相対位置を設定 */
-    width: 100%; /* 幅を100%に設定 */
-    height: calc(100vw/4.5); /* 高さを設定 */
-    overflow: hidden; /* オーバーフローを隠す */
-    border-color: #353535; /* ボーダーカラーを設定 */
-    border-radius: 5px; /* ボーダーの角を丸める */
-    padding: 0; /* パディングを0に設定 */
-    z-index: -1; /* Zインデックスを設定 */
+/* スライド設定 */
+.css-carousel-slider .slide-wrap {
+    width: 400%; /* 画像の合計数*100%を設定(*2) */
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: css-carousel-slider 20s infinite; /* スライダーアニメーション全体の時間(*3) */
+    animation-delay: 10s; /* スライダーが始まるまでの時間(*4) */
+}
+.css-carousel-slider .slide-wrap-main {
+    width: 100%;
+    z-index: 1;
+    animation: css-carousel-slider-main 20s infinite; /* (*3)と同じ内容を設定 */
+    animation-delay: 10s; /* (*4)と同じ内容を設定 */
+}
+.css-carousel-slider .slide {
+    width: 100%;
 }
 
-.PR__slideshow  li {
-    list-style: none; /* リストのマーカーをなくす */
-    width: 100%; /* 幅を100%に設定 */
-    height: 100%; /* 高さを100%に設定 */
-    transition: 1s; /* アニメーションの速度を設定 */
-    top: 0; /* 上位置を0に設定 */
-    left: 0; /* 左位置を0に設定 */
+/* スライダーアニメーションの設定(*5) */
+@keyframes css-carousel-slider {
+    0% { transform: translateX(0); }
+
+    20% { transform: translateX(calc(1 / 4 * -100%)); }
+    25% { transform: translateX(calc(1 / 4 * -100%)); }
+
+    45% { transform: translateX(calc(2 / 4 * -100%)); }
+    50% { transform: translateX(calc(2 / 4 * -100%)); }
+
+    70% { transform: translateX(calc(3 / 4 * -100%)); }
+    75% { transform: translateX(calc(3 / 4 * -100%)); }
+
+    95% { transform: translateX(calc(4 / 4 * -100%)); }
+    100% { transform: translateX(calc(4 / 4 * -100%)); }
 }
 
-.PR__slideshow  li.slide {
-    top: 0; /* 上位置を0に設定 */
-    left: 100%; /* 左位置を100%に設定 */
-    z-index: 10; /* Zインデックスを設定 */
+@keyframes css-carousel-slider-main {
+    0% { transform: translateX(100%); }
+    75% { transform: translateX(100%); }
+    95% { transform: translateX(0%);}
 }
 
-.PR__slideshow  li:first-of-type {
-    display: block!important; /* 最初の要素を表示 */
-}
-
-.PR__slideshow  img {
-    position: absolute; /* 絶対位置を設定 */
-    left: 0; /* 左位置を0に設定 */
-    top: 0; /* 上位置を0に設定 */
-    width: 100%; /* 幅を100%に設定 */
-    height: auto; /* 高さを自動に設定 */
-    max-width: 100%; /* 最大幅を100%に設定 */
-    max-height: 100%; /* 最大高さを100%に設定 */
-}
 
 .content__title {
-    padding: 0% 0%; /* パディングを設定 */
+    margin: 2%;
     display: flex; /* 要素をフレックスボックスとして表示 */
     align-items: center; /* アイテムを中央揃え */
 }
@@ -180,7 +196,7 @@ content{
 
 .news__table .news__scrollbar {
     height: 250px; /* 高さを設定 */
-    padding: 5px; /* パディングを設定 */
+    padding: 1%; /* パディングを設定 */
     border: 3px solid rgb(226, 225, 225); /* ボーダーを設定 */
     border-radius: 10px; /* ボーダーの角を丸める */
     background-color: rgba(255, 255, 255, 0.7); /* 背景色を設定 */
@@ -190,6 +206,7 @@ content{
 }
 
 .news__table dt {
+    padding-top: 1%; 
     float: left; /* 左寄せ */
     margin-left: 3%; /* 左マージンを設定 */
     margin-top: 2.8px; /* 上マージンを設定 */
@@ -197,6 +214,7 @@ content{
 }
 
 .news__table dd {
+    padding: 1%;
     margin-left: 150px; /* 左マージンを設定 */
 }
 
