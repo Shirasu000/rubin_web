@@ -64,7 +64,7 @@ header {
     position: absolute; /* 絶対位置を設定 */
     top: 0; /* 上位置を設定 */
     width: 100%; /* 幅を100%に設定 */
-    z-index: 20; /* Zインデックスを設定 */
+    z-index: -1; /* Zインデックスを設定 */
 }
 
 #header__hamburger:checked ~ .header__hamburger_bg {
@@ -98,12 +98,14 @@ main{
     /* max-width: 800px */ /* サイズ設定をする場合はここ(*1) */
     overflow: hidden;
     position: relative;
-    z-index:-1;
+    z-index: 0;
 }
+
 .css-carousel-slider img {
     width: 100%;
     height: auto;
     vertical-align: top;
+    pointer-events: auto; /* リンクがクリック可能にする */
 }
 
 /* スライド設定 */
